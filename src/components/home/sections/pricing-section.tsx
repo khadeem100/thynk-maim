@@ -693,7 +693,7 @@ export function PricingSection({
               Choose the right plan for your needs
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Start with our free plan or upgrade for more AI token credits
+              Start with our free plan or upgrade for more AI modules and add -ons
             </p>
           </SectionHeader>
         )}
@@ -733,10 +733,8 @@ export function PricingSection({
       </div>
       {showInfo && (
         <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg max-w-2xl mx-auto">
-          <p className="text-sm text-blue-800 dark:text-blue-200 text-center">
-            <strong>What are AI tokens?</strong> Tokens are units of text that AI models process. 
-            Your plan includes credits to spend on various AI models - the more complex the task, 
-            the more tokens used.
+          <p className="text-sm text-red-800 dark:text-blue-200 text-center">
+            <strong>What are AI Blocks?</strong> AI Blocks are pre-built, intelligent modules that you can drag and drop into your business workflow like LEGO pieces for automation.
           </p>
         </div>
       )}

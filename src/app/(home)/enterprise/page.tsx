@@ -32,7 +32,7 @@ const CustomHeroSection = () => {
           <div className="flex flex-col items-center justify-center gap-6 pt-12 max-w-4xl mx-auto">
             {/* Kortix Logo */}
             <div className="mb-8">
-              <KortixLogo size={48} />
+              <KortixLogo size={88} />
             </div>
             
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20">
@@ -41,20 +41,20 @@ const CustomHeroSection = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tighter text-balance text-center">
-              <span className="text-primary">Enterprise AI Workers.</span>
+              <span className="text-primary">Enterprise AI modules.</span>
               <br />
               <span className="text-secondary">Delivered in days.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight max-w-3xl">
-              Skip the learning curve. Our AI specialists design, develop and deploy enterprise-grade AI workers that integrate seamlessly with your operations.
+              Skip the learning curve. Our AI specialists design, develop and deploy enterprise-grade AI modules that integrate seamlessly within your interface.
             </p>
             
             <div className="flex flex-col items-center gap-6 pt-6">
               <KortixEnterpriseModal>
                 <Button size="lg">
                   <Calendar className="w-4 h-4 mr-2" />
-                  Schedule Strategy Call
+                  Schedule a Strategy Call
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </KortixEnterpriseModal>
@@ -92,7 +92,7 @@ const ValuePropSection = () => {
               When Standard Solutions Fall Short
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Professional implementation services designed for organizations with unique requirements and mission-critical automation needs.
+              Professional implementation services designed for organizations with unique requirements and mission-critical Artificial needs.
             </p>
           </SectionHeader>
 
@@ -105,7 +105,7 @@ const ValuePropSection = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-3">Accelerate Time-to-Value</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Bypass months of development cycles. Our proven methodology delivers enterprise-ready AI workers in a fraction of the time, letting you focus on strategy instead of implementation.
+                    Bypass months of development cycles. Our proven methodology delivers enterprise-ready AI Solutions in a fraction of the time, letting you focus on strategy instead of implementation.
                   </p>
                 </div>
               </div>
@@ -163,7 +163,7 @@ const ProcessSection = () => {
               Our Implementation Methodology
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              A proven three-phase approach that transforms your vision into production-ready AI workers
+              A proven three-phase approach that transforms your vision into production-ready AI Modules
             </p>
           </SectionHeader>
 
@@ -207,10 +207,10 @@ const ProcessSection = () => {
 const BenefitsSection = () => {
   const benefits = [
     "Dedicated solution architect and technical lead for your project",
-    "Enterprise-grade AI worker design with scalability considerations",
-    "White-glove support with dedicated success manager", 
+    "Enterprise-grade AI module design with scalability considerations",
+    "White-glove support with a dedicated success manager", 
     "Comprehensive team training and knowledge transfer",
-    "Quarterly business reviews and performance optimization",
+    "Quarterly business reviews and performance tracking",
     "Deep integration with existing technology stack and workflows"
   ];
 
@@ -359,7 +359,7 @@ const SelfServiceSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Learning Center</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Master AI worker development through structured courses, detailed documentation, and hands-on tutorials.
+                  Master AI module development through structured courses, detailed documentation, and hands-on tutorials.
                 </p>
                 <Button variant="outline" className="rounded-full">
                   Start Learning

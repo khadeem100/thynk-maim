@@ -111,7 +111,7 @@ export default function ActivateTrialPage() {
           <div>
             <CardTitle className="text-2xl font-bold flex items-center justify-center gap-2">
               <KortixLogo/>
-              <span>Welcome to Suna</span>
+              <span>Welcome to Tynk Tech</span>
             </CardTitle>
             <CardDescription className="mt-2">
               Start your journey with a 7-day free trial
@@ -131,7 +131,7 @@ export default function ActivateTrialPage() {
                 <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-medium">$5 in Credits</p>
-                  <p className="text-sm text-muted-foreground">Full access to all AI models</p>
+                  <p className="text-sm text-muted-foreground">Full access to all AI modules</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

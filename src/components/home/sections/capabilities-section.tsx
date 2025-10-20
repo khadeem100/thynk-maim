@@ -16,43 +16,43 @@ import {
 
 const capabilities = [
   {
-    title: 'Create Professional Websites',
-    description: 'At Tynk Tech we pride ourself for creating the most modern and sleek websites out there using the newest frameworks.',
+    title: 'Automate Your CRM',
+    description: 'Say goodbye to manual data entry and repetitive tasks. Our AI-powered CRM system learns your business processes and automates everything from lead scoring to customer follow-ups.',
     icon: <FileText className="size-6" />,
   },
   {
-    title: 'Design Graphics & Visuals',
-    description: 'Create Professional designs, social media graphics, infographics, and custom images from just a text description. No design skills required.',
+    title: 'Build Custom Solutions',
+    description: 'Why settle for one-size-fits-all software? Our revolutionary block-builder approach lets you create a custom AI solution tailored to your exact needs.',
     icon: <Image className="size-6" />,
   },
   {
-    title: 'Build Stunning Softwares',
-    description: 'Turn your ideas into polished slide decks with professional layouts, charts, and images sourced automatically.',
+    title: 'Launch Websites Instantly',
+    description: 'Our white-labeled AI website builder empowers you to create stunning, conversion-optimized websites without technical expertise.',
     icon: <Presentation className="size-6" />,
   },
   {
-    title: 'Research SEO',
-    description: 'Get comprehensive research reports on competitors, markets, trends, or any topic with verified sources and current data.',
+    title: 'Streamline Business Operations',
+    description: 'Manage every aspect of your business from a single, intelligent platform. Our comprehensive ERP system integrates inventory management, financial tracking, supply chain optimization, and more.',
     icon: <Globe className="size-6" />,
   },
   {
-    title: 'Analyze Your Data',
-    description: 'Upload spreadsheets, sales data, or any files and get insights, trends, forecasts, and beautiful charts in minutes.',
+    title: 'Revolutionize Human Resources',
+    description: 'Transform how you attract, onboard, and retain talent. Our AI-driven HRM system automates recruitment screening.',
     icon: <BarChart3 className="size-6" />,
   },
   {
-    title: 'Automate Online Tasks',
-    description: 'Fill out forms, collect data from websites, monitor prices, schedule posts, and handle repetitive web tasks while you sleep.',
+    title: 'Scale Without Limits',
+    description: 'As your company grows, our white-labeled platform grows with you. Deploy our entire suite of AI solutions to your clients under your own brand.',
     icon: <ShoppingCart className="size-6" />,
   },
   {
-    title: 'Manage Your Workflows',
-    description: 'Set up automated processes for lead generation, customer follow-ups, content creation, and daily business operations.',
+    title: 'Integrate AI Strategically',
+    description: 'Not ready for a complete overhaul? No problem. Our modular approach means you can start small.',
     icon: <Users className="size-6" />,
   },
   {
-    title: 'Work Around the Clock',
-    description: 'Tynk Tech never sleeps. Schedule tasks to run overnight, on weekends, or whenever you need work done without being there.',
+    title: 'Specialized B2B Expertise',
+    description: 'We are not just another tech company. We are B2B specialists who understand your challenges',
     icon: <Clock className="size-6" />,
   },
 ];

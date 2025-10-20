@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: 'Kortix Suna',
+  name: 'Tynk Technologies',
   url: 'https://suna.so/',
-  description: 'Kortix AI',
+  description: 'Tynk Tech',
   links: {
     twitter: 'https://x.com/kortixai',
     github: 'https://github.com/kortix-ai/',

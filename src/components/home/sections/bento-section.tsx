@@ -11,7 +11,7 @@ export function BentoSection() {
       content: <FirstBentoAnimation />,
       title: 'Describe your needs',
       description:
-        'Tell Kortix what you need and customize your AI worker for your use cases.',
+        'Tell TeeTee what you need and customize your AI worker for your use cases.',
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export function BentoSection() {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Create a New AI Worker in 3 Simple Steps
+              Enjoy our new AI worker in 3 simple steps
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
               Customize powerful AI Workers to work on your tailored use cases.

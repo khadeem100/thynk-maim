@@ -45,7 +45,7 @@ interface Config {
 // Production tier IDs
 const PROD_TIERS: SubscriptionTiers = {
   TIER_2_20: {
-    priceId: 'price_1RILb4G6l1KZGqIrhomjgDnO',
+    priceId: 'price_1SKRBm7xizlCbtZiO9HqFFgf',
     name: '2h/$20',
   },
   TIER_6_50: {
