@@ -135,7 +135,7 @@ export function Navbar() {
               <Link href="/" className="flex items-center gap-3">
                 <Image
                   src={logoSrc}
-                  alt="Kortix Logo"
+                  alt="Tynk Tech Logo"
                   width={80}
                   height={14}
                   className="md:w-[100px] md:h-[18px]"
@@ -225,7 +225,7 @@ export function Navbar() {
                   <Link href="/" className="flex items-center gap-3">
                     <Image
                       src={logoSrc}
-                      alt="Kortix Logo"
+                      alt="Tynk Tech Logo"
                       width={120}
                       height={22}
                       priority

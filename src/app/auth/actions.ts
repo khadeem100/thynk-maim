@@ -10,7 +10,7 @@ async function sendWelcomeEmail(email: string, name?: string) {
     const adminApiKey = process.env.KORTIX_ADMIN_API_KEY;
     
     if (!adminApiKey) {
-      console.error('KORTIX_ADMIN_API_KEY not configured');
+      console.error('KORTIX_ADMIN_API_KEY not configured'); // Note: Environment variable name kept for backward compatibility
       return;
     }
     

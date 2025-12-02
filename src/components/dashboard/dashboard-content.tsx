@@ -29,7 +29,7 @@ import { SunaModesPanel } from './suna-modes-panel';
 import { AIWorkerTemplates } from './ai-worker-templates';
 import { useThreadQuery } from '@/hooks/react-query/threads/use-threads';
 import { normalizeFilenameToNFC } from '@/lib/utils/unicode';
-import { KortixLogo } from '../sidebar/kortix-logo';
+import { TynkTechLogo } from '../sidebar/kortix-logo';
 import { AgentRunLimitDialog } from '@/components/thread/agent-run-limit-dialog';
 import { CustomAgentsSection } from './custom-agents-section';
 import { toast } from 'sonner';
@@ -383,7 +383,7 @@ export function DashboardContent() {
                         : "text-muted-foreground hover:text-foreground"
                     )}
                   >
-                    Kortix Super Worker
+                    Tynk Tech Super Worker
                   </button>
                   <button
                     onClick={() => {
@@ -417,7 +417,7 @@ export function DashboardContent() {
                           className="tracking-tight text-2xl md:text-3xl font-normal text-foreground/90"
                           data-tour="dashboard-title"
                         >
-                          What should Kortix Super Worker do for you today?
+                          What should Tynk Tech Super Worker do for you today?
                         </p>
                       </div>
 

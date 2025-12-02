@@ -34,7 +34,7 @@ export default function IntroductionPage() {
   return (
     <>
       <DocsHeader
-        title="What is Kortix?"
+        title="What is Tynk Tech?"
         subtitle="An open source platform for building AI agents that actually get things done"
         breadcrumbs={breadcrumbs}
         lastUpdated="August 2025"
@@ -45,14 +45,14 @@ export default function IntroductionPage() {
 
       <DocsImage
         src={imageSrc}
-        alt="Kortix Platform Interface"
+        alt="Tynk Tech Platform Interface"
         size="full"
         aspect="video"
         className="mb-12"
       />
     
       <DocsBody className="mb-8">
-        <h2 id="overview">What is Kortix?</h2>
+        <h2 id="overview">What is Tynk Tech?</h2>
         <p className="text-lg mb-6">
           Kortix is an open source platform where you can build AI agents that handle real work. Think of it as the infrastructure and tools you need to create agents that can browse the web, manage files, analyze data, and automate workflows.
         </p>

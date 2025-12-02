@@ -74,7 +74,7 @@ export function CapabilitiesSection() {
               What Can Thynk Tech Do For You?
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              From content creation to data analysis, Kortix handles the work that takes you hours in just minutes.
+              From content creation to data analysis, Tynk Tech handles the work that takes you hours in just minutes.
             </p>
           </SectionHeader>
 

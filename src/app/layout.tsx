@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description:
-    'Kortix is a fully open source AI assistant that helps you accomplish real-world tasks with ease. Through natural conversation, Kortix becomes your digital companion for research, data analysis, and everyday challenges.',
+    'Tynk Tech is a fully open source AI assistant that helps you accomplish real-world tasks with ease. Through natural conversation, Tynk Tech becomes your digital companion for research, data analysis, and everyday challenges.',
   keywords: [
     'AI',
     'artificial intelligence',
@@ -45,11 +45,11 @@ export const metadata: Metadata = {
     'research',
     'data analysis',
   ],
-  authors: [{ name: 'Kortix Team', url: 'https://suna.so' }],
+  authors: [{ name: 'Tynk Tech Team', url: 'https://suna.so' }],
   creator:
-    'Kortix Team',
+    'Tynk Tech Team',
   publisher:
-    'Kortix Team',
+    'Tynk Tech Team',
   category: 'Technology',
   applicationName: 'Suna',
   formatDetection: {
@@ -88,8 +88,8 @@ export const metadata: Metadata = {
     title: 'Suna - Open Source Generalist AI Worker',
     description:
       'Suna is a fully open source AI assistant that helps you accomplish real-world tasks with ease through natural conversation.',
-    creator: '@kortixai',
-    site: '@kortixai',
+    creator: '@tynktech',
+    site: '@tynktech',
     images: [
       {
         url: '/banner.png',

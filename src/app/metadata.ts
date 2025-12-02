@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Tynk Technologys V.O.F',
-      url: 'https://kortix.ai',
+      url: 'https://tynktech.ai',
     },
   ],
   creator: 'Tynk Technologys V.O.F',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    creator: '@kortixai',
+    creator: '@tynktech',
     images: ['/banner.png'],
   },
   robots: {

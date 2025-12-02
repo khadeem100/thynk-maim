@@ -26,7 +26,7 @@ export const sampleNavigation: DocsNavigationSection[] = [
     items: [
       {
         id: 'introduction',
-        title: 'What is Kortix?',
+        title: 'What is Tynk Tech?',
         href: '#introduction',
         icon: BookOpen,
         isActive: true
