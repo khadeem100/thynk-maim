@@ -16,43 +16,43 @@ import {
 
 const capabilities = [
   {
-    title: 'Automate Your CRM',
-    description: 'Say goodbye to manual data entry and repetitive tasks. Our AI-powered CRM system learns your business processes and automates everything from lead scoring to customer follow-ups.',
+    title: 'Moderne Weboplossingen',
+    description: 'Ontwikkeling van snelle, gebruiksvriendelijke en toekomstbestendige websites en webapplicaties met de nieuwste frameworks en design systems.',
     icon: <FileText className="size-6" />,
   },
   {
-    title: 'Build Custom Solutions',
-    description: 'Why settle for one-size-fits-all software? Our revolutionary block-builder approach lets you create a custom AI solution tailored to your exact needs.',
+    title: 'Professioneel Webdesign',
+    description: 'Webdesign waarbij gebruikservaring, uitstraling en conversie centraal staan. Wij creëren visueel aantrekkelijke en functionele digitale producten.',
     icon: <Image className="size-6" />,
   },
   {
-    title: 'Launch Websites Instantly',
-    description: 'Our white-labeled AI website builder empowers you to create stunning, conversion-optimized websites without technical expertise.',
+    title: 'Cloudbeheer op Maat',
+    description: 'Volledige ondersteuning bij cloud-oplossingen: van het opzetten tot beheren en optimaliseren van complete cloudomgevingen voor jouw organisatie.',
     icon: <Presentation className="size-6" />,
   },
   {
-    title: 'Streamline Business Operations',
-    description: 'Manage every aspect of your business from a single, intelligent platform. Our comprehensive ERP system integrates inventory management, financial tracking, supply chain optimization, and more.',
+    title: 'Applicatiebeheer',
+    description: 'Onderhoud en beheer van bestaande (dochter)applicaties. Wij zorgen ervoor dat jouw systemen optimaal blijven functioneren.',
     icon: <Globe className="size-6" />,
   },
   {
-    title: 'Revolutionize Human Resources',
-    description: 'Transform how you attract, onboard, and retain talent. Our AI-driven HRM system automates recruitment screening.',
+    title: 'Geavanceerde Cybersecurity',
+    description: 'Uitgebreide cybersecurity-expertise: van volledige beveiligingsscans tot het opzetten van complete security-infrastructuren tegen moderne dreigingen.',
     icon: <BarChart3 className="size-6" />,
   },
   {
-    title: 'Scale Without Limits',
-    description: 'As your company grows, our white-labeled platform grows with you. Deploy our entire suite of AI solutions to your clients under your own brand.',
+    title: 'Digitale Oplossingen op Maat',
+    description: 'Met TynkTech kies je voor kwaliteit, innovatie en een betrouwbare technologiepartner die met je meedenkt bij elke stap.',
     icon: <ShoppingCart className="size-6" />,
   },
   {
-    title: 'Integrate AI Strategically',
-    description: 'Not ready for a complete overhaul? No problem. Our modular approach means you can start small.',
+    title: 'Toekomstbestendige Technologie',
+    description: 'Wij gebruiken de nieuwste frameworks en design systems om producten te creëren die meegroeien met jouw bedrijf.',
     icon: <Users className="size-6" />,
   },
   {
-    title: 'Specialized B2B Expertise',
-    description: 'We are not just another tech company. We are B2B specialists who understand your challenges',
+    title: 'Betrouwbare Partner',
+    description: 'TynkTech is jouw betrouwbare technologiepartner die met je meedenkt en kwaliteit en innovatie levert.',
     icon: <Clock className="size-6" />,
   },
 ];
@@ -71,10 +71,10 @@ export function CapabilitiesSection() {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              What Can Thynk Tech Do For You?
+              Wat kan TynkTech voor jou betekenen?
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              From content creation to data analysis, Tynk Tech handles the work that takes you hours in just minutes.
+              Van moderne websites tot cloudbeheer en cybersecurity – wij bieden complete digitale oplossingen op maat.
             </p>
           </SectionHeader>
 

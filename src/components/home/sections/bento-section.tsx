@@ -9,23 +9,23 @@ export function BentoSection() {
     {
       id: 1,
       content: <FirstBentoAnimation />,
-      title: 'Describe your needs',
+      title: 'Bespreken van jouw wensen',
       description:
-        'Tell TeeTee what you need and customize your AI worker for your use cases.',
+        'We bespreken jouw behoeften en ontwikkelen een oplossing die perfect aansluit bij jouw bedrijf.',
     },
     {
       id: 2,
       content: <SecondBentoAnimation />,
-      title: 'Connect 100s of tools',
+      title: 'Ontwikkeling op maat',
       description:
-        'Connect to your favorite tools and services with our extensive library of integrations.',
+        'Wij ontwikkelen moderne websites, webapplicaties en digitale oplossingen met de nieuwste technologieën.',
     },
     {
       id: 3,
       content: <ThirdBentoAnimation />,
-      title: 'Deploy and personalize',
+      title: 'Oplevering en ondersteuning',
       description:
-        'Watch your agent handle complex tasks and workflows with advanced AI reasoning.',
+        'Na oplevering zorgen wij voor onderhoud, beheer en continue optimalisatie van jouw digitale oplossingen.',
     },
   ];
 
@@ -38,10 +38,10 @@ export function BentoSection() {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Enjoy our new AI worker in 3 simple steps
+              Jouw digitale oplossing in 3 stappen
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Customize powerful AI Workers to work on your tailored use cases.
+              Van eerste gesprek tot oplevering en ondersteuning – wij begeleiden je bij elke stap.
             </p>
           </SectionHeader>
 

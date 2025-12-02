@@ -58,9 +58,9 @@ export interface PricingTier {
 }
 
 export const siteConfig = {
-  name: 'Tynk Tech',
-  description: 'The Generalist AI Worker that can act on your behalf.',
-  cta: 'Start Free',
+  name: 'TynkTech',
+  description: 'Moderne Websites, Webapplicaties, Cloud & Cybersecurity – jouw betrouwbare technologiepartner.',
+  cta: 'Neem contact op',
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   keywords: ['AI Worker', 'Generalist AI', 'Open Source AI', 'Autonomous Agent'],
   links: {
@@ -109,10 +109,10 @@ export const siteConfig = {
     ),
     badge: '100% OPEN SOURCE',
     githubUrl: 'https://github.com/kortix-ai/suna',
-    title: 'Tynk Tech – Build, manage and train your AI Workforce.',
+    title: 'TynkTech – Moderne Websites, Webapplicaties, Cloud & Cybersecurity',
     description:
-      'Tynk Tech – The first platform to build and manage your own AI Workforce.',
-    inputPlaceholder: 'Ask TeeTee to...',
+      'TynkTech is een innovatief technologiebedrijf dat gespecialiseerd is in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat.',
+    inputPlaceholder: 'Vraag TynkTech om hulp...',
   },
   cloudPricingItems: [
     {
@@ -1234,13 +1234,13 @@ export const siteConfig = {
   },
   ctaSection: {
     id: 'cta',
-    title: 'Launch Your AI interface Today',
+    title: 'Start vandaag met jouw digitale oplossing',
     backgroundImage: '/holo.png',
     button: {
-      text: 'Get Started for free',
+      text: 'Neem contact op',
       href: '/auth',
     },
-    subtext: 'Build amd manage your AI Workforce',
+    subtext: 'Ontdek wat TynkTech voor jouw bedrijf kan betekenen',
   },
   footerLinks: [
     {

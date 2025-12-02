@@ -41,7 +41,7 @@ export function FooterSection() {
                 />
               </Link>
               <p className="tracking-tight text-muted-foreground font-medium">
-                {siteConfig.hero.description}
+                TynkTech is een innovatief technologiebedrijf dat gespecialiseerd is in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat.
               </p>
 
               <div className="flex items-center gap-4">

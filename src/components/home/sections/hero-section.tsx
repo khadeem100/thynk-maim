@@ -374,14 +374,14 @@ export function HeroSection() {
           </Link> */}
           <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 pt-8 sm:pt-12 max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center px-2">
-              <span className="text-primary">Hire Thynk Tech for </span>
+              <span className="text-primary">TynkTech – Moderne Websites, </span>
               <RotatingText 
-                texts={['Upgrading', 'Softwares', 'Websites', 'Webapplications', 'Design', 'Data Analysis', 'AI Development', 'Social Media', 'SEO', 'Outsourcing', 'Mobile apps', 'SaaS Development', 'MVPs', 'Tracking', 'Marketing', 'Analytics']}
+                texts={['Webapplicaties', 'Cloud', 'Cybersecurity', 'Webdesign', 'Cloudbeheer', 'Security', 'Weboplossingen', 'Digitale Oplossingen']}
                 className="text-secondary"
               />
             </h1>
             <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight max-w-2xl px-2">
-            Take a sneak peek at our TT AI.
+            Innovatief technologiebedrijf gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat.
             </p>
           </div>
 
@@ -391,7 +391,7 @@ export function HeroSection() {
                 <ChatInput
                   ref={chatInputRef}
                   onSubmit={handleChatInputSubmit}
-                  placeholder="Give TeeTee a task to complete..."
+                  placeholder="Vraag TynkTech om hulp..."
                   loading={isSubmitting}
                   disabled={isSubmitting}
                   value={inputValue}
@@ -432,7 +432,7 @@ export function HeroSection() {
               </button> */}
             </div>
             <DialogDescription className="text-muted-foreground">
-              Sign in or create an account to talk with TeeTee
+              Meld je aan of maak een account aan om met TynkTech te werken
             </DialogDescription>
           </DialogHeader>
 

@@ -37,39 +37,39 @@ const CustomHeroSection = () => {
             
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Enterprise Implementation Services</span>
+              <span className="text-sm font-medium text-primary">Enterprise Oplossingen</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tighter text-balance text-center">
-              <span className="text-primary">Enterprise AI modules.</span>
+              <span className="text-primary">Enterprise digitale oplossingen.</span>
               <br />
-              <span className="text-secondary">Delivered in days.</span>
+              <span className="text-secondary">Opgeleverd op maat.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight max-w-3xl">
-              Skip the learning curve. Our AI specialists design, develop and deploy enterprise-grade AI modules that integrate seamlessly within your interface.
+              Onze specialisten ontwerpen, ontwikkelen en beheren enterprise-grade digitale oplossingen die naadloos integreren met jouw bestaande systemen.
             </p>
             
             <div className="flex flex-col items-center gap-6 pt-6">
               <TynkTechEnterpriseModal>
                 <Button size="lg">
                   <Calendar className="w-4 h-4 mr-2" />
-                  Schedule a Strategy Call
+                  Plan een Strategiegesprek
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </TynkTechEnterpriseModal>
               <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span>Free consultation</span>
+                  <span>Gratis consultatie</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span>Custom solution design</span>
+                  <span>Oplossing op maat</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span>Tailored pricing</span>
+                  <span>Prijzen op maat</span>
                 </div>
               </div>
             </div>
@@ -89,10 +89,10 @@ const ValuePropSection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              When Standard Solutions Fall Short
+              Wanneer standaardoplossingen tekort schieten
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Professional implementation services designed for organizations with unique requirements and mission-critical Artificial needs.
+              Professionele implementatiediensten ontworpen voor organisaties met unieke vereisten en kritieke digitale behoeften.
             </p>
           </SectionHeader>
 
@@ -103,9 +103,9 @@ const ValuePropSection = () => {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Accelerate Time-to-Value</h3>
+                  <h3 className="text-xl font-semibold mb-3">Versnel jouw tijd tot waarde</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Bypass months of development cycles. Our proven methodology delivers enterprise-ready AI Solutions in a fraction of the time, letting you focus on strategy instead of implementation.
+                    Sla maanden van ontwikkelingscycli over. Onze bewezen methodologie levert enterprise-ready digitale oplossingen in een fractie van de tijd, zodat jij je kunt focussen op strategie in plaats van implementatie.
                   </p>
                 </div>
               </div>
@@ -117,9 +117,9 @@ const ValuePropSection = () => {
                   <Settings className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Enterprise Integration</h3>
+                  <h3 className="text-xl font-semibold mb-3">Enterprise Integratie</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Designed for sophisticated business processes requiring seamless integration with legacy systems, compliance frameworks, and industry-specific requirements.
+                    Ontworpen voor geavanceerde bedrijfsprocessen die naadloze integratie vereisen met legacy systemen, compliance frameworks en branchespecifieke vereisten.
                   </p>
                 </div>
               </div>
@@ -136,21 +136,21 @@ const ProcessSection = () => {
   const steps = [
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Strategic Analysis",
-      description: "Solution architects conduct comprehensive business analysis, workflow mapping, and technical requirements gathering to design optimal AI worker architecture for your organization.",
-      phase: "Discovery"
+      title: "Strategische Analyse",
+      description: "Onze solution architects voeren een uitgebreide bedrijfsanalyse uit, workflow mapping en technische vereisten verzameling om de optimale digitale architectuur voor jouw organisatie te ontwerpen.",
+      phase: "Ontdekking"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Engineering Excellence", 
-      description: "Full-stack development with enterprise security, scalability design, comprehensive testing, performance optimization, and seamless integration with existing systems.",
-      phase: "Build"
+      description: "Full-stack ontwikkeling met enterprise beveiliging, schaalbaarheidsdesign, uitgebreide testing, prestatie-optimalisatie en naadloze integratie met bestaande systemen.",
+      phase: "Ontwikkeling"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Enterprise Support",
-      description: "Dedicated success management, comprehensive training programs, continuous performance monitoring, optimization services, and satisfaction guarantee with full accountability.",
-      phase: "Scale"
+      title: "Enterprise Ondersteuning",
+      description: "Toegewijd success management, uitgebreide trainingsprogramma's, continue prestatiemonitoring, optimalisatiediensten en tevredenheidsgarantie met volledige verantwoordelijkheid.",
+      phase: "Schaal"
     }
   ];
 
@@ -160,10 +160,10 @@ const ProcessSection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Our Implementation Methodology
+              Onze Implementatiemethodologie
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              A proven three-phase approach that transforms your vision into production-ready AI Modules
+              Een bewezen drie-fase aanpak die jouw visie transformeert naar productieklare digitale oplossingen
             </p>
           </SectionHeader>
 
@@ -206,12 +206,12 @@ const ProcessSection = () => {
 // Benefits Section
 const BenefitsSection = () => {
   const benefits = [
-    "Dedicated solution architect and technical lead for your project",
-    "Enterprise-grade AI module design with scalability considerations",
-    "White-glove support with a dedicated success manager", 
-    "Comprehensive team training and knowledge transfer",
-    "Quarterly business reviews and performance tracking",
-    "Deep integration with existing technology stack and workflows"
+    "Toegewijde solution architect en technisch leider voor jouw project",
+    "Enterprise-grade digitale oplossingen met schaalbaarheidsconsideraties",
+    "White-glove ondersteuning met een toegewijde success manager", 
+    "Uitgebreide teamtraining en kennisoverdracht",
+    "Kwartaal business reviews en prestatie tracking",
+    "Diepe integratie met bestaande technologie stack en workflows"
   ];
 
   return (
@@ -220,10 +220,10 @@ const BenefitsSection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Enterprise-Grade Implementation
+              Enterprise-Grade Implementatie
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Premium service tier with dedicated resources and tailored solutions for complex organizational needs
+              Premium service tier met toegewijde resources en op maat gemaakte oplossingen voor complexe organisatorische behoeften
             </p>
           </SectionHeader>
 
@@ -287,10 +287,10 @@ const TestimonialsSection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Client Success Stories
+              Klant Succesverhalen
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Organizations that have transformed their operations with our enterprise implementation services
+              Organisaties die hun operaties hebben getransformeerd met onze enterprise implementatiediensten
             </p>
           </SectionHeader>
 
@@ -344,10 +344,10 @@ const SelfServiceSection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Self-Service Alternative
+              Zelfservice Alternatief
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Explore our platform independently with comprehensive resources and community support
+              Verken ons platform zelfstandig met uitgebreide resources en community ondersteuning
             </p>
           </SectionHeader>
 
@@ -357,12 +357,12 @@ const SelfServiceSection = () => {
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3">Learning Center</h3>
+                <h3 className="text-xl font-semibold mb-3">Leercentrum</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Master AI module development through structured courses, detailed documentation, and hands-on tutorials.
+                  Leer digitale oplossingen ontwikkelen via gestructureerde cursussen, gedetailleerde documentatie en hands-on tutorials.
                 </p>
                 <Button variant="outline" className="rounded-full">
-                  Start Learning
+                  Start met Leren
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -375,10 +375,10 @@ const SelfServiceSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Developer Community</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Connect with engineers, solution architects, and other professionals building enterprise AI solutions.
+                  Verbind met engineers, solution architects en andere professionals die enterprise digitale oplossingen bouwen.
                 </p>
                 <Button variant="outline" className="rounded-full">
-                  Join Community
+                  Word Lid
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -398,10 +398,10 @@ const FinalCTASection = () => {
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
-              Ready to Transform Your Operations?
+              Klaar om jouw operaties te transformeren?
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Let's discuss your specific requirements and design a custom AI implementation strategy for your organization.
+              Laten we jouw specifieke vereisten bespreken en een op maat gemaakte digitale implementatiestrategie voor jouw organisatie ontwerpen.
             </p>
           </SectionHeader>
 
@@ -412,25 +412,25 @@ const FinalCTASection = () => {
                   <TynkTechEnterpriseModal>
                     <Button size="lg">
                       <Calendar className="w-4 h-4 mr-2" />
-                      Book Your Strategy Session
+                      Plan Jouw Strategiegesprek
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </TynkTechEnterpriseModal>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center max-w-2xl mx-auto">
                     <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-accent/20">
                       <Shield className="w-6 h-6 text-primary" />
-                      <span className="text-sm font-medium">100% Satisfaction</span>
-                      <span className="text-xs text-muted-foreground">Guarantee</span>
+                      <span className="text-sm font-medium">100% Tevredenheid</span>
+                      <span className="text-xs text-muted-foreground">Garantie</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-accent/20">
                       <Users className="w-6 h-6 text-primary" />
-                      <span className="text-sm font-medium">Enterprise Support</span>
-                      <span className="text-xs text-muted-foreground">Dedicated team</span>
+                      <span className="text-sm font-medium">Enterprise Ondersteuning</span>
+                      <span className="text-xs text-muted-foreground">Toegewijd team</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 p-4 rounded-lg bg-accent/20">
                       <Settings className="w-6 h-6 text-primary" />
-                      <span className="text-sm font-medium">Custom Pricing</span>
-                      <span className="text-xs text-muted-foreground">Tailored to needs</span>
+                      <span className="text-sm font-medium">Prijzen op Maat</span>
+                      <span className="text-xs text-muted-foreground">Afgestemd op behoeften</span>
                     </div>
                   </div>
                 </div>
