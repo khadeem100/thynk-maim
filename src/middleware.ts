@@ -11,11 +11,13 @@ const PUBLIC_ROUTES = [
   '/auth/forgot-password',
   '/auth/reset-password',
   '/legal',
+  '/license',
   '/api/auth',
   '/share', // Shared content should be public
   '/templates', // Template pages should be public
   '/enterprise', // Enterprise page should be public
   '/contact', // Contact page should be public
+  '/careers', // Careers page should be public
   '/master-login', // Master password admin login
 ];
 

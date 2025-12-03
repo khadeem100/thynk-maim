@@ -1220,7 +1220,7 @@ export const siteConfig = {
       links: [
         { id: 1, title: 'Over Ons', url: 'https://tynktech.nl' },
         { id: 3, title: 'Contact', url: '/contact' },
-        { id: 4, title: 'Vacatures', url: 'https://tynktech.nl/careers' },
+        { id: 4, title: 'Vacatures', url: '/careers' },
       ],
     },
     {

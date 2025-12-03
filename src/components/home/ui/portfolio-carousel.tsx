@@ -22,6 +22,16 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
+    title: 'Frangancao.nl',
+    description: 'Moderne website voor Frangancao met focus op gebruiksvriendelijkheid en professionele uitstraling.',
+    category: 'Website',
+    image: 'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://frangancao.nl',
+    imageAlt: 'Frangancao.nl website screenshot',
+    link: 'https://frangancao.nl',
+    tags: ['Webdesign', 'Next.js', 'Responsive'],
+  },
+  {
+    id: '2',
     title: 'Moderne E-commerce Platform',
     description: 'Volledig op maat gemaakte webshop met geavanceerde productcatalogus en betalingsintegratie.',
     category: 'Webapplicatie',
@@ -30,7 +40,7 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['React', 'Next.js', 'E-commerce'],
   },
   {
-    id: '2',
+    id: '3',
     title: 'Corporate Website Redesign',
     description: 'Complete redesign van een corporate website met focus op gebruikservaring en conversie.',
     category: 'Website',
@@ -39,7 +49,7 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['Webdesign', 'SEO', 'Performance'],
   },
   {
-    id: '3',
+    id: '4',
     title: 'Cloud Infrastructuur Setup',
     description: 'Migratie naar cloud met volledige automatisering en monitoring voor optimale performance.',
     category: 'Cloud',
@@ -48,7 +58,7 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['AWS', 'DevOps', 'Kubernetes'],
   },
   {
-    id: '4',
+    id: '5',
     title: 'Security Audit & Hardening',
     description: 'Uitgebreide security audit en implementatie van best practices voor maximale beveiliging.',
     category: 'Cybersecurity',
