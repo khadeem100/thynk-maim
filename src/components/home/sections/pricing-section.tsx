@@ -21,6 +21,7 @@ import {
   Zap
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ContactModal } from '@/components/home/contact-modal';
 import {
   createCheckoutSession,
   SubscriptionStatus,
@@ -520,20 +521,37 @@ function PricingTier({
         "mt-auto",
         insideDialog ? "px-3 pt-1 pb-3" : "px-4 pt-2 pb-4"
       )}>
-        <Button
-          onClick={() => handleSubscribe(priceId)}
-          disabled={buttonDisabled}
-          variant={buttonVariant || 'default'}
-          className={cn(
-            'w-full font-medium transition-all duration-200',
-            isCompact || insideDialog ? 'h-8 text-xs' : 'h-10 rounded-full text-sm',
-            buttonClassName,
-            isPlanLoading && 'animate-pulse',
-          )}
-          title={!planChangeValidation.allowed ? planChangeValidation.reason : undefined}
-        >
-          {buttonText}
-        </Button>
+        {!isAuthenticated && buttonText === 'Neem contact op' ? (
+          <ContactModal>
+            <Button
+              disabled={buttonDisabled}
+              variant={buttonVariant || 'default'}
+              className={cn(
+                'w-full font-medium transition-all duration-200',
+                isCompact || insideDialog ? 'h-8 text-xs' : 'h-10 rounded-full text-sm',
+                buttonClassName,
+                isPlanLoading && 'animate-pulse',
+              )}
+            >
+              {buttonText}
+            </Button>
+          </ContactModal>
+        ) : (
+          <Button
+            onClick={() => handleSubscribe(priceId)}
+            disabled={buttonDisabled}
+            variant={buttonVariant || 'default'}
+            className={cn(
+              'w-full font-medium transition-all duration-200',
+              isCompact || insideDialog ? 'h-8 text-xs' : 'h-10 rounded-full text-sm',
+              buttonClassName,
+              isPlanLoading && 'animate-pulse',
+            )}
+            title={!planChangeValidation.allowed ? planChangeValidation.reason : undefined}
+          >
+            {buttonText}
+          </Button>
+        )}
       </div>
     </div>
   );

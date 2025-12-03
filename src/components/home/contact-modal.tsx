@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import {
   Dialog,
@@ -11,17 +13,32 @@ import Cal, { getCalApi } from '@calcom/embed-react';
 import { useTheme } from 'next-themes';
 import { Check, Calendar } from 'lucide-react';
 
-interface EnterpriseModalProps {
+interface ContactModalProps {
   children: React.ReactNode;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
+  calLink?: string;
+  namespace?: string;
+  title?: string;
+  description?: string;
+  benefits?: string[];
 }
 
-export function TynkTechEnterpriseModal({ 
+export function ContactModal({ 
   children,
   open: controlledOpen,
-  onOpenChange: controlledOnOpenChange
-}: EnterpriseModalProps) {
+  onOpenChange: controlledOnOpenChange,
+  calLink = 'tynktech.nl/consultation', // Cal.com link
+  namespace = 'contact-modal',
+  title = 'Plan een gesprek met TynkTech',
+  description = 'Plan een vrijblijvend gesprek met ons team om te bespreken hoe we jouw bedrijf kunnen helpen met moderne digitale oplossingen.',
+  benefits = [
+    'Gratis consultatie',
+    'Oplossing op maat',
+    'Transparante prijzen',
+    'Snelle reactietijd',
+  ],
+}: ContactModalProps) {
   const [internalOpen, setInternalOpen] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 768px)');
   const { resolvedTheme } = useTheme();
@@ -33,21 +50,10 @@ export function TynkTechEnterpriseModal({
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: 'enterprise-demo' });
+      const cal = await getCalApi({ namespace });
       cal('ui', { hideEventTypeDetails: true, layout: 'month_view' });
     })();
-  }, []);
-
-  const benefits = [
-    "Dedicated solution architect assigned",
-    "Enterprise-grade security & compliance",
-    "Custom integration with existing systems",
-    "Comprehensive team training included",
-    "Priority support & ongoing optimization",
-    "Scalable architecture for growth",
-    "Performance monitoring & analytics",
-    "100% satisfaction guarantee"
-  ];
+  }, [namespace]);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -56,16 +62,16 @@ export function TynkTechEnterpriseModal({
       </DialogTrigger>
       <DialogContent className="p-0 gap-0 border-none max-w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw] rounded-xl overflow-hidden">
         <DialogTitle className="sr-only">
-          Enterprise AI Implementation - Schedule Consultation
+          {title}
         </DialogTitle>
         <div className="grid grid-cols-1 lg:grid-cols-2 h-[700px] lg:h-[800px]">
-          {/* Enhanced Info Panel */}
+          {/* Info Panel */}
           <div className="p-6 lg:p-8 flex flex-col bg-white dark:bg-black relative h-full overflow-y-auto border-r border-gray-200 dark:border-gray-800">
             <div className="relative z-10 flex flex-col h-full">
               <div className="mb-6 flex-shrink-0">
                 <Image
                   src="/kortix-logo.svg"
-                  alt="Tynk Tech Logo"
+                  alt="TynkTech Logo"
                   width={80}
                   height={28}
                   className="h-7 w-auto"
@@ -75,19 +81,19 @@ export function TynkTechEnterpriseModal({
               <div className="mb-6 flex-shrink-0">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 mb-4">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-xs font-medium text-primary">Enterprise Implementation</span>
+                  <span className="text-xs font-medium text-primary">Gratis Consultatie</span>
                 </div>
                 
                 <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight mb-3 text-foreground">
-                  Let's Design Your Custom AI Solution
+                  {title}
                 </h2>
                 <p className="text-base lg:text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Schedule a strategy session with our solution architects to explore how custom AI workers can transform your specific business processes and workflows.
+                  {description}
                 </p>
               </div>
 
               <div className="border-t border-gray-200 dark:border-gray-800 pt-6 flex-1">
-                <h3 className="text-lg font-semibold mb-4 text-foreground">What's Included</h3>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">Wat je krijgt</h3>
                 <div className="space-y-3">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
@@ -104,10 +110,10 @@ export function TynkTechEnterpriseModal({
                 <div className="text-center space-y-2">
                   <div className="flex items-center justify-center gap-2 text-sm font-medium text-foreground">
                     <Calendar className="w-4 h-4 text-primary" />
-                    <span>Free Strategy Session</span>
+                    <span>Vrijblijvend Gesprek</span>
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    30-minute consultation • No commitment required
+                    30 minuten consultatie • Geen verplichtingen
                   </p>
                 </div>
               </div>
@@ -118,8 +124,8 @@ export function TynkTechEnterpriseModal({
           <div className="bg-white dark:bg-[#171717] h-full overflow-hidden">
             <div className="h-full overflow-auto">
               <Cal
-                namespace="enterprise-demo"
-                calLink="tynktech.nl/consultation"
+                namespace={namespace}
+                calLink={calLink}
                 style={{ width: '100%', height: '100%' }}
                 config={{
                   layout: 'month_view',
@@ -134,5 +140,3 @@ export function TynkTechEnterpriseModal({
   );
 }
 
-// Export with original name for backwards compatibility
-export const TynkTechProcessModal = TynkTechEnterpriseModal;
