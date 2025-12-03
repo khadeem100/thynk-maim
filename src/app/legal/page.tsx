@@ -107,7 +107,7 @@ function LegalContent() {
               </Link>
 
               <h1 className="text-3xl md:text-4xl font-medium tracking-tighter text-center">
-                Legal <span className="text-secondary">Information</span>
+                Juridische <span className="text-secondary">Informatie</span>
               </h1>
             </div>
 
@@ -121,7 +121,7 @@ function LegalContent() {
                       : 'text-muted-foreground hover:text-primary/80 transition-colors'
                   }`}
                 >
-                  Terms of Service
+                  Algemene Voorwaarden
                 </button>
                 <button
                   onClick={() => handleTabChange('privacy')}
@@ -131,7 +131,7 @@ function LegalContent() {
                       : 'text-muted-foreground hover:text-primary/80 transition-colors'
                   }`}
                 >
-                  Privacy Policy
+                  Privacybeleid
                 </button>
               </div>
             </div>
@@ -141,147 +141,119 @@ function LegalContent() {
                 {activeTab === 'terms' ? (
                   <div>
                     <h2 className="text-2xl font-medium tracking-tight mb-4">
-                      Terms of Service
+                      Algemene Voorwaarden
                     </h2>
                     <p className="text-sm text-muted-foreground mb-6">
                       Last updated: {new Date().toLocaleDateString()}
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Terms of Service & Privacy Policy
+                      Algemene Voorwaarden
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      Last updated and effective date: 13 August 2024
+                      Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL')}
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      PLEASE READ THESE TERMS OF USE ("AGREEMENT" OR "TERMS OF
-                      USE" or "TERMS OF SERVICE" or "TERMS AND CONDITIONS")
-                      CAREFULLY BEFORE USING THE SERVICES OFFERED BY Tynk Tech AI
-                      Corp (701 Tillery Street Unit 12-2521 Austin, Texas 78702,
-                      United States). THIS AGREEMENT SETS FORTH THE LEGALLY
-                      BINDING TERMS AND CONDITIONS FOR YOUR USE OF THE SUNA
-                      WEBSITE AND ALL RELATED SERVICES.
+                      LEES DEZE ALGEMENE VOORWAARDEN ("OVEREENKOMST" OF "VOORWAARDEN" OF "SERVICEVOORWAARDEN") 
+                      ZORGVULDIG DOOR VOORDAT U DE DIENSTEN GEBRUIKT DIE WORDEN AANGEBODEN DOOR TynkTech 
+                      (Tynk Technologies V.O.F., Nederland). DEZE OVEREENKOMST BEVAT DE JURIDISCH BINDENDE 
+                      VOORWAARDEN EN BEPALINGEN VOOR UW GEBRUIK VAN DE TYNK TECH WEBSITE EN ALLE GERELATEERDE DIENSTEN.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Definitions
+                      Definities
                     </h3>
                     <ul className="text-muted-foreground space-y-1 mb-6">
                       <li>
-                        "Company" refers to Tynk Tech AI Corp (701 Tillery Street
-                        Unit 12-2521 Austin, Texas 78702, United States).
+                        "Bedrijf" verwijst naar TynkTech (Tynk Technologies V.O.F., Nederland).
                       </li>
                       <li>
-                        "Site" refers to the Suna website, including any related
-                        features, content, or applications offered from time to
-                        time by the Company.
+                        "Website" verwijst naar de TynkTech website, inclusief alle gerelateerde
+                        functies, inhoud of applicaties die van tijd tot tijd door het Bedrijf worden aangeboden.
                       </li>
                       <li>
-                        "Service" refers to the Suna website and all related
-                        services provided by the Company, including the
-                        AI-powered agent that helps you accomplish real-world
-                        tasks.
+                        "Dienst" verwijst naar de TynkTech website en alle gerelateerde
+                        diensten die door het Bedrijf worden verleend, inclusief website ontwikkeling,
+                        webapplicatie ontwikkeling, cloudbeheer, cybersecurity en ondersteuning.
                       </li>
                       <li>
-                        "User" refers to any individual or entity using the Site
-                        or Service.
+                        "Gebruiker" verwijst naar elke persoon of entiteit die de Website of Dienst gebruikt.
                       </li>
                       <li>
-                        "Content" refers to any text, images, code, or other
-                        material uploaded to or generated by the Site or Service
-                        by Users.
+                        "Inhoud" verwijst naar alle tekst, afbeeldingen, code of ander
+                        materiaal dat door Gebruikers wordt geüpload naar of gegenereerd door de Website of Dienst.
                       </li>
                       <li>
-                        "Assets" refers to the results and outputs generated by
-                        the AI models provided by the Service, including any
-                        code, applications, or reports.
+                        "Intellectueel Eigendom" verwijst naar alle eigendomsrechten, inclusief maar niet beperkt tot
+                        auteursrechten, handelsmerken, patenten, handelsgeheimen en andere eigendomsrechten
+                        met betrekking tot de Website, Dienst en alle gerelateerde technologieën.
                       </li>
                       <li>
-                        "Terms of Use" refers to these terms and conditions
-                        governing the use of the Site and Service.
+                        "Voorwaarden" verwijst naar deze voorwaarden die het gebruik van de Website en Dienst regelen.
                       </li>
                       <li>
-                        "License" refers to the permissions granted to Users to
-                        use the Site and Service as outlined in these Terms of
-                        Use.
+                        "Licentie" verwijst naar de beperkte toestemmingen die aan Gebruikers worden verleend
+                        om de Website en Dienst te gebruiken zoals uiteengezet in deze Voorwaarden.
                       </li>
                       <li>
-                        "DMCA" refers to the Digital Millennium Copyright Act.
+                        "Vergoedingen" verwijst naar de abonnements- of andere betalingen die
+                        door Gebruikers worden gedaan voor toegang tot bepaalde functies of niveaus van de Dienst.
                       </li>
                       <li>
-                        "Fees" refers to the subscription or other payments made
-                        by Users for access to certain features or levels of the
-                        Service.
+                        "Contactadres" verwijst naar het contactadres van het Bedrijf, specifiek admin@thynktech.nl
                       </li>
                       <li>
-                        "Notice Address" refers to the contact address for the
-                        Company, specifically legal@tynktech.ai
+                        "Privacybeleid" verwijst naar het document dat beschrijft hoe
+                        het Bedrijf gebruikersgegevens verzamelt, gebruikt en beschermt.
                       </li>
                       <li>
-                        "Privacy Policy" refers to the document outlining how
-                        the Company collects, uses, and protects User data.
-                      </li>
-                      <li>
-                        "Third Party" refers to any person or entity other than
-                        the Company or the User.
-                      </li>
-                      <li>
-                        "AAA Rules" refers to the American Arbitration
-                        Association's Consumer Arbitration Rules.
-                      </li>
-                      <li>
-                        "Claim" refers to any dispute, claim, demand, or cause
-                        of action that arises between the User and the Company.
+                        "Derde Partij" verwijst naar elke persoon of entiteit anders dan het Bedrijf of de Gebruiker.
                       </li>
                     </ul>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Acceptance of Terms of Use
+                      Aanvaarding van de Voorwaarden
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      The Service is offered subject to acceptance without
-                      modification of all of these Terms of Use and all other
-                      operating rules, policies, and procedures that may be
-                      published from time to time in connection with the
-                      Services by the Company. In addition, some services
-                      offered through the Service may be subject to additional
-                      terms and conditions promulgated by the Company from time
-                      to time; your use of such services is subject to those
-                      additional terms and conditions, which are incorporated
-                      into these Terms of Use by this reference.
+                      De Dienst wordt aangeboden onder voorbehoud van aanvaarding zonder
+                      wijziging van al deze Voorwaarden en alle andere
+                      operationele regels, beleidsregels en procedures die van tijd tot tijd
+                      kunnen worden gepubliceerd in verband met de
+                      Diensten door het Bedrijf. Bovendien kunnen sommige diensten
+                      die via de Dienst worden aangeboden onderworpen zijn aan aanvullende
+                      voorwaarden die van tijd tot tijd door het Bedrijf worden vastgesteld;
+                      uw gebruik van dergelijke diensten is onderworpen aan die
+                      aanvullende voorwaarden, die door deze verwijzing worden opgenomen
+                      in deze Voorwaarden.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      The Company may, in its sole discretion, refuse to offer
-                      the Service to any person or entity and change its
-                      eligibility criteria at any time. This provision is void
-                      where prohibited by law and the right to access the
-                      Service is revoked in such jurisdictions.
+                      Het Bedrijf kan, naar eigen goeddunken, weigeren de
+                      Dienst aan te bieden aan elke persoon of entiteit en kan zijn
+                      toelatingscriteria op elk moment wijzigen. Deze bepaling is nietig
+                      waar dit door de wet is verboden en het recht om toegang te krijgen tot de
+                      Dienst wordt ingetrokken in dergelijke rechtsgebieden.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Rules and Conduct
+                      Regels en Gedrag
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      By using the Service, you agree that it is intended solely
-                      for the purpose of using an AI assistant to help
-                      accomplish real-world tasks through natural conversation.
-                      The Service's capabilities include browser automation,
-                      file management, web crawling, search capabilities,
-                      command-line execution, website deployment, and
-                      integration with various APIs and services. You
-                      acknowledge and agree that when using the Service, you
-                      must have the necessary rights and permissions for any
-                      content or data you incorporate. You are solely
-                      responsible for ensuring that your use of the Service is
-                      legal and that you have the necessary rights for any tasks
-                      you perform. The Company is not responsible for any
-                      content created or actions taken through the Service and
-                      disclaims all liability for any issues arising from the
-                      created content or performed actions, including but not
-                      limited to copyright infringement, illegal content, or any
-                      other legal matters.
+                      Door gebruik te maken van de Dienst, stemt u ermee in dat deze uitsluitend
+                      bedoeld is voor het doel van het gebruik van onze diensten voor website ontwikkeling,
+                      webapplicatie ontwikkeling, cloudbeheer, cybersecurity en ondersteuning.
+                      U erkent en stemt ermee in dat bij gebruik van de Dienst u
+                      de noodzakelijke rechten en toestemmingen moet hebben voor alle
+                      inhoud of gegevens die u opneemt. U bent uitsluitend
+                      verantwoordelijk voor het waarborgen dat uw gebruik van de Dienst
+                      legaal is en dat u de noodzakelijke rechten heeft voor alle taken
+                      die u uitvoert. Het Bedrijf is niet verantwoordelijk voor enige
+                      inhoud die wordt gemaakt of acties die worden ondernomen via de Dienst en
+                      wijst alle aansprakelijkheid af voor eventuele problemen die voortvloeien uit de
+                      gemaakte inhoud of uitgevoerde acties, inclusief maar niet
+                      beperkt tot inbreuk op auteursrechten, illegale inhoud of enige
+                      andere juridische aangelegenheden.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-4">
@@ -351,29 +323,49 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Open Source License
+                      Proprietary Eigendomsrechten en Verbod op Duplicatie
                     </h3>
+                    <p className="text-muted-foreground text-balance mb-4">
+                      <strong>BELANGRIJK:</strong> Alle software, technologie, code, ontwerpen, documentatie,
+                      en andere materialen die deel uitmaken van of worden verstrekt in verband met de Dienst
+                      zijn het exclusieve eigendom van TynkTech en zijn beschermd door auteursrecht,
+                      handelsmerk en andere intellectuele eigendomsrechten. Niets op deze Website of in de Dienst
+                      is open source of vrij beschikbaar.
+                    </p>
+                    <p className="text-muted-foreground text-balance mb-4">
+                      U erkent en stemt ermee in dat:
+                    </p>
+                    <ul className="text-muted-foreground space-y-1 mb-4">
+                      <li>
+                        Alle software, code, technologieën, algoritmen, interfaces, ontwerpen en
+                        andere componenten van de Dienst zijn proprietary eigendom van TynkTech.
+                      </li>
+                      <li>
+                        U heeft GEEN recht om de software, code of technologie te kopiëren, dupliceren,
+                        reproduceren, reverse engineeren, decompileren, disassembleren of op enige andere
+                        manier te repliceren.
+                      </li>
+                      <li>
+                        U heeft GEEN recht om de software, code of technologie te verkopen, te verhuren,
+                        te leasen, te sublicentiëren, te distribueren of op enige andere manier commercieel
+                        te exploiteren.
+                      </li>
+                      <li>
+                        U heeft GEEN recht om afgeleide werken te maken op basis van de software of technologie.
+                      </li>
+                      <li>
+                        Elke ongeautoriseerde duplicatie, distributie of verkoop van onze software of technologie
+                        is strikt verboden en kan leiden tot civiele en strafrechtelijke vervolging.
+                      </li>
+                    </ul>
                     <p className="text-muted-foreground text-balance mb-6">
-                      Suna is licensed under the Apache License, Version 2.0.
-                      You may obtain a copy of the License at{' '}
-                      <a
-                        href="http://www.apache.org/licenses/LICENSE-2.0"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary hover:underline"
-                      >
-                        http://www.apache.org/licenses/LICENSE-2.0
-                      </a>
-                      . Unless required by applicable law or agreed to in
-                      writing, software distributed under the License is
-                      distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-                      CONDITIONS OF ANY KIND, either express or implied. See the
-                      License for the specific language governing permissions
-                      and limitations under the License.
+                      Het Bedrijf behoudt zich alle rechten voor die niet uitdrukkelijk zijn verleend in deze Voorwaarden.
+                      Elke schending van deze bepalingen kan leiden tot onmiddellijke beëindiging van uw toegang
+                      tot de Dienst en kan leiden tot juridische stappen.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Accuracy Disclaimer
+                      Nauwkeurigheidsdisclaimer
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       The Service is provided for general assistance purposes.
@@ -385,7 +377,7 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      DMCA and Takedowns Policy
+                      Auteursrecht en Takedown Beleid
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       The Company utilizes artificial intelligence systems to
@@ -394,7 +386,7 @@ function LegalContent() {
                       held by others. We respect rights holders internationally,
                       and we ask our users to do the same. If you believe your
                       copyright or trademark is being infringed by the Service,
-                      please write to legal@tynktech.ai and we will process and
+                      neem dan contact met ons op via admin@thynktech.nl en we zullen uw verzoek verwerken en
                       investigate your request and take appropriate actions
                       under the Digital Millennium Copyright Act and other
                       applicable intellectual property laws with respect to any
@@ -402,37 +394,37 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Fees and Payments
+                      Vergoedingen en Betalingen
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      The Company may offer paid Services. You can learn more
-                      about our pricing after signing up. You may sign up for a
-                      subscription, payable in U.S. dollars, that will
-                      automatically renew. You can stop using the Service and
-                      cancel your subscription at any time through the website
-                      or by emailing us at legal@tynktech.ai. If you cancel
-                      your subscription, you may not receive a refund or credit
-                      for any amounts that have already been billed or paid. The
-                      Company reserves the right to change its prices at any
-                      time. If you are on a subscription plan, changes to
-                      pricing will not apply until your next renewal.
+                      Het Bedrijf kan betaalde Diensten aanbieden. U kunt meer te weten komen
+                      over onze prijzen op onze website. U kunt zich aanmelden voor een
+                      abonnement, betaalbaar in euro's, dat automatisch
+                      wordt verlengd. U kunt op elk moment stoppen met het gebruik van de Dienst en
+                      uw abonnement opzeggen via de website
+                      of door een e-mail te sturen naar admin@thynktech.nl. Als u uw
+                      abonnement opzegt, ontvangt u mogelijk geen restitutie of tegoed
+                      voor bedragen die al zijn gefactureerd of betaald. Het
+                      Bedrijf behoudt zich het recht voor om zijn prijzen op elk moment te wijzigen.
+                      Als u een abonnement heeft, zijn wijzigingen in
+                      de prijzen niet van toepassing tot uw volgende verlenging.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      Unless otherwise stated, your subscription fees ("Fees")
-                      do not include federal, state, local, and foreign taxes,
-                      duties, and other similar assessments ("Taxes"). You are
-                      responsible for all Taxes associated with your purchase
-                      and we may invoice you for such Taxes. You agree to timely
-                      pay such Taxes and provide us with documentation showing
-                      the payment or additional evidence that we may reasonably
-                      require. If any amount of your Fees is past due, we may
-                      suspend your access to the Services after we provide you
-                      with written notice of late payment.
+                      Tenzij anders vermeld, zijn uw abonnementskosten ("Vergoedingen")
+                      exclusief btw, belastingen, heffingen en andere soortgelijke
+                      beoordelingen ("Belastingen"). U bent
+                      verantwoordelijk voor alle Belastingen die verband houden met uw aankoop
+                      en wij kunnen u factureren voor dergelijke Belastingen. U stemt ermee in om tijdig
+                      dergelijke Belastingen te betalen en ons documentatie te verstrekken die
+                      de betaling aantoont of ander bewijs dat wij redelijkerwijs
+                      kunnen vereisen. Als een bedrag van uw Vergoedingen achterstallig is, kunnen wij
+                      uw toegang tot de Diensten opschorten nadat wij u
+                      schriftelijk op de hoogte hebben gesteld van de achterstallige betaling.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Termination
+                      Beëindiging
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       The Company may terminate your access to all or any part
@@ -452,11 +444,11 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Dispute Resolution by Binding Arbitration
+                      Geschilbeslechting
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      PLEASE READ THIS SECTION CAREFULLY, AS IT AFFECTS YOUR
-                      RIGHTS.
+                      LEES DEZE SECTIE ZORGVULDIG DOOR, AANGEZIEN DIT UW
+                      RECHTEN BEÏNVLOEDT.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-4">
@@ -506,23 +498,19 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Choice of Law
+                      Toepasselijk Recht
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
-                      Any and all Claims shall be governed by the Federal
-                      Arbitration Act and the internal substantive laws of
-                      Singapore in all respects, without regard for the
-                      jurisdiction or forum in which the user is domiciled,
-                      resides, or is located at the time of such access or use.
-                      Except as provided in the Arbitration Agreement, all
-                      Claims will be brought in the federal or state courts in
-                      Singapore, and you and the Company each unconditionally,
-                      voluntarily, and irrevocably consent to the exclusive
-                      personal jurisdiction and venue of those courts.
+                      Alle geschillen en claims worden beheerst door het Nederlandse recht,
+                      zonder verwijzing naar de conflictenrechtregels. Alle geschillen
+                      zullen worden voorgelegd aan de bevoegde rechter in Nederland,
+                      en u en het Bedrijf stemmen elk onvoorwaardelijk,
+                      vrijwillig en onherroepelijk in met de exclusieve
+                      persoonlijke jurisdictie en rechtsmacht van die rechtbanken.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Links to and From Other Websites
+                      Links naar en van Andere Websites
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       You may gain access to other websites via links on the
@@ -535,7 +523,7 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Modification of Terms of Use
+                      Wijziging van de Voorwaarden
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       At its sole discretion, the Company may modify or replace
@@ -553,55 +541,56 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Trademarks and Patents
+                      Handelsmerken en Patenten
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
-                      All Suna logos, marks, and designations are trademarks or
-                      registered trademarks of the Company. All other trademarks
-                      mentioned on this website are the property of their
-                      respective owners. The trademarks and logos displayed on
-                      this website may not be used without the prior written
-                      consent of the Company or their respective owners.
-                      Portions, features, and/or functionality of the Company's
-                      products may be protected under the Company's patent
-                      applications or patents.
+                      Alle TynkTech logo's, merken en aanduidingen zijn handelsmerken of
+                      geregistreerde handelsmerken van het Bedrijf. Alle andere handelsmerken
+                      die op deze website worden genoemd zijn eigendom van hun
+                      respectieve eigenaren. De handelsmerken en logo's die op
+                      deze website worden weergegeven mogen niet worden gebruikt zonder de voorafgaande schriftelijke
+                      toestemming van het Bedrijf of hun respectieve eigenaren.
+                      Delen, functies en/of functionaliteit van de producten van het Bedrijf
+                      kunnen worden beschermd onder de octrooiaanvragen of patenten van het Bedrijf.
+                      Alle rechten zijn voorbehouden.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Licensing Terms
+                      Licentievoorwaarden
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      Subject to your compliance with this Agreement, the
-                      conditions herein, and any limitations applicable to the
-                      Company or by law:
+                      Onder voorbehoud van uw naleving van deze Overeenkomst, de
+                      voorwaarden hierin, en eventuele beperkingen die van toepassing zijn op het
+                      Bedrijf of door de wet:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-4">
                       <li>
-                        you are granted a non-exclusive, limited,
-                        non-transferable, non-sublicensable, non-assignable,
-                        freely revocable license to access and use the Service
-                        for business or personal use;
+                        U krijgt een niet-exclusieve, beperkte,
+                        niet-overdraagbare, niet-onderlicentieerbare, niet-toewijsbare,
+                        vrijelijk herroepbare licentie om toegang te krijgen tot en de Dienst te gebruiken
+                        voor zakelijk of persoonlijk gebruik, uitsluitend zoals bedoeld door het Bedrijf;
                       </li>
                       <li>
-                        you own all Assets you create with the Services, and
+                        U bezit alle resultaten, deliverables en output die u ontvangt als onderdeel van
+                        de diensten die door het Bedrijf worden verleend, en
                       </li>
                       <li>
-                        we hereby assign to you all rights, title, and interest
-                        in and to such Assets for your personal or commercial
-                        use.
+                        Het Bedrijf draagt alle rechten, titel en belang over
+                        in en met betrekking tot dergelijke resultaten voor uw persoonlijk of commercieel
+                        gebruik, behoudens de proprietary technologieën en methodologieën van het Bedrijf.
                       </li>
                     </ul>
                     <p className="text-muted-foreground text-balance mb-6">
-                      Otherwise, the Company reserves all rights not expressly
-                      granted under these Terms of Use. Each person must have a
-                      unique account, and you are responsible for any activity
-                      conducted on your account. A breach or violation of any of
-                      our Terms of Use may result in an immediate termination of
-                      your right to use our Service.
+                      Het Bedrijf behoudt zich alle rechten voor die niet uitdrukkelijk
+                      zijn verleend onder deze Voorwaarden. Elke persoon moet een
+                      uniek account hebben, en u bent verantwoordelijk voor alle activiteiten
+                      die worden uitgevoerd op uw account. Een schending of overtreding van een van
+                      onze Voorwaarden kan leiden tot onmiddellijke beëindiging van
+                      uw recht om onze Dienst te gebruiken.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Indemnification
+                      Vrijwaring
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       You shall defend, indemnify, and hold harmless the
@@ -620,7 +609,7 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Limitation of Liability
+                      Beperking van Aansprakelijkheid
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
                       IN NO EVENT SHALL THE COMPANY OR ITS DIRECTORS, EMPLOYEES,
@@ -646,14 +635,14 @@ function LegalContent() {
                     <p className="text-muted-foreground text-balance mb-6">
                       ALL USE OF THE SERVICE AND ANY CONTENT IS UNDERTAKEN
                       ENTIRELY AT YOUR OWN RISK. THE SERVICE (INCLUDING, WITHOUT
-                      LIMITATION, THE SUNA WEB APP AND ANY CONTENT) IS PROVIDED
+                      LIMITATION, DE TYNK TECH WEBSITE EN ALLE INHOUD) WORDT VERSTREKT
                       "AS IS" AND "AS AVAILABLE" AND IS WITHOUT WARRANTY OF ANY
                       KIND, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
                       THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT,
                       MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE, AND
                       ANY WARRANTIES IMPLIED BY ANY COURSE OF PERFORMANCE OR
                       USAGE OF TRADE, ALL OF WHICH ARE EXPRESSLY DISCLAIMED.
-                      SUNA DOES NOT GUARANTEE THE ACCURACY, COMPLETENESS, OR
+                      TYNK TECH GARANDEERT NIET DE NAUWKEURIGHEID, VOLLEDIGHEID OF
                       RELIABILITY OF THE AI-GENERATED CONTENT, AND USERS ASSUME
                       FULL RESPONSIBILITY FOR ANY APPLICATIONS CREATED USING THE
                       SERVICE. SOME STATES DO NOT ALLOW LIMITATIONS ON HOW LONG
@@ -662,7 +651,7 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Age Requirements
+                      Leeftijdsvereisten
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
                       By accessing the Services, you confirm that you're at
@@ -682,16 +671,16 @@ function LegalContent() {
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Contact Us
+                      Neem Contact Op
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
-                      For questions regarding the Service, you can get in touch
-                      by emailing us at{' '}
+                      Voor vragen met betrekking tot de Dienst kunt u contact met ons opnemen
+                      door een e-mail te sturen naar{' '}
                       <a
-                        href="mailto:legal@tynktech.ai"
+                        href="mailto:admin@thynktech.nl"
                         className="text-secondary hover:underline"
                       >
-                        legal@tynktech.ai
+                        admin@thynktech.nl
                       </a>
                       .
                     </p>
@@ -699,223 +688,219 @@ function LegalContent() {
                 ) : (
                   <div>
                     <h2 className="text-2xl font-medium tracking-tight mb-4">
-                      Privacy Policy
+                      Privacybeleid
                     </h2>
                     <p className="text-sm text-muted-foreground mb-6">
-                      Last updated: {new Date().toLocaleDateString()}
+                      Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL')}
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
                       Privacy
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
-                      Our commitment to privacy and data protection is reflected
-                      in this Privacy Statement which describes how we collect
-                      and process "personal information" that identifies you,
-                      like your name or email address. Any other information
-                      besides this is "non-personal information." If we store
-                      personal information with non-personal information, we'll
-                      consider that combination to be personal information.
+                      Onze toewijding aan privacy en gegevensbescherming komt tot uiting
+                      in dit Privacybeleid dat beschrijft hoe we verzamelen
+                      en verwerken "persoonsgegevens" die u identificeren,
+                      zoals uw naam of e-mailadres. Alle andere informatie
+                      behalve dit is "niet-persoonlijke informatie." Als we
+                      persoonsgegevens opslaan met niet-persoonlijke informatie, beschouwen we
+                      die combinatie als persoonsgegevens.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      References to our "Services" at Suna in this statement
-                      include our website, apps, and other products and
-                      services. This statement applies to our Services that
-                      display or reference this Privacy Statement. Third-party
-                      services that we integrate with are governed under their
-                      own privacy policies.
+                      Verwijzingen naar onze "Diensten" bij TynkTech in dit beleid
+                      omvatten onze website, apps en andere producten en
+                      diensten. Dit beleid is van toepassing op onze Diensten die
+                      dit Privacybeleid weergeven of ernaar verwijzen. Diensten van derden
+                      waarmee we integreren worden beheerst door hun
+                      eigen privacybeleid.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      Suna does not collect biometric or identifying
-                      information. All data is processed securely and any data
-                      is deleted upon account removal.
+                      TynkTech verzamelt geen biometrische of identificerende
+                      informatie zonder uw uitdrukkelijke toestemming. Alle gegevens worden veilig verwerkt
+                      en alle gegevens worden verwijderd bij verwijdering van het account, tenzij
+                      wettelijk verplicht om deze te bewaren.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Information Gathering
+                      Gegevensverzameling
                     </h3>
                     <p className="text-muted-foreground text-balance mb-4">
-                      We learn information about you when:
+                      We verzamelen informatie over u wanneer:
                     </p>
 
                     <p className="font-medium mb-2">
-                      You directly provide it to us.
+                      U deze direct aan ons verstrekt.
                     </p>
                     <p className="text-muted-foreground mb-2">
-                      For example, we collect:
+                      Bijvoorbeeld, we verzamelen:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-4">
                       <li>
-                        Name and contact information. We collect details such as
-                        name and email address.
+                        Naam en contactgegevens. We verzamelen gegevens zoals
+                        naam en e-mailadres.
                       </li>
                       <li>
-                        Payment information. If you make a purchase, we collect
-                        credit card numbers, financial account information, and
-                        other payment details.
+                        Betalingsgegevens. Als u een aankoop doet, verzamelen we
+                        creditcardnummers, financiële rekeninginformatie en
+                        andere betalingsgegevens via onze beveiligde betalingsverwerker.
                       </li>
                       <li>
-                        Content and files. We collect and retain the videos,
-                        documents, or other files you send to us in connection
-                        with delivering our Services, including via email or
-                        chat.
+                        Inhoud en bestanden. We verzamelen en bewaren de documenten,
+                        bestanden of andere materialen die u naar ons stuurt in verband
+                        met het leveren van onze Diensten, inclusief via e-mail of
+                        contactformulieren.
                       </li>
                     </ul>
 
                     <p className="font-medium mb-2">
-                      We collect it automatically through our products and
-                      services.
+                      We verzamelen deze automatisch via onze producten en
+                      diensten.
                     </p>
                     <p className="text-muted-foreground mb-2">
-                      For instance, we collect:
+                      Bijvoorbeeld, we verzamelen:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-4">
                       <li>
-                        Identifiers and device information. When you visit our
-                        websites, our web servers log your Internet Protocol
-                        (IP) address and information about your device,
-                        including device identifiers, device type, operating
-                        system, browser, and other software including type,
-                        version, language, settings, and configuration.
+                        Identificatoren en apparaatinformatie. Wanneer u onze
+                        websites bezoekt, loggen onze webservers uw Internet Protocol
+                        (IP) adres en informatie over uw apparaat,
+                        inclusief apparaatidentificatoren, apparaattype, besturingssysteem,
+                        browser en andere software inclusief type,
+                        versie, taal, instellingen en configuratie.
                       </li>
                       <li>
-                        Geolocation data. Depending on your device and app
-                        settings, we collect geolocation data when you use our
-                        Services.
-                      </li>
-                      <li>
-                        Usage data. We log your activity on our website,
-                        including the URL of the website from which you came to
-                        our site, pages you viewed on our website, how long you
-                        spent on a page, access times, and other details about
-                        your use of and actions on our website. We also collect
-                        information about which web-elements or objects you
-                        interact with on our Service, metadata about your
-                        activity on the Service, changes in your user state, and
-                        the duration of your use of our Service.
+                        Gebruiksgegevens. We loggen uw activiteit op onze website,
+                        inclusief de URL van de website waarvan u naar
+                        onze site kwam, pagina's die u op onze website bekijkt, hoe lang u
+                        op een pagina doorbracht, toegangstijden en andere details over
+                        uw gebruik van en acties op onze website.
                       </li>
                     </ul>
 
                     <p className="font-medium mb-2">
-                      Someone else tells us information about you.
+                      Iemand anders vertelt ons informatie over u.
                     </p>
                     <p className="text-muted-foreground mb-2">
-                      Third-party sources include, for example:
+                      Bronnen van derden omvatten bijvoorbeeld:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-4">
                       <li>
-                        Third-party partners. Third-party applications and
-                        services, including social networks you choose to
-                        connect with or interact with through our services.
+                        Partners van derden. Applicaties en
+                        diensten van derden, inclusief sociale netwerken waarmee u ervoor kiest
+                        verbinding te maken of te interacteren via onze diensten.
                       </li>
                       <li>
-                        Service providers. Third parties that collect or provide
-                        data in connection with work they do on our behalf, for
-                        example, companies that determine your device's location
-                        based on its IP address.
+                        Dienstverleners. Derden die gegevens verzamelen of verstrekken
+                        in verband met werk dat zij namens ons doen, bijvoorbeeld
+                        bedrijven die de locatie van uw apparaat bepalen
+                        op basis van het IP-adres.
                       </li>
                     </ul>
-
-                    <p className="font-medium mb-2">
-                      When we try and understand more about you based on
-                      information you've given to us.
-                    </p>
-                    <p className="text-muted-foreground text-balance mb-6">
-                      We infer new information from other data we collect,
-                      including using automated means to generate information
-                      about your likely preferences or other characteristics
-                      ("inferences"). For example, we infer your general
-                      geographic location based on your IP address.
-                    </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Information Use
+                      Gebruik van Gegevens
                     </h3>
                     <p className="text-muted-foreground text-balance mb-2">
-                      We use each category of personal information about you:
+                      We gebruiken elke categorie persoonsgegevens over u:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-6">
-                      <li>To provide you with our Services</li>
-                      <li>To improve and develop our Services</li>
-                      <li>To communicate with you</li>
-                      <li>To provide customer support</li>
+                      <li>Om u onze Diensten te verlenen</li>
+                      <li>Om onze Diensten te verbeteren en te ontwikkelen</li>
+                      <li>Om met u te communiceren</li>
+                      <li>Om klantenondersteuning te bieden</li>
+                      <li>Om te voldoen aan wettelijke verplichtingen</li>
+                      <li>Om fraude te voorkomen en te detecteren</li>
                     </ul>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Information Sharing
+                      Delen van Gegevens
                     </h3>
                     <p className="text-muted-foreground text-balance mb-2">
-                      We share information about you:
+                      We delen informatie over u:
                     </p>
                     <ul className="text-muted-foreground space-y-1 mb-4">
                       <li>
-                        When we've asked & received your consent to share it.
+                        Wanneer we uw toestemming hebben gevraagd en ontvangen om deze te delen.
                       </li>
                       <li>
-                        As needed, including to third-party service providers,
-                        to process or provide Services or products to you, but
-                        only if those entities agree to provide at least the
-                        same level of privacy protection we're committed to
-                        under this Privacy Statement.
+                        Indien nodig, inclusief aan dienstverleners van derden,
+                        om Diensten of producten te verwerken of aan u te verlenen, maar
+                        alleen als die entiteiten ermee instemmen ten minste hetzelfde
+                        niveau van privacybescherming te bieden waartoe wij ons verbinden
+                        onder dit Privacybeleid.
                       </li>
                       <li>
-                        To comply with laws or to respond to lawful requests and
-                        legal processes, provided that we'll notify you unless
-                        we're legally prohibited from doing so. We'll only
-                        release personal information if we believe in good faith
-                        that it's legally required.
+                        Om te voldoen aan wetten of om te reageren op rechtmatige verzoeken en
+                        juridische processen, met dien verstande dat we u op de hoogte stellen tenzij
+                        we juridisch verhinderd zijn dit te doen. We zullen alleen
+                        persoonsgegevens vrijgeven als we in goed vertrouwen geloven
+                        dat dit juridisch vereist is.
                       </li>
                       <li>
-                        Only if we reasonably believe it's necessary to prevent
-                        harm to the rights, property, or safety of you or
-                        others.
+                        Alleen als we redelijkerwijs geloven dat het noodzakelijk is om
+                        schade aan de rechten, eigendom of veiligheid van u of
+                        anderen te voorkomen.
                       </li>
                       <li>
-                        In the event of a corporate restructuring or change in
-                        our organizational structure or status to a successor or
-                        affiliate.
+                        In het geval van een bedrijfsherstructurering of wijziging in
+                        onze organisatiestructuur of status aan een opvolger of
+                        dochteronderneming.
                       </li>
                     </ul>
 
                     <p className="text-muted-foreground text-balance mb-4">
-                      Please note that some of our Services include
-                      integrations, references, or links to services provided by
-                      third parties whose privacy practices differ from ours. If
-                      you provide personal information to any of those third
-                      parties, or allow us to share personal information with
-                      them, that data is governed by their privacy statements.
+                      Houd er rekening mee dat sommige van onze Diensten
+                      integraties, verwijzingen of links bevatten naar diensten die worden verstrekt door
+                      derden wier privacybeleid verschilt van het onze. Als
+                      u persoonsgegevens verstrekt aan een van die derden,
+                      of ons toestaat persoonsgegevens met hen te delen, worden die gegevens beheerst door hun privacybeleid.
                     </p>
 
                     <p className="text-muted-foreground text-balance mb-6">
-                      Finally, we may share non-personal information in
-                      accordance with applicable law.
+                      Ten slotte kunnen we niet-persoonlijke informatie delen in
+                      overeenstemming met de toepasselijke wetgeving.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Information Protection
+                      Gegevensbescherming
                     </h3>
                     <p className="text-muted-foreground text-balance mb-6">
-                      We implement physical, business, and technical security
-                      measures to safeguard your personal information. In the
-                      event of a security breach, we'll notify you so that you
-                      can take appropriate protective steps. We only keep your
-                      personal information for as long as is needed to do what
-                      we collected it for. After that, we destroy it unless
-                      required by law.
+                      We implementeren fysieke, bedrijfs- en technische beveiligingsmaatregelen
+                      om uw persoonsgegevens te beschermen. In het
+                      geval van een beveiligingslek zullen we u op de hoogte stellen zodat u
+                      passende beschermende maatregelen kunt nemen. We bewaren uw
+                      persoonsgegevens alleen zolang als nodig is voor het doel
+                      waarvoor we deze hebben verzameld. Daarna vernietigen we deze, tenzij
+                      dit door de wet is vereist.
                     </p>
 
                     <h3 className="text-lg font-medium tracking-tight">
-                      Contact Us
+                      Uw Rechten
+                    </h3>
+                    <p className="text-muted-foreground text-balance mb-4">
+                      Onder de Algemene Verordening Gegevensbescherming (AVG) heeft u de volgende rechten:
+                    </p>
+                    <ul className="text-muted-foreground space-y-1 mb-6">
+                      <li>Het recht om toegang te krijgen tot uw persoonsgegevens</li>
+                      <li>Het recht om rectificatie van onjuiste gegevens te verzoeken</li>
+                      <li>Het recht om verwijdering van uw gegevens te verzoeken</li>
+                      <li>Het recht om bezwaar te maken tegen verwerking</li>
+                      <li>Het recht op gegevensoverdraagbaarheid</li>
+                      <li>Het recht om toestemming in te trekken</li>
+                    </ul>
+
+                    <h3 className="text-lg font-medium tracking-tight">
+                      Neem Contact Op
                     </h3>
                     <p className="text-muted-foreground text-balance">
-                      You can get in touch by emailing us at{' '}
+                      U kunt contact met ons opnemen door een e-mail te sturen naar{' '}
                       <a
-                        href="mailto:legal@tynktech.ai"
+                        href="mailto:admin@thynktech.nl"
                         className="text-secondary hover:underline"
                       >
-                        legal@tynktech.ai
+                        admin@thynktech.nl
                       </a>
                       .
                     </p>

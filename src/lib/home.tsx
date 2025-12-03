@@ -1242,17 +1242,17 @@ export const siteConfig = {
         {
           id: 9,
           title: 'Privacybeleid',
-          url: 'https://tynktech.nl/legal',
+          url: '/legal?tab=privacy',
         },
         {
           id: 10,
           title: 'Algemene Voorwaarden',
-          url: 'https://tynktech.nl/legal',
+          url: '/legal?tab=terms',
         },
         {
           id: 11,
           title: 'Licentie',
-          url: 'https://tynktech.nl/license',
+          url: '/license',
         },
       ],
     },
