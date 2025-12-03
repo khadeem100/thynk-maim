@@ -19,6 +19,7 @@ const PUBLIC_ROUTES = [
   '/contact', // Contact page should be public
   '/careers', // Careers page should be public
   '/portfolio', // Portfolio pages should be public
+  '/diy', // DIY website scan page should be public
   '/master-login', // Master password admin login
 ];
 
