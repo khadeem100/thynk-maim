@@ -1222,6 +1222,7 @@ export const siteConfig = {
         { id: 2, title: 'Portfolio', url: '/portfolio' },
         { id: 3, title: 'Contact', url: '/contact' },
         { id: 4, title: 'Vacatures', url: '/careers' },
+        { id: 12, title: 'DIY Website Scan', url: '/diy' },
       ],
     },
     {
