@@ -1,231 +1,211 @@
 'use client';
 
-import { motion, useInView, AnimatePresence } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
-import { Icons } from '@/components/home/icons';
+import { Shield, CheckCircle2, TrendingUp, HeadphonesIcon, Wrench, BarChart3 } from 'lucide-react';
 
-interface TaskConfig {
-  title: string;
-  icon: React.ReactNode;
-  status: 'pending' | 'processing' | 'completed';
-  className: string;
-}
-
-const taskConfigs: TaskConfig[] = [
-  {
-    title: 'Email sorted',
-    icon: (
-      <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    status: 'completed',
-    className: 'bg-muted border border-border text-muted-foreground',
-  },
-  {
-    title: 'Meeting scheduled',
-    icon: (
-      <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    status: 'completed',
-    className: 'bg-muted border border-border text-muted-foreground',
-  },
-  {
-    title: 'Reports generated',
-    icon: (
-      <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    status: 'processing',
-    className: 'bg-accent border border-border text-foreground',
-  },
-  {
-    title: 'Data analyzed',
-    icon: (
-      <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-    status: 'pending',
-    className: 'bg-muted/50 border border-border/50 text-muted-foreground/70',
-  },
-];
-
-export function AITaskExecution({
-  shouldAnimate,
-  startAnimationDelay,
-}: {
-  shouldAnimate: boolean;
-  startAnimationDelay?: number;
-}) {
-  const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
-  const [showTasks, setShowTasks] = useState(false);
-
-  useEffect(() => {
-    if (!shouldAnimate) {
-      setShowTasks(false);
-      setCurrentTaskIndex(0);
-      return;
-    }
-
-    const timeoutId = setTimeout(
-      () => {
-        setShowTasks(true);
-      },
-      (startAnimationDelay || 0) * 1000,
-    );
-
-    return () => clearTimeout(timeoutId);
-  }, [shouldAnimate, startAnimationDelay]);
-
-  useEffect(() => {
-    if (!showTasks) return;
-
-    const intervalId = setInterval(() => {
-      setCurrentTaskIndex((prev) => {
-        if (prev < taskConfigs.length - 1) {
-          return prev + 1;
-        }
-        return 0; // Reset to start the cycle again
-      });
-    }, 1500);
-
-    return () => {
-      if (intervalId) clearInterval(intervalId);
-    };
-  }, [showTasks]);
-
-  return (
-    <div className="w-full max-w-sm mx-auto px-6 space-y-3">
-      {/* AI Brain Icon */}
-      <div className="flex justify-center mb-6">
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{
-            scale: showTasks ? 1 : 0,
-            opacity: showTasks ? 1 : 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: 'backOut',
-          }}
-          className="relative"
-        >
-          <div className="size-12 bg-black rounded-full flex items-center justify-center">
-            <img 
-              src="/kortix-symbol.svg" 
-              alt="Tynk Tech Symbol" 
-              className="size-6 filter brightness-0 invert"
-            />
-          </div>
-          {/* Pulsing ring */}
-          <motion.div
-            className="absolute inset-0 border-2 border-secondary rounded-full"
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.5, 0, 0.5],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-        </motion.div>
-      </div>
-
-      {/* Task List */}
-      <AnimatePresence>
-        {taskConfigs.map((task, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{
-              opacity: showTasks && index <= currentTaskIndex ? 1 : 0.3,
-              x: showTasks ? 0 : -20,
-            }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.2,
-              ease: 'easeOut',
-            }}
-            className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 ${
-              index <= currentTaskIndex ? task.className : 'bg-muted/30 border border-border/30 text-muted-foreground/50'
-            }`}
-          >
-            {/* Status indicator */}
-            <div className="flex-shrink-0">
-              {index < currentTaskIndex ? (
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="size-5 bg-primary rounded-full flex items-center justify-center"
-                >
-                  <svg className="size-3 text-primary-foreground" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </motion.div>
-              ) : index === currentTaskIndex ? (
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                  className="size-5 border-2 border-primary border-t-transparent rounded-full"
-                />
-              ) : (
-                <div className="size-5 border-2 border-border rounded-full" />
-              )}
-            </div>
-
-            {/* Task icon and title */}
-            <div className="flex items-center gap-2">
-              {task.icon}
-              <span className="text-sm font-medium">{task.title}</span>
-            </div>
-          </motion.div>
-        ))}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-
-
-export function ThirdBentoAnimation({
-  startAnimationDelay = 0,
-  once = false,
-}: {
-  data?: number[];
-  toolTipValues?: number[];
-  color?: string;
-  startAnimationDelay?: number;
-  once?: boolean;
-}) {
+export function ThirdBentoAnimation() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once });
+  const isInView = useInView(ref);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [activeService, setActiveService] = useState(0);
 
   useEffect(() => {
     if (isInView) {
       setShouldAnimate(true);
     } else {
       setShouldAnimate(false);
+      setActiveService(0);
     }
   }, [isInView]);
+
+  useEffect(() => {
+    if (!shouldAnimate) return;
+
+    const interval = setInterval(() => {
+      setActiveService((prev) => (prev + 1) % 3);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [shouldAnimate]);
+
+  const services = [
+    {
+      icon: <Wrench className="w-5 h-5" />,
+      title: 'Onderhoud',
+      description: 'Regelmatige updates en optimalisaties',
+      color: 'primary',
+    },
+    {
+      icon: <HeadphonesIcon className="w-5 h-5" />,
+      title: 'Support',
+      description: '24/7 beschikbaar voor vragen',
+      color: 'secondary',
+    },
+    {
+      icon: <TrendingUp className="w-5 h-5" />,
+      title: 'Optimalisatie',
+      description: 'Continue verbetering van prestaties',
+      color: 'primary',
+    },
+  ];
 
   return (
     <div
       ref={ref}
-      className="relative flex size-full items-center justify-center h-[300px] pt-10 overflow-hidden"
+      className="relative flex size-full items-center justify-center h-full overflow-hidden"
     >
       <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
-      <div className="flex items-center justify-center w-full h-full">
-        <AITaskExecution
-          shouldAnimate={shouldAnimate}
-          startAnimationDelay={startAnimationDelay}
-        />
+
+      <div className="w-full max-w-md mx-auto p-6">
+        {/* Central Status Indicator */}
+        <motion.div
+          className="flex flex-col items-center justify-center mb-8"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{
+            opacity: shouldAnimate ? 1 : 0,
+            scale: shouldAnimate ? 1 : 0,
+          }}
+          transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
+        >
+          <motion.div
+            className="relative"
+            animate={{
+              scale: shouldAnimate ? [1, 1.05, 1] : 1,
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          >
+            <div className="size-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg border-4 border-background">
+              <CheckCircle2 className="w-8 h-8 text-primary-foreground" />
+            </div>
+            {/* Pulsing rings */}
+            <motion.div
+              className="absolute inset-0 border-2 border-primary rounded-full"
+              animate={{
+                scale: [1, 1.4, 1],
+                opacity: [0.6, 0, 0.6],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 border-2 border-secondary rounded-full"
+              animate={{
+                scale: [1, 1.6, 1],
+                opacity: [0.4, 0, 0.4],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: 0.5,
+                ease: 'easeInOut',
+              }}
+            />
+          </motion.div>
+          <motion.p
+            className="text-sm font-semibold mt-4 text-foreground"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{
+              opacity: shouldAnimate ? 1 : 0,
+              y: shouldAnimate ? 0 : 10,
+            }}
+            transition={{ delay: 0.6 }}
+          >
+            Website Live & Actief
+          </motion.p>
+        </motion.div>
+
+        {/* Service Cards */}
+        <div className="space-y-3">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className={`p-4 rounded-lg border transition-all duration-300 ${
+                activeService === index
+                  ? 'bg-primary/10 border-primary/30 shadow-lg scale-105'
+                  : 'bg-background border-border'
+              }`}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{
+                opacity: shouldAnimate ? 1 : 0,
+                x: shouldAnimate ? 0 : -20,
+              }}
+              transition={{
+                delay: 0.8 + index * 0.2,
+                duration: 0.4,
+              }}
+            >
+              <div className="flex items-center gap-3">
+                <motion.div
+                  className={`p-2 rounded-lg ${
+                    activeService === index
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-muted text-muted-foreground'
+                  }`}
+                  animate={{
+                    rotate: activeService === index ? [0, 10, -10, 0] : 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    repeat: activeService === index ? Infinity : 0,
+                    repeatDelay: 2,
+                  }}
+                >
+                  {service.icon}
+                </motion.div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-sm">{service.title}</h4>
+                  <p className="text-xs text-muted-foreground">
+                    {service.description}
+                  </p>
+                </div>
+                {activeService === index && (
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="text-primary"
+                  >
+                    <CheckCircle2 className="w-5 h-5" />
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Bar */}
+        <motion.div
+          className="mt-6 p-4 bg-accent/50 rounded-lg border border-border"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{
+            opacity: shouldAnimate ? 1 : 0,
+            y: shouldAnimate ? 0 : 20,
+          }}
+          transition={{ delay: 1.5 }}
+        >
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-2">
+              <BarChart3 className="w-4 h-4 text-secondary" />
+              <span className="text-xs font-medium">Performance</span>
+            </div>
+            <span className="text-xs font-bold text-secondary">98%</span>
+          </div>
+          <div className="w-full bg-background rounded-full h-2 overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: shouldAnimate ? '98%' : 0 }}
+              transition={{ delay: 1.7, duration: 1, ease: 'easeOut' }}
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   );

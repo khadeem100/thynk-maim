@@ -1,119 +1,152 @@
-import { Icons } from '@/components/home/icons';
-import { OrbitingCircles } from '@/components/home/ui/orbiting-circle';
+'use client';
+
+import { motion, useInView } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
+import { Code2, FileCode, Terminal, Zap } from 'lucide-react';
 
 export function SecondBentoAnimation() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (isInView) {
+      setShouldAnimate(true);
+    } else {
+      setShouldAnimate(false);
+    }
+  }, [isInView]);
+
+  const codeLines = [
+    { text: 'const website = {', indent: 0, delay: 0 },
+    { text: '  framework: "Next.js",', indent: 1, delay: 0.2 },
+    { text: '  styling: "Tailwind CSS",', indent: 1, delay: 0.4 },
+    { text: '  features: [', indent: 1, delay: 0.6 },
+    { text: '    "Responsive Design",', indent: 2, delay: 0.8 },
+    { text: '    "SEO Optimized",', indent: 2, delay: 1.0 },
+    { text: '    "Fast Performance"', indent: 2, delay: 1.2 },
+    { text: '  ]', indent: 1, delay: 1.4 },
+    { text: '};', indent: 0, delay: 1.6 },
+  ];
+
   return (
-    <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+    <div
+      ref={ref}
+      className="relative flex h-full w-full items-center justify-center overflow-hidden"
+    >
       <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
       <div className="pointer-events-none absolute top-0 left-0 h-20 w-full bg-gradient-to-b from-background to-transparent z-20"></div>
 
-      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 size-16 bg-black p-2 rounded-full z-30 md:bottom-0 md:top-auto">
-        <img 
-          src="/kortix-symbol.svg" 
-          alt="Tynk Tech Symbol" 
-          className="size-10 filter brightness-0 invert"
-        />
-      </div>
-      <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
-        <div className="relative flex h-full w-full items-center justify-center translate-y-0 md:translate-y-32">
-          <OrbitingCircles
-            index={0}
-            iconSize={60}
-            radius={100}
-            reverse
-            speed={1}
-          >
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Slack" className="size-8" />
+      <div className="w-full max-w-md mx-auto p-6">
+        {/* Code Editor */}
+        <motion.div
+          className="bg-[#1e1e1e] rounded-lg border border-border shadow-2xl overflow-hidden"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ 
+            opacity: shouldAnimate ? 1 : 0,
+            scale: shouldAnimate ? 1 : 0.9
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Editor Header */}
+          <div className="flex items-center gap-2 px-4 py-2 bg-[#252526] border-b border-border/50">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
             </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Google_Docs_logo_%282014-2020%29.svg" alt="Google Docs" className="size-8" />
+            <div className="flex-1 flex items-center gap-2 ml-4">
+              <FileCode className="w-3.5 h-3.5 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground">website.tsx</span>
             </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="size-8" />
-            </div>
-          </OrbitingCircles>
+          </div>
 
-          <OrbitingCircles index={1} iconSize={60} speed={0.5}>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Google Calendar" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.svg" alt="Trello" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Google_Sheets_icon_%282020%29.svg" alt="Google Sheets" className="size-8" />
-            </div>
-          </OrbitingCircles>
+          {/* Code Content */}
+          <div className="p-4 font-mono text-sm">
+            {codeLines.map((line, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center gap-2 mb-1"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{
+                  opacity: shouldAnimate ? 1 : 0,
+                  x: shouldAnimate ? 0 : -20,
+                }}
+                transition={{
+                  delay: line.delay,
+                  duration: 0.3,
+                }}
+              >
+                <span className="text-muted-foreground/50 text-xs w-6 text-right">
+                  {index + 1}
+                </span>
+                <span
+                  className="text-foreground"
+                  style={{ marginLeft: `${line.indent * 1.5}rem` }}
+                >
+                  {line.text}
+                </span>
+                {shouldAnimate && index === codeLines.length - 1 && (
+                  <motion.span
+                    className="inline-block w-0.5 h-4 bg-primary ml-1"
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-          <OrbitingCircles
-            index={2}
-            iconSize={60}
-            radius={230}
-            reverse
-            speed={0.5}
+        {/* Floating Icons */}
+        <div className="absolute inset-0 pointer-events-none">
+          <motion.div
+            className="absolute top-10 right-10"
+            initial={{ opacity: 0, scale: 0, rotate: -180 }}
+            animate={{
+              opacity: shouldAnimate ? 1 : 0,
+              scale: shouldAnimate ? 1 : 0,
+              rotate: shouldAnimate ? 0 : -180,
+            }}
+            transition={{ delay: 2, type: 'spring', stiffness: 200 }}
           >
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="size-8" />
+            <div className="bg-primary/10 p-3 rounded-lg border border-primary/20">
+              <Code2 className="w-6 h-6 text-primary" />
             </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://cdn.worldvectorlogo.com/logos/asana-logo.svg" alt="Asana" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" alt="Teams" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mail_%28iOS%29.svg/1024px-Mail_%28iOS%29.svg.png" alt="Apple Mail" className="size-8" />
-            </div>
-            <div className="size-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="size-8" />
-            </div>
-          </OrbitingCircles>
-          
-          {/* Additional outer ring for more tools */}
-          <OrbitingCircles
-            index={3}
-            iconSize={50}
-            radius={320}
-            speed={0.3}
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-20 left-10"
+            initial={{ opacity: 0, scale: 0, rotate: 180 }}
+            animate={{
+              opacity: shouldAnimate ? 1 : 0,
+              scale: shouldAnimate ? 1 : 0,
+              rotate: shouldAnimate ? 0 : 180,
+            }}
+            transition={{ delay: 2.2, type: 'spring', stiffness: 200 }}
           >
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/480px-Google_Chrome_icon_%28February_2022%29.svg.png" alt="Chrome" className="size-6" />
+            <div className="bg-secondary/10 p-3 rounded-lg border border-secondary/20">
+              <Zap className="w-6 h-6 text-secondary" />
             </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Twitter_bird_logo_2012.svg/512px-Twitter_bird_logo_2012.svg.png" alt="Twitter" className="size-6" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-1/2 right-5"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              opacity: shouldAnimate ? 1 : 0,
+              scale: shouldAnimate ? 1 : 0,
+            }}
+            transition={{ delay: 2.4, type: 'spring', stiffness: 200 }}
+          >
+            <div className="bg-accent p-3 rounded-lg border border-border">
+              <Terminal className="w-5 h-5 text-foreground" />
             </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="Instagram" className="size-6" />
-            </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/600px-Facebook_Logo_%282019%29.png" alt="Facebook" className="size-6" />
-            </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Zoom_Icon.png/600px-Zoom_Icon.png" alt="Zoom" className="size-6" />
-            </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Dropbox_Icon.svg/480px-Dropbox_Icon.svg.png" alt="Dropbox" className="size-6" />
-            </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/480px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" className="size-6" />
-            </div>
-            <div className="size-10 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100 opacity-75">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/480px-ChatGPT_logo.svg.png" alt="OpenAI" className="size-6" />
-            </div>
-          </OrbitingCircles>
+          </motion.div>
         </div>
       </div>
     </div>
