@@ -183,15 +183,7 @@ function PricingTier({
   
   // Determine the price to display based on billing period
   const getDisplayPrice = () => {
-    if (billingPeriod === 'yearly_commitment' && tier.monthlyCommitmentStripePriceId) {
-      // Calculate the yearly commitment price (15% off regular monthly)
-      const regularPrice = parseFloat(tier.price.slice(1));
-      const discountedPrice = Math.round(regularPrice * 0.85);
-      return `$${discountedPrice}`;
-    } else if (billingPeriod === 'yearly' && tier.yearlyPrice) {
-      // Legacy yearly plans (hidden from UI but still accessible)
-      return tier.yearlyPrice;
-    }
+    // For service-based pricing, always show the base price per hour
     return tier.price;
   };
 
@@ -497,57 +489,13 @@ function PricingTier({
           {isAuthenticated && statusBadge}
         </p>
         <div className="flex items-baseline mt-2">
-          {billingPeriod === 'yearly_commitment' && tier.monthlyCommitmentStripePriceId ? (
-            <div className="flex flex-col">
-              <div className="flex items-baseline gap-2">
-                <PriceDisplay price={displayPrice} isCompact={insideDialog} />
-                <span className="text-xs line-through text-muted-foreground">
-                  {tier.price.startsWith('€') ? '€' : '$'}{tier.price.slice(1)}
-                </span>
-              </div>
-              <div className="flex items-center gap-1 mt-1">
-                <span className="text-xs text-muted-foreground">uren per project</span>
-              </div>
-            </div>
-          ) : billingPeriod === 'yearly' && tier.yearlyPrice && displayPrice !== '$0' ? (
-            <div className="flex flex-col">
-              <div className="flex items-baseline gap-2">
-                <PriceDisplay price={`${tier.yearlyPrice.startsWith('€') ? '€' : '$'}${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)}`} isCompact={insideDialog} />
-                {tier.discountPercentage && (
-                  <span className="text-xs line-through text-muted-foreground">
-                    {tier.originalYearlyPrice?.startsWith('€') ? '€' : '$'}{Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') / 12)}
-                  </span>
-                )}
-              </div>
-              <div className="flex items-center gap-2 mt-1">
-                <span className="text-xs text-muted-foreground">uren per project</span>
-              </div>
-            </div>
-          ) : (
-            <div className="flex items-baseline">
-              <PriceDisplay price={displayPrice} isCompact={insideDialog} />
-              <span className="ml-2">{displayPrice !== '€0' && displayPrice !== '$0' ? 'uren per project' : ''}</span>
-            </div>
-          )}
+          <div className="flex items-baseline">
+            <PriceDisplay price={displayPrice} isCompact={insideDialog} />
+            <span className="ml-2">{displayPrice !== '€0' && displayPrice !== '$0' ? 'per uur' : ''}</span>
+          </div>
         </div>
         <p className="hidden text-sm mt-2">{tier.description}</p>
 
-        {billingPeriod === 'yearly_commitment' && tier.monthlyCommitmentStripePriceId ? (
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-50 border-green-200 text-green-700 w-fit">
-            Bespaar {tier.price.startsWith('€') ? '€' : '$'}{Math.round((parseFloat(tier.price.slice(1)) - parseFloat(displayPrice.slice(1))) * 12)} per jaar
-          </div>
-        ) : billingPeriod === 'yearly' && tier.yearlyPrice && tier.discountPercentage ? (
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-50 border-green-200 text-green-700 w-fit">
-            Bespaar {tier.yearlyPrice.startsWith('€') ? '€' : '$'}{Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') - parseFloat(tier.yearlyPrice.slice(1)))} per jaar
-          </div>
-        ) : (
-          <div className="hidden items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 border-primary/20 text-primary w-fit">
-            {billingPeriod === 'yearly' && tier.yearlyPrice && displayPrice !== '$0'
-              ? `${tier.yearlyPrice.startsWith('€') ? '€' : '$'}${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)} uren per project`
-              : `${displayPrice} uren per project`
-            }
-          </div>
-        )}
       </div>
 
       <div className={cn(
@@ -688,20 +636,14 @@ export function PricingSection({
         {showTitleAndTabs && (
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
-              Kies het juiste plan voor jouw behoeften
+              Onze Service Prijzen
             </h2>
             <p className="text-muted-foreground text-center text-balance font-medium">
-              Start met ons gratis plan of upgrade voor meer functionaliteiten en ondersteuning
+              Transparante uurtarieven voor al onze diensten. Kies de service die bij jouw project past.
             </p>
           </SectionHeader>
         )}
 
-        <div className="flex justify-center mb-8">
-          <BillingPeriodToggle
-            billingPeriod={billingPeriod}
-            setBillingPeriod={setBillingPeriod}
-          />
-        </div>
 
         <div className={cn(
           "grid gap-6 w-full",
