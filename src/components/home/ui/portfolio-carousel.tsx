@@ -224,7 +224,7 @@ export function PortfolioCarousel() {
           Bekijk volledig portfolio
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
-        <ContactModal buttonText="Start jouw project" calLink="tynktech.nl/consultation">
+        <ContactModal calLink="tynktech.nl/consultation">
           <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all font-medium text-sm shadow-md">
             Start jouw project
           </button>
