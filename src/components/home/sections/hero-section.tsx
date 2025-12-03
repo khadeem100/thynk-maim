@@ -41,6 +41,7 @@ import { agentKeys } from '@/hooks/react-query/agents/keys';
 import { getAgents } from '@/hooks/react-query/agents/utils';
 import { AgentRunLimitDialog } from '@/components/thread/agent-run-limit-dialog';
 import { useAgentSelection } from '@/lib/stores/agent-selection-store';
+import { Hero } from '@/components/ui/hero';
 
 // Custom dialog overlay with blur effect
 const BlurredDialogOverlay = () => (
@@ -338,78 +339,29 @@ export function HeroSection() {
         <div className="absolute inset-x-0 sm:inset-x-1/6 md:inset-x-1/4 top-0 h-[500px] sm:h-[600px] md:h-[800px] -z-20 bg-background rounded-b-xl"></div>
 
         <div className="relative z-10 pt-16 sm:pt-24 md:pt-32 mx-auto h-full w-full max-w-6xl flex flex-col items-center justify-center">
-          {/* <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">
-            {hero.badgeIcon}
-            {hero.badge}
-          </p> */}
-
-          {/* <Link
-            href={hero.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group border border-border/50 bg-background hover:bg-accent/20 hover:border-secondary/40 rounded-full text-sm h-8 px-3 flex items-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 hover:-translate-y-0.5"
-          >
-            {hero.badgeIcon}
-            <span className="font-medium text-muted-foreground text-xs tracking-wide group-hover:text-primary transition-colors duration-300">
-              {hero.badge}
-            </span>
-            <span className="inline-flex items-center justify-center size-3.5 rounded-full bg-muted/30 group-hover:bg-secondary/30 transition-colors duration-300">
-              <svg
-                width="8"
-                height="8"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-muted-foreground group-hover:text-primary"
-              >
-                <path
-                  d="M7 17L17 7M17 7H8M17 7V16"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </Link> */}
-          <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 pt-8 sm:pt-12 max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center px-2">
-              <span className="text-primary">TynkTech – Moderne Websites, </span>
-              <RotatingText 
-                texts={['Webapplicaties', 'Cloud', 'Cybersecurity', 'Webdesign', 'Cloudbeheer', 'Security', 'Weboplossingen', 'Digitale Oplossingen']}
-                className="text-secondary"
-              />
-            </h1>
-            <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight max-w-2xl px-2">
-            Innovatief technologiebedrijf gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center w-full max-w-3xl mx-auto gap-2 flex-wrap justify-center px-2 sm:px-0">
-            <div className="w-full relative">
-              <div className="relative z-10">
-                <ChatInput
-                  ref={chatInputRef}
-                  onSubmit={handleChatInputSubmit}
-                  placeholder="Vraag TynkTech om hulp..."
-                  loading={isSubmitting}
-                  disabled={isSubmitting}
-                  value={inputValue}
-                  onChange={setInputValue}
-                  isLoggedIn={!!user}
-                  selectedAgentId={selectedAgentId}
-                  onAgentSelect={setSelectedAgent}
-                  autoFocus={false}
-                  enableAdvancedConfig={false}
-                  animatePlaceholder={true}
-                />
-              </div>
-              {/* Subtle glow effect */}
-              <div className="absolute -bottom-4 inset-x-0 h-6 bg-secondary/20 blur-xl rounded-full -z-10 opacity-70"></div>
-            </div>
-            
-          </div>
-
+          <Hero
+            title={
+              <>
+                <div className="whitespace-nowrap">
+                  <span className="text-primary">TynkTech – Moderne Websites, </span>
+                </div>
+                <div className="text-primary">
+                  <RotatingText 
+                    texts={['Webapplicaties', 'Cloud', 'Cybersecurity', 'Webdesign', 'Cloudbeheer', 'Security', 'Weboplossingen', 'Digitale Oplossingen']}
+                    className="text-secondary"
+                  />
+                </div>
+              </>
+            }
+            subtitle="Innovatief technologiebedrijf gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat."
+            ctaText="Vraag TynkTech om hulp"
+            mockupImage={{
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1274&h=1043&fit=crop",
+              alt: "TynkTech Digitale Oplossingen",
+              width: 1274,
+              height: 1043
+            }}
+          />
         </div>
 
       </div>
