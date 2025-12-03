@@ -64,7 +64,7 @@ export function TynkTechEnterpriseModal({
             <div className="relative z-10 flex flex-col h-full">
               <div className="mb-6 flex-shrink-0">
                 <Image
-                  src={isDarkMode ? '/kortix-logo-white.svg' : '/kortix-logo.svg'}
+                  src="/kortix-logo.svg"
                   alt="Tynk Tech Logo"
                   width={80}
                   height={28}

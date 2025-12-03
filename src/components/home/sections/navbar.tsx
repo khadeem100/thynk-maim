@@ -103,12 +103,6 @@ export function Navbar() {
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
-  const logoSrc = !mounted
-    ? '/kortix-logo.svg'
-    : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
-
   return (
     <header
       className={cn(
@@ -134,7 +128,7 @@ export function Navbar() {
             <div className="flex items-center justify-start flex-shrink-0 w-auto md:w-[200px]">
               <Link href="/" className="flex items-center gap-3">
                 <Image
-                  src={logoSrc}
+                  src="/kortix-logo.svg"
                   alt="Tynk Tech Logo"
                   width={80}
                   height={14}
@@ -175,7 +169,7 @@ export function Navbar() {
                   ) : (
                     <Link
                       className="bg-secondary h-8 hidden md:flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-fit px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12]"
-                      href="/auth"
+                      href="/contact"
                     >
                       Neem contact op
                     </Link>
@@ -224,7 +218,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                   <Link href="/" className="flex items-center gap-3">
                     <Image
-                      src={logoSrc}
+                      src="/kortix-logo.svg"
                       alt="Tynk Tech Logo"
                       width={120}
                       height={22}
@@ -315,7 +309,7 @@ export function Navbar() {
                     </Link>
                   ) : (
                     <Link
-                      href="/auth"
+                      href="/contact"
                       className="bg-secondary h-8 flex items-center justify-center text-sm font-normal tracking-wide rounded-full text-primary-foreground dark:text-secondary-foreground w-full px-4 shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_3px_3px_-1.5px_rgba(16,24,40,0.06),0_1px_1px_rgba(16,24,40,0.08)] border border-white/[0.12] hover:bg-secondary/80 transition-all ease-out active:scale-95"
                     >
                       Neem contact op

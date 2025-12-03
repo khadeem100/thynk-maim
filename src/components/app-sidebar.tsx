@@ -103,13 +103,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     setMounted(true);
   }, []);
 
-  const logoSrc = !mounted
-    ? '/kortix-logo.svg'
-    : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
-  
-
   const isActive = (url: string) => {
     return pathname === url
   }
@@ -118,7 +111,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar className="w-72 [&_[data-sidebar=sidebar]]:bg-white dark:[&_[data-sidebar=sidebar]]:bg-black border-none" {...props}>
       <SidebarHeader className="bg-transparent p-6 px-2">
         <Image
-          src={logoSrc}
+          src="/kortix-logo.svg"
           alt="Tynk Tech Logo"
           width={80}
           height={14}

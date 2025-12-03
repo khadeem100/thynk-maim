@@ -73,11 +73,12 @@ export const siteConfig = {
   nav: {
     links: [
       { id: 1, name: 'Home', href: '#hero' },
-      { id: 2, name: 'Features', href: '#process' },
+      { id: 2, name: 'Diensten', href: '#process' },
       // { id: 3, name: 'Use Cases', href: '#use-cases' },
-      { id: 4, name: 'AI interface', href: '#ai-interface' },
-      { id: 5, name: 'Pricing', href: '#pricing' },
-      { id: 6, name: 'E2E', href: '/enterprise' },
+      { id: 4, name: 'Oplossingen', href: '#ai-interface' },
+      { id: 5, name: 'Prijzen', href: '#pricing' },
+      { id: 6, name: 'Enterprise', href: '/enterprise' },
+      { id: 7, name: 'Contact', href: '/contact' },
     ],
   },
   hero: {
@@ -1203,47 +1204,48 @@ export const siteConfig = {
     backgroundImage: '/holo.png',
     button: {
       text: 'Neem contact op',
-      href: '/auth',
+      href: '/contact',
     },
     subtext: 'Ontdek wat TynkTech voor jouw bedrijf kan betekenen',
   },
   footerLinks: [
     {
-      title: 'Tynk',
+      title: 'TynkTech',
       links: [
-        { id: 1, title: 'About', url: 'https://tynktech.nl' },
-        { id: 3, title: 'Contact', url: 'mailto:admin@thynktech.nl' },
-        { id: 4, title: 'Careers', url: 'https://tynktech/careers' },
+        { id: 1, title: 'Over Ons', url: 'https://tynktech.nl' },
+        { id: 3, title: 'Contact', url: '/contact' },
+        { id: 4, title: 'Vacatures', url: 'https://tynktech.nl/careers' },
       ],
     },
     {
-      title: 'Resources',
+      title: 'Diensten',
       links: [
         {
           id: 5,
-          title: 'Documentation',
-          url: 'https://github.com/thynktech/teetee',
+          title: 'Website Ontwikkeling',
+          url: '/#pricing',
         },
-        { id: 7, title: 'Forum', url: 'https://tynktech.nl/forum' }, //
-        { id: 8, title: 'GitHub', url: 'https://github.com/tynktech/teetee' },
+        { id: 6, title: 'Webapplicaties', url: '/#pricing' },
+        { id: 7, title: 'Cloudbeheer', url: '/#pricing' },
+        { id: 8, title: 'Cybersecurity', url: '/#pricing' },
       ],
     },
     {
-      title: 'Legal',
+      title: 'Juridisch',
       links: [
         {
           id: 9,
-          title: 'Privacy Policy',
+          title: 'Privacybeleid',
           url: 'https://tynktech.nl/legal',
         },
         {
           id: 10,
-          title: 'Terms of Service',
+          title: 'Algemene Voorwaarden',
           url: 'https://tynktech.nl/legal',
         },
         {
           id: 11,
-          title: 'License Apache 2.0',
+          title: 'Licentie',
           url: 'https://tynktech.nl/license',
         },
       ],

@@ -19,12 +19,6 @@ export function FooterSection() {
     setMounted(true);
   }, []);
 
-  const logoSrc = !mounted
-    ? '/kortix-logo.svg'
-    : resolvedTheme === 'dark'
-      ? '/kortix-logo-white.svg'
-      : '/kortix-logo.svg';
-
   return (
     <footer id="footer" className="w-full pb-0 px-6">
         <div className="w-full mx-auto">
@@ -33,7 +27,7 @@ export function FooterSection() {
             <div className="flex flex-col items-start justify-start gap-y-5 max-w-xs mx-0">
               <Link href="/" className="flex items-center gap-2">
                 <Image
-                  src={logoSrc}
+                  src="/kortix-logo.svg"
                   alt="Tynk Tech Logo"
                   width={122}
                   height={22}
