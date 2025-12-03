@@ -1,0 +1,77 @@
+# robots.txt for TynkTech - Optimized for Maximum Search Engine Visibility
+# https://www.robotstxt.org/
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /settings/
+Disallow: /invitation/
+Disallow: /master-login/
+Disallow: /activate-trial/
+Disallow: /subscription/
+Disallow: /monitoring/
+
+# Allow important public pages
+Allow: /
+Allow: /enterprise
+Allow: /docs/
+Allow: /legal
+Allow: /changelog
+Allow: /templates/
+Allow: /share/
+
+# Sitemap location
+Sitemap: https://tynktech.nl/sitemap.xml
+
+# Crawl-delay for respectful crawling (optional, can be removed for faster indexing)
+# Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /banner.png
+Allow: /favicon.png
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# Host information
+Host: https://tynktech.nl
+
