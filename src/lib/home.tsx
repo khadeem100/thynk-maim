@@ -55,6 +55,7 @@ export interface PricingTier {
   billingPeriod?: 'monthly' | 'yearly'; // Add billing period support
   originalYearlyPrice?: string; // For showing crossed-out price
   discountPercentage?: number; // For showing discount badge
+  pricingNote?: string; // Additional pricing information (e.g., "vanaf 20 uur", "10 uren per week", "per maand")
 }
 
 export const siteConfig = {
@@ -128,6 +129,7 @@ export const siteConfig = {
       isPopular: false,
       /** @deprecated */
       hours: 'per uur',
+      pricingNote: 'Prijzen worden berekend vanaf 20 uur',
       features: [
         'Responsive webdesign',
         'CMS integratie',
@@ -155,6 +157,7 @@ export const siteConfig = {
       isPopular: true,
       /** @deprecated */
       hours: 'per uur',
+      pricingNote: 'Prijzen worden berekend vanaf 20 uur',
       features: [
         'Full-stack ontwikkeling',
         'API ontwikkeling',
@@ -208,6 +211,7 @@ export const siteConfig = {
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
       hours: 'per uur',
+      pricingNote: 'Op basis van 10 uren per week',
       features: [
         'Cloud infrastructuur setup',
         'Server configuratie',
@@ -234,6 +238,7 @@ export const siteConfig = {
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
       hours: 'per uur',
+      pricingNote: 'Op basis van 10 uren per week',
       features: [
         'Security audits',
         'Penetration testing',
@@ -260,6 +265,7 @@ export const siteConfig = {
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
       hours: 'per uur',
+      pricingNote: '€60 per maand',
       features: [
         'Bug fixes',
         'Updates & patches',

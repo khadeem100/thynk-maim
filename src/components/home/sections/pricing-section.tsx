@@ -495,6 +495,9 @@ function PricingTier({
             <span className="ml-2">{displayPrice !== '€0' && displayPrice !== '$0' ? 'per uur' : ''}</span>
           </div>
         </div>
+        {tier.pricingNote && (
+          <p className="text-xs text-muted-foreground mt-1">{tier.pricingNote}</p>
+        )}
         <p className="hidden text-sm mt-2">{tier.description}</p>
 
       </div>
