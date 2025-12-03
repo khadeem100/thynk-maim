@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
-import { Search, CheckCircle2, XCircle, AlertCircle, Loader2, Image as ImageIcon, FileText, Zap, Globe, TrendingUp } from 'lucide-react';
+import { Search, CheckCircle2, XCircle, AlertCircle, Loader2, Image as ImageIcon, FileText, Zap, Globe, TrendingUp, Download, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +10,8 @@ import { Badge } from '@/components/ui/badge';
 import { ContactModal } from '@/components/home/contact-modal';
 import { FlickeringGrid } from '@/components/home/ui/flickering-grid';
 import { useMediaQuery } from '@/hooks/use-media-query';
+import { saveAs } from 'file-saver';
+import html2pdf from 'html2pdf.js';
 
 interface ScanResults {
   url: string;
@@ -41,6 +43,8 @@ export default function DIYPage() {
   const [isScanning, setIsScanning] = useState(false);
   const [results, setResults] = useState<ScanResults | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const reportRef = useRef<HTMLDivElement>(null);
   const tablet = useMediaQuery('(max-width: 1024px)');
 
   const normalizeUrl = (input: string): string => {
@@ -176,6 +180,41 @@ export default function DIYPage() {
     return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
   };
 
+  const downloadJSON = () => {
+    if (!results) return;
+    
+    const domain = new URL(results.url).hostname;
+    const filename = `website-scan-${domain}-${new Date().toISOString().split('T')[0]}.json`;
+    const jsonData = JSON.stringify(results, null, 2);
+    const blob = new Blob([jsonData], { type: 'application/json' });
+    saveAs(blob, filename);
+  };
+
+  const downloadPDF = async () => {
+    if (!results || !reportRef.current) return;
+
+    setIsDownloading(true);
+    try {
+      const domain = new URL(results.url).hostname;
+      const filename = `website-scan-${domain}-${new Date().toISOString().split('T')[0]}.pdf`;
+
+      const opt = {
+        margin: [10, 10, 10, 10],
+        filename: filename,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      };
+
+      await html2pdf().set(opt).from(reportRef.current).save();
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      setError('Er is een fout opgetreden bij het genereren van de PDF.');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen w-full">
       <section className="w-full relative overflow-hidden pb-20">
@@ -270,6 +309,165 @@ export default function DIYPage() {
               transition={{ duration: 0.6 }}
               className="space-y-6"
             >
+              {/* Download Buttons */}
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold mb-1">Download Scan Rapport</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Download je scanresultaten als PDF of JSON bestand
+                      </p>
+                    </div>
+                    <div className="flex gap-3">
+                      <Button
+                        onClick={downloadPDF}
+                        disabled={isDownloading}
+                        variant="outline"
+                        className="w-full sm:w-auto"
+                      >
+                        {isDownloading ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Genereren...
+                          </>
+                        ) : (
+                          <>
+                            <FileDown className="w-4 h-4 mr-2" />
+                            Download PDF
+                          </>
+                        )}
+                      </Button>
+                      <Button
+                        onClick={downloadJSON}
+                        variant="outline"
+                        className="w-full sm:w-auto"
+                      >
+                        <Download className="w-4 h-4 mr-2" />
+                        Download JSON
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Report Content for PDF */}
+              <div ref={reportRef} className="hidden">
+                <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto' }}>
+                  <h1 style={{ fontSize: '28px', marginBottom: '10px', color: '#1a1a1a' }}>
+                    Website Scan Rapport
+                  </h1>
+                  <p style={{ fontSize: '14px', color: '#666', marginBottom: '30px' }}>
+                    Gemaakt op: {new Date().toLocaleDateString('nl-NL', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric',
+                      hour: '2-digit',
+                      minute: '2-digit'
+                    })}
+                  </p>
+
+                  <div style={{ marginBottom: '30px', padding: '15px', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
+                    <h2 style={{ fontSize: '18px', marginBottom: '10px', color: '#1a1a1a' }}>Website URL</h2>
+                    <p style={{ fontSize: '14px', color: '#333' }}>{results.url}</p>
+                  </div>
+
+                  <div style={{ marginBottom: '30px' }}>
+                    <h2 style={{ fontSize: '20px', marginBottom: '15px', color: '#1a1a1a' }}>Technische Bestanden</h2>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '4px' }}>
+                        <span>Sitemap.xml</span>
+                        <span style={{ fontWeight: 'bold', color: results.hasSitemap ? '#10b981' : '#ef4444' }}>
+                          {results.hasSitemap ? '✓ Aanwezig' : '✗ Ontbreekt'}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '4px' }}>
+                        <span>Robots.txt</span>
+                        <span style={{ fontWeight: 'bold', color: results.hasRobotsTxt ? '#10b981' : '#ef4444' }}>
+                          {results.hasRobotsTxt ? '✓ Aanwezig' : '✗ Ontbreekt'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '30px' }}>
+                    <h2 style={{ fontSize: '20px', marginBottom: '15px', color: '#1a1a1a' }}>Performance</h2>
+                    <div style={{ padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+                        <span>Laadtijd:</span>
+                        <span style={{ fontWeight: 'bold' }}>{results.performance.loadTime}s</span>
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
+                        <span>Score:</span>
+                        <span style={{ fontWeight: 'bold', fontSize: '18px', color: results.performance.score >= 80 ? '#10b981' : results.performance.score >= 60 ? '#eab308' : '#ef4444' }}>
+                          {results.performance.score}/100
+                        </span>
+                      </div>
+                      {results.performance.issues.length > 0 && (
+                        <div>
+                          <p style={{ fontWeight: 'bold', marginBottom: '8px' }}>Problemen:</p>
+                          <ul style={{ marginLeft: '20px', fontSize: '14px' }}>
+                            {results.performance.issues.map((issue, idx) => (
+                              <li key={idx} style={{ marginBottom: '5px' }}>{issue}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '30px' }}>
+                    <h2 style={{ fontSize: '20px', marginBottom: '15px', color: '#1a1a1a' }}>SEO Analyse</h2>
+                    <div style={{ padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
+                        <span>SEO Score:</span>
+                        <span style={{ fontWeight: 'bold', fontSize: '24px', color: results.seo.score >= 80 ? '#10b981' : results.seo.score >= 60 ? '#eab308' : '#ef4444' }}>
+                          {results.seo.score}/100
+                        </span>
+                      </div>
+                      {results.seo.issues.length > 0 && (
+                        <div>
+                          <p style={{ fontWeight: 'bold', marginBottom: '8px' }}>Aandachtspunten:</p>
+                          <ul style={{ marginLeft: '20px', fontSize: '14px' }}>
+                            {results.seo.issues.map((issue, idx) => (
+                              <li key={idx} style={{ marginBottom: '5px' }}>{issue}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div style={{ marginBottom: '30px' }}>
+                    <h2 style={{ fontSize: '20px', marginBottom: '15px', color: '#1a1a1a' }}>Verbeteringsvoorstellen</h2>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                      {results.suggestions.map((suggestion, idx) => (
+                        <div key={idx} style={{ padding: '15px', backgroundColor: '#f9f9f9', borderRadius: '8px', borderLeft: '4px solid #3b82f6' }}>
+                          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '8px' }}>{suggestion.title}</h3>
+                          <p style={{ fontSize: '14px', marginBottom: '10px', color: '#666' }}>{suggestion.description}</p>
+                          <div style={{ display: 'flex', gap: '10px', fontSize: '12px' }}>
+                            <span style={{ padding: '4px 8px', backgroundColor: '#e5e7eb', borderRadius: '4px' }}>
+                              {suggestion.service}
+                            </span>
+                            <span style={{ padding: '4px 8px', backgroundColor: '#e5e7eb', borderRadius: '4px' }}>
+                              Prioriteit: {suggestion.priority === 'high' ? 'Hoog' : suggestion.priority === 'medium' ? 'Gemiddeld' : 'Laag'}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ marginTop: '40px', padding: '20px', backgroundColor: '#f0f9ff', borderRadius: '8px', textAlign: 'center' }}>
+                    <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
+                      Dit rapport is gegenereerd door TynkTech DIY Website Scan
+                    </p>
+                    <p style={{ fontSize: '12px', color: '#999' }}>
+                      Voor meer informatie, bezoek tynktech.nl of neem contact op via contact@tynktech.nl
+                    </p>
+                  </div>
+                </div>
+              </div>
               {/* Screenshot */}
               {results.screenshot && (
                 <Card>
