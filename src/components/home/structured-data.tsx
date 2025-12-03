@@ -25,7 +25,7 @@ export function StructuredData() {
     sameAs: [
       siteConfig.links.twitter,
       siteConfig.links.github,
-      siteConfig.links.linkedin,
+      ...(siteConfig.links.instagram ? [siteConfig.links.instagram] : []),
     ],
   };
 

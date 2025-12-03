@@ -1,6 +1,5 @@
 'use client';
 
-import { Metadata } from 'next';
 import { useState } from 'react';
 import { SectionHeader } from '@/components/home/section-header';
 import { FooterSection } from '@/components/home/sections/footer-section';
