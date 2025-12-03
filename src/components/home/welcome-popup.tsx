@@ -68,7 +68,7 @@ export function WelcomePopup() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {/* Image Side - Left */}
-                <div className="relative h-[400px] md:h-[500px] bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 overflow-hidden">
+                <div className="relative h-[500px] md:h-[650px] bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 overflow-hidden">
                   <Image
                     src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop"
                     alt="TynkTech - Professioneel Team"
@@ -81,23 +81,23 @@ export function WelcomePopup() {
                 </div>
 
                 {/* Content Side - Right */}
-                <div className="p-8 md:p-10 flex flex-col justify-between h-[400px] md:h-[500px]">
-                  <div className="space-y-6">
+                <div className="p-8 md:p-10 flex flex-col justify-between h-[500px] md:h-[650px] overflow-y-auto">
+                  <div className="space-y-5">
                     <div>
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
                         <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         <span className="text-xs font-medium text-primary">Welkom bij TynkTech</span>
                       </div>
-                      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
                         Laten we samen jouw digitale toekomst bouwen
                       </h2>
-                      <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                         Wij zijn gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat. 
                         Plan een vrijblijvend gesprek en ontdek hoe we jouw bedrijf kunnen helpen groeien.
                       </p>
                     </div>
 
-                    <div className="space-y-3">
+                    <div className="space-y-2.5">
                       <div className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <div className="w-2 h-2 rounded-full bg-secondary" />
