@@ -47,10 +47,10 @@ export const portfolioItems: PortfolioItem[] = [
     fullDescription: 'Een volledig op maat gemaakte website voor Frangancao, ontwikkeld met de nieuwste webtechnologieën. De website combineert een moderne, professionele uitstraling met optimale gebruiksvriendelijkheid en performance. We hebben speciale aandacht besteed aan responsive design, zodat de website perfect werkt op alle apparaten.',
     category: 'Website',
     image: 'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://frangancao.nl',
-    imageAlt: 'Frangancao.nl website screenshot',
+    imageAlt: 'Frangancao.nl homepage met innovatieve scent experience',
     images: [
       'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://frangancao.nl',
-      'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://frangancao.nl',
     ],
     link: 'https://frangancao.nl',
     tags: ['Webdesign', 'Next.js', 'Responsive'],
@@ -61,31 +61,31 @@ export const portfolioItems: PortfolioItem[] = [
       location: 'Nederland',
     },
     timeline: {
-      startDate: '2024-01-15',
-      endDate: '2024-03-20',
+      startDate: '2025-11-10',
+      endDate: '2025-11-20',
       milestones: [
         {
-          date: '2024-01-15',
+          date: '2025-11-10',
           title: 'Project Kick-off',
           description: 'Eerste meeting met de klant om requirements en wensen te bespreken.',
         },
         {
-          date: '2024-02-01',
+          date: '2025-11-11',
           title: 'Design Fase',
           description: 'Wireframes en mockups ontwikkeld en goedgekeurd door de klant.',
         },
         {
-          date: '2024-02-20',
+          date: '2025-11-12',
           title: 'Development Start',
           description: 'Begin van de development fase met focus op core functionaliteiten.',
         },
         {
-          date: '2024-03-10',
+          date: '2025-11-18',
           title: 'Testing & Optimalisatie',
           description: 'Uitgebreide testing en performance optimalisatie.',
         },
         {
-          date: '2024-03-20',
+          date: '2025-11-20',
           title: 'Launch',
           description: 'Website succesvol gelanceerd en live gezet.',
         },
@@ -109,8 +109,8 @@ export const portfolioItems: PortfolioItem[] = [
       },
     ],
     testimonial: {
-      quote: 'TynkTech heeft een prachtige website voor ons ontwikkeld die perfect aansluit bij onze visie. Het team was professioneel, communicatief en heeft ons door het hele proces begeleid.',
-      author: 'Jan de Vries',
+      quote: 'Mijn ervaring met Tynk Tech is zeer positief. De developers hebben mijn idee goed weten te vertalen in een website vorm. Na twee keer feedback was de website zo goed als af . de developers werken snel en adequaat hebben verstand van zaken. al met al is mijn ervaring zeer positief en zou ik ze zeker aanraden aan een ieder',
+      author: 'Jake Colin',
       role: 'Eigenaar',
       company: 'Frangancao',
     },
