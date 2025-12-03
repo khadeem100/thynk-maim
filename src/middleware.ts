@@ -15,6 +15,7 @@ const PUBLIC_ROUTES = [
   '/share', // Shared content should be public
   '/templates', // Template pages should be public
   '/enterprise', // Enterprise page should be public
+  '/contact', // Contact page should be public
   '/master-login', // Master password admin login
 ];
 

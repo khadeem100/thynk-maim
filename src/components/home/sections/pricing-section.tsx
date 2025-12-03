@@ -492,7 +492,11 @@ function PricingTier({
         <div className="flex items-baseline mt-2">
           <div className="flex items-baseline">
             <PriceDisplay price={displayPrice} isCompact={insideDialog} />
-            <span className="ml-2">{displayPrice !== '€0' && displayPrice !== '$0' ? 'per uur' : ''}</span>
+            <span className="ml-2">
+              {displayPrice !== '€0' && displayPrice !== '$0' 
+                ? (tier.name === 'Onderhoud & Support' ? 'per maand' : 'per uur')
+                : ''}
+            </span>
           </div>
         </div>
         {tier.pricingNote && (
