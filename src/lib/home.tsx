@@ -126,7 +126,7 @@ export const siteConfig = {
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
       /** @deprecated */
-      hours: '2 hours',
+      hours: '2 uren per project',
       features: [
         'Moderne website (tot 5 pagina\'s)',
         'Responsive webdesign',
@@ -153,7 +153,7 @@ export const siteConfig = {
       buttonColor: 'bg-primary text-white dark:text-black',
       isPopular: true,
       /** @deprecated */
-      hours: '6 hours',
+      hours: '6 uren per project',
       features: [
         'Alles in Starter, plus:',
         'Webapplicatie ontwikkeling',
@@ -182,7 +182,7 @@ export const siteConfig = {
       buttonText: 'Start nu',
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
-      hours: '25 hours',
+      hours: '25 uren per project',
       features: [
         'Alles in Professional, plus:',
         'Volledige cybersecurity suite',
@@ -216,7 +216,7 @@ export const siteConfig = {
       buttonText: 'Start nu',
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
-      hours: '50 hours',
+      hours: '50 uren per project',
       features: [
         'Volledige cloud-infrastructuur',
         'Private projecten',
@@ -241,7 +241,7 @@ export const siteConfig = {
       buttonText: 'Start nu',
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
-      hours: '125 hours',
+      hours: '125 uren per project',
       features: [
         'Onbeperkte cloud resources',
         'Private projecten',
@@ -267,7 +267,7 @@ export const siteConfig = {
       buttonText: 'Start nu',
       buttonColor: 'bg-secondary text-white',
       isPopular: false,
-      hours: '200 hours',
+      hours: '200 uren per project',
       features: [
         'Volledige enterprise suite',
         'Private projecten',

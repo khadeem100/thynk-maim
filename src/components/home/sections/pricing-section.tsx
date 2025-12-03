@@ -145,7 +145,7 @@ function BillingPeriodToggle({
             )}
             onClick={() => setBillingPeriod('monthly')}
           >
-            Monthly
+            Maandelijks
           </div>
           <div 
             className={cn("px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer",
@@ -155,9 +155,9 @@ function BillingPeriodToggle({
             )}
             onClick={() => setBillingPeriod('yearly_commitment')}
           >
-            Yearly
+            Jaarlijks
             <span className="bg-green-600 text-green-50 dark:bg-green-500 dark:text-green-50 text-[10px] px-1.5 py-0.5 rounded-full font-semibold whitespace-nowrap">
-              15% off
+              15% korting
             </span>
           </div>
         </div>
@@ -502,33 +502,31 @@ function PricingTier({
               <div className="flex items-baseline gap-2">
                 <PriceDisplay price={displayPrice} isCompact={insideDialog} />
                 <span className="text-xs line-through text-muted-foreground">
-                  ${tier.price.slice(1)}
+                  {tier.price.startsWith('€') ? '€' : '$'}{tier.price.slice(1)}
                 </span>
               </div>
               <div className="flex items-center gap-1 mt-1">
-                <span className="text-xs text-muted-foreground">/month</span>
-                <span className="text-xs text-muted-foreground">for one year</span>
+                <span className="text-xs text-muted-foreground">uren per project</span>
               </div>
             </div>
           ) : billingPeriod === 'yearly' && tier.yearlyPrice && displayPrice !== '$0' ? (
             <div className="flex flex-col">
               <div className="flex items-baseline gap-2">
-                <PriceDisplay price={`$${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)}`} isCompact={insideDialog} />
+                <PriceDisplay price={`${tier.yearlyPrice.startsWith('€') ? '€' : '$'}${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)}`} isCompact={insideDialog} />
                 {tier.discountPercentage && (
                   <span className="text-xs line-through text-muted-foreground">
-                    ${Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') / 12)}
+                    {tier.originalYearlyPrice?.startsWith('€') ? '€' : '$'}{Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') / 12)}
                   </span>
                 )}
               </div>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-xs text-muted-foreground">/month</span>
-                <span className="text-xs text-muted-foreground">billed yearly</span>
+                <span className="text-xs text-muted-foreground">uren per project</span>
               </div>
             </div>
           ) : (
             <div className="flex items-baseline">
               <PriceDisplay price={displayPrice} isCompact={insideDialog} />
-              <span className="ml-2">{displayPrice !== '$0' ? '/month' : ''}</span>
+              <span className="ml-2">{displayPrice !== '€0' && displayPrice !== '$0' ? 'uren per project' : ''}</span>
             </div>
           )}
         </div>
@@ -536,17 +534,17 @@ function PricingTier({
 
         {billingPeriod === 'yearly_commitment' && tier.monthlyCommitmentStripePriceId ? (
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-50 border-green-200 text-green-700 w-fit">
-            Save ${Math.round((parseFloat(tier.price.slice(1)) - parseFloat(displayPrice.slice(1))) * 12)} per year
+            Bespaar {tier.price.startsWith('€') ? '€' : '$'}{Math.round((parseFloat(tier.price.slice(1)) - parseFloat(displayPrice.slice(1))) * 12)} per jaar
           </div>
         ) : billingPeriod === 'yearly' && tier.yearlyPrice && tier.discountPercentage ? (
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-50 border-green-200 text-green-700 w-fit">
-            Save ${Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') - parseFloat(tier.yearlyPrice.slice(1)))} per year
+            Bespaar {tier.yearlyPrice.startsWith('€') ? '€' : '$'}{Math.round(parseFloat(tier.originalYearlyPrice?.slice(1) || '0') - parseFloat(tier.yearlyPrice.slice(1)))} per jaar
           </div>
         ) : (
           <div className="hidden items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-primary/10 border-primary/20 text-primary w-fit">
             {billingPeriod === 'yearly' && tier.yearlyPrice && displayPrice !== '$0'
-              ? `$${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)}/month (billed yearly)`
-              : `${displayPrice}/month`
+              ? `${tier.yearlyPrice.startsWith('€') ? '€' : '$'}${Math.round(parseFloat(tier.yearlyPrice.slice(1)) / 12)} uren per project`
+              : `${displayPrice} uren per project`
             }
           </div>
         )}
