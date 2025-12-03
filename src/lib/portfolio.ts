@@ -7,6 +7,7 @@ export interface PortfolioItem {
   image: string;
   imageAlt: string;
   images?: string[];
+  video?: string;
   link?: string;
   tags: string[];
   technologies: string[];
@@ -51,7 +52,10 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://fragancao.nl',
       'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://fragancao.nl',
+      'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://fragancao.nl',
+      'https://image.thum.io/get/width/1200/crop/600/noanimate/fullpage/https://fragancao.nl',
     ],
+    video: 'https://image.thum.io/get/video/width/1920/height/1080/noanimate/fullpage/https://fragancao.nl',
     link: 'https://fragancao.nl',
     tags: ['Webdesign', 'Next.js', 'Responsive'],
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],

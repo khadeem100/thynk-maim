@@ -295,12 +295,34 @@ export default function PortfolioDetailPage({ params }: { params: Promise<{ id: 
               </div>
             </motion.div>
 
+            {/* Video */}
+            {item.video && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="mb-12"
+              >
+                <h3 className="text-xl font-semibold mb-6">Website Video Opname</h3>
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border bg-background">
+                  <video
+                    src={item.video}
+                    controls
+                    className="w-full h-full object-contain"
+                    preload="metadata"
+                  >
+                    Je browser ondersteunt de video tag niet.
+                  </video>
+                </div>
+              </motion.div>
+            )}
+
             {/* Additional Images */}
             {item.images && item.images.length > 1 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
+                transition={{ duration: 0.6, delay: item.video ? 1 : 0.9 }}
                 className="mb-12"
               >
                 <h3 className="text-xl font-semibold mb-6">Meer Afbeeldingen</h3>
