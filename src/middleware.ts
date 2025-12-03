@@ -18,6 +18,7 @@ const PUBLIC_ROUTES = [
   '/enterprise', // Enterprise page should be public
   '/contact', // Contact page should be public
   '/careers', // Careers page should be public
+  '/portfolio', // Portfolio pages should be public
   '/master-login', // Master password admin login
 ];
 

@@ -1219,6 +1219,7 @@ export const siteConfig = {
       title: 'TynkTech',
       links: [
         { id: 1, title: 'Over Ons', url: 'https://tynktech.nl' },
+        { id: 2, title: 'Portfolio', url: '/portfolio' },
         { id: 3, title: 'Contact', url: '/contact' },
         { id: 4, title: 'Vacatures', url: '/careers' },
       ],
