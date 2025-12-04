@@ -1213,11 +1213,12 @@ export const siteConfig = {
     {
       title: 'TynkTech',
       links: [
-        { id: 1, title: 'Over Ons', url: 'https://tynktech.nl' },
+        { id: 1, title: 'Over Ons', url: '/' },
         { id: 2, title: 'Portfolio', url: '/portfolio' },
         { id: 3, title: 'Contact', url: '/contact' },
         { id: 4, title: 'Vacatures', url: '/careers' },
         { id: 12, title: 'DIY Website Scan', url: '/diy' },
+        { id: 13, title: 'Enterprise Oplossingen', url: '/enterprise' },
       ],
     },
     {
@@ -1231,6 +1232,38 @@ export const siteConfig = {
         { id: 6, title: 'Webapplicaties', url: '/#pricing' },
         { id: 7, title: 'Cloudbeheer', url: '/#pricing' },
         { id: 8, title: 'Cybersecurity', url: '/#pricing' },
+        { id: 14, title: 'Webdesign', url: '/#pricing' },
+        { id: 15, title: 'Onderhoud & Support', url: '/#pricing' },
+      ],
+    },
+    {
+      title: 'Support & Info',
+      links: [
+        {
+          id: 16,
+          title: 'Klantenservice',
+          url: '/contact',
+        },
+        {
+          id: 17,
+          title: 'Veelgestelde Vragen',
+          url: '/#faq',
+        },
+        {
+          id: 18,
+          title: 'Documentatie',
+          url: '/docs',
+        },
+        {
+          id: 19,
+          title: 'Changelog',
+          url: '/changelog',
+        },
+        {
+          id: 20,
+          title: 'Blog',
+          url: '/blog',
+        },
       ],
     },
     {

@@ -21,6 +21,7 @@ import { AgentShowcaseSection } from '@/components/home/sections/agent-showcase-
 import { DeliverablesSection } from '@/components/home/sections/deliverables-section';
 import { CapabilitiesSection } from '@/components/home/sections/capabilities-section';
 import { WelcomePopup } from '@/components/home/welcome-popup';
+import { QuickLinksSection } from '@/components/home/sections/quick-links-section';
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
             <CapabilitiesSection />
             {/* <DeliverablesSection />             */}
             <BentoSection />
-            
+            <QuickLinksSection />
             {/* <AgentShowcaseSection /> */}
             <OpenSourceSection />
             <PricingSection />

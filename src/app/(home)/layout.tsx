@@ -4,8 +4,8 @@ import Script from 'next/script';
 import { siteConfig } from '@/lib/home';
 
 export const metadata: Metadata = {
-  title: 'TynkTech – Moderne Websites, Webapplicaties, Cloud & Cybersecurity | Website Ontwikkelaar Nederland',
-  description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat. Professioneel webdesign, cloudbeheer en geavanceerde cybersecurity diensten. Website laten maken vanaf €75/uur.',
+  title: 'TynkTech | Moderne Websites & Webapplicaties Rotterdam | Cloud & Cybersecurity',
+  description: 'TynkTech - Specialist in moderne websites, webapplicaties, cloudbeheer en cybersecurity in Rotterdam. ✓ Toekomstbestendige oplossingen ✓ Transparante prijzen ✓ Expert developers. Website laten maken vanaf €75/uur.',
   keywords: [
     'website ontwikkeling',
     'webapplicatie ontwikkeling',
@@ -73,20 +73,109 @@ export default function HomeLayout({
     alternateName: 'Tynk Technologies V.O.F',
     url: baseUrl,
     logo: `${baseUrl}/kortix-logo.svg`,
-    description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat.',
+    description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Rotterdam en heel Nederland.',
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'Rotterdam',
+      addressRegion: 'Zuid-Holland',
       addressCountry: 'NL',
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      contactType: 'Customer Service',
-      email: 'support@tynktech.ai',
+      telephone: '+31-6-12345678',
+      contactType: 'customer service',
+      email: 'admin@thynktech.nl',
+      availableLanguage: ['Dutch', 'English'],
+      areaServed: 'NL',
     },
     sameAs: [
       siteConfig.links.twitter,
       siteConfig.links.github,
+      siteConfig.links.linkedin,
       ...(siteConfig.links.instagram ? [siteConfig.links.instagram] : []),
+    ],
+  };
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'TynkTech',
+    '@id': baseUrl,
+    url: baseUrl,
+    telephone: '+31-6-12345678',
+    priceRange: '€€',
+    image: `${baseUrl}/banner.png`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Rotterdam',
+      addressRegion: 'Zuid-Holland',
+      addressCountry: 'NL',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 51.9244,
+      longitude: 4.4777,
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Rotterdam',
+    },
+    serviceArea: {
+      '@type': 'Country',
+      name: 'Nederland',
+    },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Wat kost een website laten maken bij TynkTech?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'De kosten voor website ontwikkeling beginnen vanaf 20 uur. De exacte prijs is afhankelijk van de complexiteit, gewenste functionaliteiten en design. Een standaard website kost gemiddeld tussen de €2.400 en €4.800. Neem contact op voor een vrijblijvende offerte op maat.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Hoe lang duurt het om een website te ontwikkelen?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Een standaard website wordt binnen 4-6 weken opgeleverd. Complexere webapplicaties of custom oplossingen kunnen 8-12 weken in beslag nemen. De exacte timeline bespreken we tijdens het intakegesprek en hangt af van de scope en jouw beschikbaarheid voor feedback.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Bieden jullie ook onderhoud en support na oplevering?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ja, wij bieden uitgebreide onderhoud en support pakketten vanaf €60 per maand. Dit omvat regelmatige updates, bug fixes, security patches, backup beheer en technische ondersteuning. Zo blijft jouw website veilig en up-to-date.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Werken jullie alleen in Rotterdam of ook landelijk?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Hoewel ons kantoor in Rotterdam is gevestigd, werken we voor klanten door heel Nederland. We kunnen remote werken of on-site komen, afhankelijk van jouw voorkeur en de aard van het project.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Welke technologieën gebruiken jullie voor website ontwikkeling?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We werken met moderne frameworks en technologieën zoals React, Next.js, Vue.js, Node.js, en headless CMS systemen zoals Strapi en Sanity. Voor cloud werken we met AWS, Azure en Google Cloud. We kiezen altijd de beste technologie die past bij jouw specifieke behoeften en toekomstplannen.',
+        },
+      },
     ],
   };
 
@@ -107,6 +196,48 @@ export default function HomeLayout({
         urlTemplate: `${baseUrl}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
+    },
+    // Important pages for sitelinks (Google uses this as a hint)
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Contact',
+          url: `${baseUrl}/contact`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Portfolio',
+          url: `${baseUrl}/portfolio`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Enterprise Oplossingen',
+          url: `${baseUrl}/enterprise`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'DIY Website Scan',
+          url: `${baseUrl}/diy`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Vacatures',
+          url: `${baseUrl}/careers`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 6,
+          name: 'Klantenservice',
+          url: `${baseUrl}/contact`,
+        },
+      ],
     },
   };
 
@@ -260,6 +391,16 @@ export default function HomeLayout({
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="w-full relative">
         <div className="block w-px h-full border-l border-border fixed top-0 left-6 z-10"></div>

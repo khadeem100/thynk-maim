@@ -16,6 +16,8 @@ Disallow: /master-login/
 Disallow: /activate-trial/
 Disallow: /subscription/
 Disallow: /monitoring/
+Disallow: /_next/
+Disallow: /private/
 
 # Allow important public pages
 Allow: /

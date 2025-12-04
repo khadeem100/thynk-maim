@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact | TynkTech – Neem contact met ons op',
-  description: 'Neem contact op met TynkTech voor vragen over onze diensten. Website ontwikkeling, webapplicaties, cloudbeheer en cybersecurity. We helpen je graag verder.',
+  title: 'Contact | TynkTech Rotterdam – Neem contact op voor Website & Webapp Ontwikkeling',
+  description: 'Neem contact op met TynkTech in Rotterdam. ✓ Gratis consultatie ✓ Website ontwikkeling ✓ Webapplicaties ✓ Cloudbeheer ✓ Cybersecurity. Bel +31 6 12 34 56 78 of mail naar admin@thynktech.nl',
   keywords: [
     'contact TynkTech',
     'neem contact op',
