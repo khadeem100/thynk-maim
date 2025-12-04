@@ -70,6 +70,7 @@ export const siteConfig = {
     // discord: 'https://discord.gg/kortixai',
     github: 'https://github.com/Kortix-ai/Suna',
     instagram: 'https://instagram.com/kortixai',
+    linkedin: 'https://www.linkedin.com/company/tynktech/',
   },
   nav: {
     links: [
