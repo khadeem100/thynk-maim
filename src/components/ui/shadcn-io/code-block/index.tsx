@@ -465,7 +465,9 @@ export const CodeBlockCopyButton = ({
   };
 
   if (asChild) {
-    return cloneElement(children as ReactElement, {
+    // Type assertion for React 19 compatibility
+    // The child element should accept onClick prop (button-like element)
+    return cloneElement(children as ReactElement<{ onClick?: () => void }>, {
       onClick: copyToClipboard,
     });
   }
