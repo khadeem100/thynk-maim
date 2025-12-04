@@ -8,17 +8,12 @@ import { SEOBreadcrumb } from '@/components/home/seo-breadcrumb';
 import { 
   Shield, 
   Lock, 
-  Eye, 
-  AlertTriangle, 
   CheckCircle2, 
   ArrowRight,
   Clock,
   FileCheck,
   Network,
-  Key,
-  Scan,
   Bug,
-  FileShield,
   UserCheck
 } from 'lucide-react';
 import Link from 'next/link';

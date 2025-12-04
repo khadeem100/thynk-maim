@@ -23,8 +23,8 @@ export function FooterSection() {
     <footer id="footer" className="w-full pb-0 px-6">
         <div className="w-full mx-auto">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-12 p-10">
-            <div className="flex flex-col items-start justify-start gap-y-5 flex-shrink-0 lg:max-w-sm">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 lg:gap-16 p-10">
+            <div className="flex flex-col items-start justify-start gap-y-5 flex-shrink-0 lg:max-w-xs">
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/kortix-logo.svg"
@@ -34,11 +34,11 @@ export function FooterSection() {
                   priority
                 />
               </Link>
-              <p className="tracking-tight text-muted-foreground font-medium">
+              <p className="tracking-tight text-muted-foreground font-medium text-sm leading-relaxed">
                 TynkTech is een innovatief technologiebedrijf dat gespecialiseerd is in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat.
               </p>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mt-2">
                 <a
                   href="https://x.com/tynktech"
                   target="_blank"
@@ -75,21 +75,21 @@ export function FooterSection() {
                 </a>
               </div>
             </div>
-            <div className="flex-1 lg:max-w-2xl">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <div className="flex-1 lg:max-w-3xl w-full">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
                 {siteConfig.footerLinks.map((column, columnIndex) => (
-                  <ul key={columnIndex} className="flex flex-col gap-y-2">
-                    <li className="mb-2 text-sm font-semibold text-primary">
+                  <ul key={columnIndex} className="flex flex-col gap-y-2.5 w-full">
+                    <li className="mb-3 text-sm font-semibold text-primary whitespace-nowrap">
                       {column.title}
                     </li>
                     {column.links.map((link) => (
                       <li
                         key={link.id}
-                        className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
+                        className="group inline-flex cursor-pointer items-center justify-start gap-1.5 text-[15px]/snug text-muted-foreground hover:text-foreground transition-colors w-full"
                       >
-                        <Link href={link.url}>{link.title}</Link>
-                        <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
-                          <ChevronRightIcon className="h-4 w-4 " />
+                        <Link href={link.url} className="flex-1 min-w-0 truncate">{link.title}</Link>
+                        <div className="flex size-4 items-center justify-center border border-border rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100 flex-shrink-0 ml-auto">
+                          <ChevronRightIcon className="h-3.5 w-3.5" />
                         </div>
                       </li>
                     ))}
