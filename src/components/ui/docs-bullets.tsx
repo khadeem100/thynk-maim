@@ -154,8 +154,8 @@ export const DocsBullets = React.forwardRef<HTMLUListElement, DocsBulletsProps>(
 
     // Clone children to pass down variant and size props
     const enhancedChildren = React.Children.map(children, (child) => {
-      if (React.isValidElement(child) && child.type === DocsBulletItem) {
-        return React.cloneElement(child, {
+      if (React.isValidElement<DocsBulletItemProps>(child) && child.type === DocsBulletItem) {
+        return React.cloneElement<DocsBulletItemProps>(child, {
           variant: child.props.variant || variant,
           size: child.props.size || size,
           ...child.props
