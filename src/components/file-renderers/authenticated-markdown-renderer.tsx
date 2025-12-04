@@ -257,15 +257,29 @@ export const MarkdownRenderer = forwardRef<
                 {...props}
               />
             ),
-            img: ({ node, ...props }) => (
-              <AuthenticatedImage
-                src={props.src || ''}
-                alt={props.alt || ''}
-                className="max-w-full h-auto rounded-md my-2"
-                project={project}
-                basePath={basePath}
-              />
-            ),
+            img: ({ node, ...props }) => {
+              // Convert src to string - handle both string and Blob types
+              // React-markdown can pass Blob objects, but AuthenticatedImage expects string
+              let srcString = '';
+              if (typeof props.src === 'string') {
+                srcString = props.src;
+              } else if (props.src instanceof Blob) {
+                // Convert Blob to blob URL string
+                // Note: The blob URL will be cleaned up by the browser when the page unloads
+                // or when URL.revokeObjectURL is called elsewhere if needed
+                srcString = URL.createObjectURL(props.src);
+              }
+              
+              return (
+                <AuthenticatedImage
+                  src={srcString}
+                  alt={typeof props.alt === 'string' ? props.alt : ''}
+                  className="max-w-full h-auto rounded-md my-2"
+                  project={project}
+                  basePath={basePath}
+                />
+              );
+            },
             pre: ({ node, ...props }) => (
               <pre className="p-0 my-2 bg-transparent" {...props} />
             ),
