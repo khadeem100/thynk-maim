@@ -34,61 +34,51 @@ export default function IntroductionPage() {
   return (
     <>
       <DocsHeader
-        title="What is Tynk Tech?"
-        subtitle="An open source platform for building AI agents that actually get things done"
+        title="Welkom bij TynkTech"
+        subtitle="Documentatie voor onze diensten: Website Ontwikkeling, Webapplicaties, Cloudbeheer & Cybersecurity"
         breadcrumbs={breadcrumbs}
-        lastUpdated="August 2025"
+        lastUpdated="Januari 2025"
         showSeparator
         size="lg"
         className="mb-8 sm:mb-12"
       />
-
-      <DocsImage
-        src={imageSrc}
-        alt="Tynk Tech Platform Interface"
-        size="full"
-        aspect="video"
-        className="mb-12"
-      />
     
       <DocsBody className="mb-8">
-        <h2 id="overview">What is Tynk Tech?</h2>
+        <h2 id="overview">Over TynkTech</h2>
         <p className="text-lg mb-6">
-          Kortix is an open source platform where you can build AI agents that handle real work. Think of it as the infrastructure and tools you need to create agents that can browse the web, manage files, analyze data, and automate workflows.
+          TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat. We helpen bedrijven wereldwijd met hun digitale transformatie door hoogwaardige technische oplossingen te leveren.
         </p>
         
-        <h3 id="meet-suna">Suna - Our Flagship Agent</h3>
+        <h3 id="onze-diensten" className="mb-4">Onze Diensten</h3>
         <p className="mb-4">
-          Suna is our showcase agent that demonstrates what's possible with Kortix. It's a generalist AI worker that can:
+          TynkTech biedt een breed scala aan diensten om jouw digitale behoeften te vervullen:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-1">
-          <li>Research topics and gather information from across the web</li>
-          <li>Analyze documents and data files</li>
-          <li>Automate browser tasks and web scraping</li>
-          <li>Manage files and handle document processing</li>
-          <li>Execute complex multi-step workflows</li>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Website Ontwikkeling</strong> - Moderne, responsive websites ontwikkeld met de nieuwste technologieën</li>
+          <li><strong>Webapplicatie Ontwikkeling</strong> - Custom webapplicaties op maat voor jouw specifieke behoeften</li>
+          <li><strong>Webdesign</strong> - Professioneel design met focus op gebruikservaring en conversie</li>
+          <li><strong>Cloudbeheer</strong> - Cloud-oplossingen en beheer voor AWS, Azure en Google Cloud</li>
+          <li><strong>Cybersecurity</strong> - Beveiliging, audits en compliance diensten</li>
+          <li><strong>Onderhoud & Support</strong> - Continue ondersteuning en updates voor jouw digitale oplossingen</li>
         </ul>
-        <p className="mb-6">
-          Suna is completely open source and shows you what you can build with the Kortix platform.
-        </p>
   
-        <h3 id="build-your-own" className="mb-4">Build Your Own Agents</h3>
+        <h3 id="onze-aanpak" className="mb-4">Onze Aanpak</h3>
         <p className="mb-6">
-          The real power comes when you create agents for your specific needs. Maybe you need an agent that monitors customer support tickets, or one that processes invoices, or handles your social media posting schedule. With Kortix, you get the building blocks to create agents that work exactly how you want them to.
+          Bij TynkTech geloven we in een transparante, collaboratieve aanpak. We werken nauw samen met onze klanten om te begrijpen wat ze nodig hebben en leveren oplossingen die precies passen bij hun doelen. Of je nu een startup bent die net begint of een gevestigd bedrijf dat wil digitaliseren, we hebben de expertise om je te helpen.
         </p>
 
-        <h3 id="how-it-works" className="mb-4">How It Works</h3>
-        <p className="mb-4">Kortix gives you four main pieces:</p>
+        <h3 id="technologie-stack" className="mb-4">Onze Technologie Stack</h3>
+        <p className="mb-4">We werken met moderne, bewezen technologieën:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Backend API</strong> - Handles the heavy lifting: talking to AI models, managing tasks, storing data</li>
-          <li><strong>Web Dashboard</strong> - Where you build, test, and monitor your agents</li>
-          <li><strong>Secure Runtime</strong> - Isolated environments where your agents run safely</li>
-          <li><strong>Database</strong> - Stores your agent configs, conversation history, and results</li>
+          <li><strong>Frontend</strong> - React, Next.js, Vue.js, TypeScript voor snelle en interactieve gebruikerservaringen</li>
+          <li><strong>Backend</strong> - Node.js, Python, FastAPI voor robuuste en schaalbare server-side oplossingen</li>
+          <li><strong>Cloud</strong> - AWS, Azure, Google Cloud voor betrouwbare en schaalbare infrastructuur</li>
+          <li><strong>Databases</strong> - PostgreSQL, MongoDB, Supabase voor veilige en efficiënte dataopslag</li>
         </ul>
         
-        <h3 id="why-open-source" className="mb-4">Why Open Source?</h3>
+        <h3 id="internationaal-werken" className="mb-4">Internationaal Werken</h3>
         <p className="mb-6">
-          We believe you should own your agents and your data. No vendor lock-in, no usage limits based on monthly fees, no mysterious black boxes. You can see exactly how everything works, modify it for your needs, and run it wherever you want.
+          TynkTech werkt wereldwijd met klanten. Hoewel ons hoofdkantoor in Rotterdam, Nederland is gevestigd, hebben we ervaring met internationale projecten en kunnen we naadloos samenwerken met teams in verschillende tijdzones. We bieden zowel remote als on-site ondersteuning, afhankelijk van jouw behoeften.
         </p>
       </DocsBody>
       <Separator className="my-6 w-full" />

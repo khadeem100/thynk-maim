@@ -19,10 +19,10 @@ export default function ContributingPage() {
   return (
     <>
       <DocsHeader
-        title="Contributing to Suna"
-        description="Help make Suna better for everyone! We welcome contributions from the community"
+        title="Samenwerken met TynkTech"
+        description="Wil je samenwerken of bijdragen aan onze projecten? We staan open voor partnerships en collaborations"
         breadcrumbs={breadcrumbs}
-        lastUpdated="August 2025"
+        lastUpdated="Januari 2025"
         showSeparator
         size="lg"
         className="mb-8 sm:mb-12"
@@ -37,8 +37,8 @@ export default function ContributingPage() {
         </DocsBody>
         <DocsBullets variant="check" spacing="default" className="mb-8">
           <DocsBulletItem
-            title="Fork the Repository"
-            description="Create your own fork of the Kortix repository on GitHub"
+            title="Neem Contact Op"
+            description="Stuur ons een bericht via ons contactformulier of e-mail om te bespreken hoe we kunnen samenwerken"
           />
           <DocsBulletItem
             title="Clone Locally"
@@ -59,33 +59,33 @@ export default function ContributingPage() {
         <DocsBody className="mb-8">
           <h2 id="ways-to-contribute">Ways to Contribute</h2>
           <p className="text-lg mb-6">
-            There are many ways to help improve Kortix:
+            Er zijn verschillende manieren om met TynkTech samen te werken:
           </p>
         </DocsBody>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <DocsCard
-            title="Bug Reports"
-            description="Report issues, provide detailed reproduction steps, and help us fix problems"
+            title="Project Partnerships"
+            description="Samenwerken aan grote projecten, joint ventures of strategische partnerships"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="Feature Requests"
-            description="Suggest new features, improvements, or enhancements to existing functionality"
+            title="Freelance Developers"
+            description="We werken graag samen met ervaren developers voor specifieke projecten"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="Code Contributions"
-            description="Submit bug fixes, implement new features, improve performance, or refactor code"
+            title="Design Collaborations"
+            description="Samenwerken met designers en design agencies voor complete digitale oplossingen"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="Documentation"
-            description="Improve docs, write tutorials, create examples, or translate content"
+            title="Referral Programma"
+            description="Verwijs klanten naar ons en ontvang een vergoeding voor succesvolle projecten"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="Design & UX"
-            description="Improve user interfaces, create designs, or enhance user experience"
+            title="Open Source Bijdragen"
+            description="Bijdragen aan onze open source projecten en tools die we ontwikkelen"
             className="bg-accent/50 border-border"
           />
         </div>

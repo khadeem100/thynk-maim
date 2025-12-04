@@ -1182,9 +1182,9 @@ export const siteConfig = {
       },
       {
         id: 4,
-        question: 'Werken jullie alleen in Rotterdam of ook landelijk?',
+        question: 'Werken jullie internationaal?',
         answer:
-          'Hoewel ons kantoor in Rotterdam is gevestigd, werken we voor klanten door heel Nederland. We kunnen remote werken of on-site komen, afhankelijk van jouw voorkeur en de aard van het project.',
+          'Ja, TynkTech werkt internationaal. Hoewel ons hoofdkantoor in Rotterdam, Nederland is gevestigd, werken we voor klanten wereldwijd. We bieden remote samenwerking en kunnen waar nodig on-site komen. Ons team is ervaren in het werken met internationale klanten en verschillende tijdzones.',
       },
       {
         id: 5,

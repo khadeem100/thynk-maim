@@ -16,11 +16,11 @@ export default function ArchitecturePage() {
   return (
     <>
       <DocsHeader
-        title="Platform Architecture"
-        subtitle="Understanding the core components and design of the Kortix platform"
+        title="Technische Architectuur"
+        subtitle="Inzicht in onze technische stack en ontwikkelingsaanpak"
         breadcrumbs={breadcrumbs}
         badge="Technical"
-        lastUpdated="December 2024"
+        lastUpdated="Januari 2025"
         showSeparator
         size="lg"
         className="mb-8 sm:mb-12"
@@ -28,30 +28,30 @@ export default function ArchitecturePage() {
 
       <section id="architecture" className="mb-16">
         <DocsBody className="mb-8">
-          <h2>🏗️ Platform Architecture</h2>
+          <h2>🏗️ Onze Technische Stack</h2>
           <p className="text-lg mb-6">
-            Kortix consists of four main components that work together to provide a complete AI agent development platform:
+            TynkTech gebruikt moderne, bewezen technologieën om robuuste en schaalbare oplossingen te bouwen:
           </p>
         </DocsBody>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <DocsCard
-            title="🔧 Backend API"
-            description="Python/FastAPI service with REST endpoints, thread management, agent orchestration, and LLM integration via LiteLLM"
+            title="🌐 Frontend Development"
+            description="React, Next.js, Vue.js met TypeScript voor moderne, responsive gebruikersinterfaces en optimale gebruikerservaring"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="🖥️ Frontend Dashboard"
-            description="Next.js/React application with chat interfaces, agent configuration dashboards, and monitoring tools"
+            title="⚙️ Backend Development"
+            description="Node.js, Python, FastAPI voor robuuste API's, server-side logica en integraties met externe systemen"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="🐳 Agent Runtime"
-            description="Isolated Docker execution environments with browser automation, code interpreter, and security sandboxing"
+            title="☁️ Cloud Infrastructure"
+            description="AWS, Azure, Google Cloud voor schaalbare hosting, CDN, databases en managed services"
             className="bg-accent/50 border-border"
           />
           <DocsCard
-            title="🗄️ Database & Storage"
-            description="Supabase-powered data layer with authentication, user management, and real-time subscriptions"
+            title="🔒 Security & DevOps"
+            description="Docker, CI/CD pipelines, security audits, monitoring en automatische deployments voor betrouwbare oplossingen"
             className="bg-accent/50 border-border"
           />
         </div>
@@ -61,7 +61,7 @@ export default function ArchitecturePage() {
         <DocsBody className="mb-8">
           <h2>🚀 Technology Stack</h2>
           <p className="text-lg mb-6">
-            Modern technologies powering the Kortix platform:
+            Moderne technologieën die we gebruiken voor onze projecten:
           </p>
         </DocsBody>
         
@@ -135,7 +135,7 @@ export default function ArchitecturePage() {
         <DocsBody className="mb-8">
           <h2>🔄 Data Flow</h2>
           <p className="text-lg mb-6">
-            How information moves through the Kortix platform:
+            Onze ontwikkelingsworkflow en projectaanpak:
           </p>
           
           <div className="bg-muted/50 border border-border rounded-lg p-6 mb-6">
@@ -143,29 +143,29 @@ export default function ArchitecturePage() {
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold">1</div>
                 <div>
-                  <h4 className="font-semibold">User Interaction</h4>
-                  <p className="text-sm text-muted-foreground">User sends request through frontend interface</p>
+                  <h4 className="font-semibold">Intake & Analyse</h4>
+                  <p className="text-sm text-muted-foreground">We analyseren jouw behoeften en stellen een technisch plan op</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold">2</div>
                 <div>
-                  <h4 className="font-semibold">API Processing</h4>
-                  <p className="text-sm text-muted-foreground">FastAPI backend processes request and authenticates user</p>
+                  <h4 className="font-semibold">Ontwerp & Development</h4>
+                  <p className="text-sm text-muted-foreground">We ontwikkelen jouw oplossing met moderne technologieën en best practices</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold">3</div>
                 <div>
-                  <h4 className="font-semibold">Agent Execution</h4>
-                  <p className="text-sm text-muted-foreground">Agent runs in isolated Docker environment with access to tools</p>
+                  <h4 className="font-semibold">Testing & Optimalisatie</h4>
+                  <p className="text-sm text-muted-foreground">Uitgebreide tests, performance optimalisatie en security checks</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold">4</div>
                 <div>
-                  <h4 className="font-semibold">Real-time Updates</h4>
-                  <p className="text-sm text-muted-foreground">Results streamed back to frontend via Supabase subscriptions</p>
+                  <h4 className="font-semibold">Deployment & Support</h4>
+                  <p className="text-sm text-muted-foreground">Live zetten en continue monitoring, updates en ondersteuning</p>
                 </div>
               </div>
             </div>

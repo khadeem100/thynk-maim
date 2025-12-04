@@ -22,26 +22,26 @@ export default function LicensePage() {
   return (
     <>
       <DocsHeader
-        title="License"
-        description="Suna is open source software licensed under the Apache License, Version 2.0"
+        title="Licentie & Voorwaarden"
+        description="Informatie over onze licentie, algemene voorwaarden en gebruiksvoorwaarden"
         breadcrumbs={breadcrumbs}
-        lastUpdated="August 2025"
+        lastUpdated="Januari 2025"
         showSeparator
         size="lg"
         className="mb-8 sm:mb-12"
       />
       <DocsBody className="w-full h-[40vh] px-8 py-16 relative overflow-hidden rounded-3xl flex items-center justify-center border bg-background mb-12">
         <h1 className="text-xl tracking-tight text-foreground text-center">
-            <span className="font-semibold text-3xl">Suna is open source under the Apache 2.0 License. You can see the source code, self-host & contribute.</span>
+            <span className="font-semibold text-3xl">TynkTech levert maatwerk digitale oplossingen. Alle projecten worden ontwikkeld volgens onze algemene voorwaarden en service level agreements.</span>
         </h1> 
         <Ripple/>
       </DocsBody>
       <section className="mb-12">
         <DocsBody className="mb-8">
-          <h2 id="overview">Overview</h2>
+          <h2 id="overview">Overzicht</h2>
           <p className="text-lg mb-6">
-            Suna is distributed under the Apache License 2.0, one of the most permissive and business-friendly open source licenses available.
-            This license allows you to use, modify, distribute, and sublicense Suna for both commercial and non-commercial purposes.
+            TynkTech werkt volgens duidelijke licentie- en servicevoorwaarden. Alle projecten worden uitgevoerd met transparante afspraken over eigendom, onderhoud en support. 
+            We bieden flexibele licentie-opties afhankelijk van jouw specifieke behoeften en projectvereisten.
           </p>
         </DocsBody>
 
@@ -61,28 +61,28 @@ export default function LicensePage() {
         </DocsBody>
         <DocsBullets variant="check" spacing="default" className="mb-8">
           <DocsBulletItem
-            title="Commercial Use"
-            description="Use Suna for commercial purposes without any fees or royalties"
+            title="Project Eigendom"
+            description="Jij behoudt volledig eigendom van alle code en assets die we voor jou ontwikkelen"
           />
           <DocsBulletItem
-            title="Modification"
-            description="Modify the source code to suit your needs and create derivative works"
+            title="Flexibele Licenties"
+            description="We bieden verschillende licentie-opties afhankelijk van jouw specifieke behoeften"
           />
           <DocsBulletItem
-            title="Distribution"
-            description="Distribute original or modified versions of Suna"
+            title="Source Code Toegang"
+            description="Volledige toegang tot alle source code en documentatie van jouw project"
           />
           <DocsBulletItem
-            title="Patent Use"
-            description="Use any patents held by contributors that are necessarily infringed by the software"
+            title="Aanpassingen"
+            description="Je kunt altijd aanpassingen maken of andere developers inschakelen voor wijzigingen"
           />
           <DocsBulletItem
-            title="Private Use"
-            description="Use and modify Suna for private purposes without any obligations"
+            title="Hergebruik"
+            description="Gebruik jouw oplossing voor alle doeleinden zonder beperkingen"
           />
           <DocsBulletItem
-            title="Sublicensing"
-            description="Grant different license terms for your modifications or derivative works"
+            title="Transparantie"
+            description="Duidelijke afspraken over eigendom, licenties en gebruiksvoorwaarden in contracten"
           />
         </DocsBullets>
       </section>
@@ -96,20 +96,20 @@ export default function LicensePage() {
         </DocsBody>
         <DocsBullets variant="default" spacing="default" className="mb-8">
           <DocsBulletItem
-            title="Include License"
-            description="Include a copy of the Apache License 2.0 in any distribution"
+            title="Contractuele Afspraken"
+            description="Alle projecten worden uitgevoerd volgens duidelijke service level agreements"
           />
           <DocsBulletItem
-            title="State Changes"
-            description="Clearly indicate any modifications you make to the original code"
+            title="Intellectueel Eigendom"
+            description="Eigendomsrechten worden duidelijk vastgelegd in projectcontracten"
           />
           <DocsBulletItem
-            title="Preserve Notices"
-            description="Keep all copyright, patent, trademark, and attribution notices"
+            title="Support & Onderhoud"
+            description="Afspraken over onderhoud, updates en support worden contractueel vastgelegd"
           />
           <DocsBulletItem
-            title="Include NOTICE"
-            description="If a NOTICE file exists, include it in distributions of your derivative works"
+            title="Vertrouwelijkheid"
+            description="NDA's en vertrouwelijkheidsclausules beschermen jouw bedrijfsgegevens"
           />
         </DocsBullets>
       </section>
@@ -123,23 +123,23 @@ export default function LicensePage() {
         </DocsBody>
         <DocsBullets variant="default" spacing="default" className="mb-8">
           <DocsBulletItem
-            title="No Trademark Use"
-            description="The license does not grant permission to use the trade names, trademarks, or service marks of Suna"
+            title="Service Level Agreements"
+            description="Duidelijke SLA's voor uptime, response tijden en support beschikbaarheid"
           />
           <DocsBulletItem
-            title="No Warranty"
-            description="The software is provided 'AS IS' without warranties of any kind"
+            title="Warranty & Support"
+            description="Gegarandeerde support en warranty periodes zoals overeengekomen in projectcontracten"
           />
           <DocsBulletItem
-            title="No Liability"
-            description="Contributors are not liable for any damages arising from the use of the software"
+            title="Liability"
+            description="Aansprakelijkheid wordt duidelijk vastgelegd volgens Nederlandse wetgeving"
           />
         </DocsBullets>
 
         <Alert className="mb-8">
           <AlertDescription>
-            <strong>Patent Retaliation Clause:</strong> If you initiate patent litigation against any entity alleging that Suna constitutes patent infringement, 
-            your patent licenses under this license will terminate.
+            <strong>Belangrijk:</strong> Alle licentie- en servicevoorwaarden worden individueel besproken en vastgelegd in projectcontracten. 
+            Neem contact met ons op voor meer informatie over specifieke licentie-opties voor jouw project.
           </AlertDescription>
         </Alert>
       </section>
@@ -151,30 +151,30 @@ export default function LicensePage() {
         
         <div className="space-y-6">
           <div className="border-l-4 border-primary pl-6">
-            <h3 className="font-semibold mb-2">Can I use Suna in my commercial product?</h3>
+            <h3 className="font-semibold mb-2">Wie is eigenaar van de code die jullie ontwikkelen?</h3>
             <p className="text-muted-foreground">
-              Yes! The Apache 2.0 license allows commercial use without any fees or restrictions.
+              Jij behoudt volledig eigendom van alle code en assets die we voor jou ontwikkelen. Dit wordt contractueel vastgelegd.
             </p>
           </div>
           
           <div className="border-l-4 border-primary pl-6">
-            <h3 className="font-semibold mb-2">Do I need to open source my modifications?</h3>
+            <h3 className="font-semibold mb-2">Kan ik andere developers inschakelen voor wijzigingen?</h3>
             <p className="text-muted-foreground">
-              No, you're not required to open source your modifications. However, you must indicate what changes you've made if you distribute the modified version.
+              Ja, je hebt volledige vrijheid om andere developers in te schakelen. We zorgen voor duidelijke documentatie en overdracht.
             </p>
           </div>
           
           <div className="border-l-4 border-primary pl-6">
-            <h3 className="font-semibold mb-2">Can I change the license for my derivative work?</h3>
+            <h3 className="font-semibold mb-2">Wat gebeurt er na oplevering van een project?</h3>
             <p className="text-muted-foreground">
-              You can apply different license terms to your modifications, but the original Suna code remains under Apache 2.0.
+              Na oplevering krijg je volledige toegang tot alle code en documentatie. We bieden optionele onderhouds- en supportpakketten.
             </p>
           </div>
           
           <div className="border-l-4 border-primary pl-6">
-            <h3 className="font-semibold mb-2">What about patent protection?</h3>
+            <h3 className="font-semibold mb-2">Hoe werken jullie met internationale klanten?</h3>
             <p className="text-muted-foreground">
-              The Apache 2.0 license includes an express grant of patent rights from contributors to users, protecting you from patent litigation.
+              We werken wereldwijd en kunnen contracten opstellen volgens lokale wetgeving. Neem contact op om te bespreken wat het beste past bij jouw situatie.
             </p>
           </div>
         </div>
@@ -184,31 +184,31 @@ export default function LicensePage() {
         <DocsBody className="mb-8">
           <h2 id="resources">Resources</h2>
           <p className="text-lg mb-6">
-            Learn more about the Apache License 2.0 and how to use Suna:
+            Meer informatie over onze diensten en voorwaarden:
           </p>
         </DocsBody>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <DocsCard
-            title="Full License Text"
-            description="Read the complete Apache License 2.0 text on GitHub"
+            title="Algemene Voorwaarden"
+            description="Bekijk onze algemene voorwaarden en servicevoorwaarden"
             clickable
             actions={[
               { 
-                label: 'View License', 
+                label: 'Bekijk Voorwaarden', 
                 variant: 'default',
-                onClick: () => window.open('https://github.com/kortix-ai/suna/blob/main/LICENSE', '_blank')
+                onClick: () => window.location.href = '/legal?tab=terms'
               }
             ]}
           />
           <DocsCard
-            title="Apache License FAQ"
-            description="Official Apache Foundation FAQ about the license"
+            title="Neem Contact Op"
+            description="Vragen over licenties of contracten? Neem contact met ons op"
             clickable
             actions={[
               { 
-                label: 'Learn More', 
+                label: 'Contact', 
                 variant: 'default',
-                onClick: () => window.open('https://www.apache.org/licenses/LICENSE-2.0', '_blank')
+                onClick: () => window.location.href = '/contact'
               }
             ]}
           />
