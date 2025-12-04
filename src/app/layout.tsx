@@ -11,6 +11,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import { PostHogIdentify } from '@/components/posthog-identify';
 import { PWARegister } from '@/components/home/pwa-register';
+import { MusicPlayer } from '@/components/home/music-player';
 import '@/lib/polyfills'; // Load polyfills early
 
 const geistSans = Geist({
@@ -256,6 +257,7 @@ export default function RootLayout({
           <SpeedInsights />
           <PostHogIdentify />
           <PWARegister />
+          <MusicPlayer />
         </ThemeProvider>
       </body>
     </html>
