@@ -28,7 +28,7 @@ const CustomHeroSection = () => {
   return (
     <section className="w-full relative overflow-hidden">
       <div className="relative flex flex-col items-center w-full px-6">
-        <div className="relative z-10 pt-32 mx-auto h-full w-full max-w-6xl flex flex-col items-center justify-center">
+        <div className="relative z-10 pt-16 sm:pt-24 md:pt-32 mx-auto h-full w-full max-w-6xl flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-6 pt-12 max-w-4xl mx-auto">
             {/* Tynk Tech Logo */}
             <div className="mb-8">
@@ -86,7 +86,7 @@ const ValuePropSection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Wanneer standaardoplossingen tekort schieten
@@ -97,7 +97,7 @@ const ValuePropSection = () => {
           </SectionHeader>
 
           <div className="grid grid-cols-1 md:grid-cols-2 border-t border-border">
-            <div className="p-8 border-r border-border">
+            <div className="p-8 md:border-r border-border border-b md:border-b-0">
               <div className="space-y-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <Clock className="w-6 h-6 text-primary" />
@@ -157,7 +157,7 @@ const ProcessSection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Onze Implementatiemethodologie
@@ -217,7 +217,7 @@ const BenefitsSection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Enterprise-Grade Implementatie
@@ -284,7 +284,7 @@ const TestimonialsSection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Klant Succesverhalen
@@ -341,7 +341,7 @@ const SelfServiceSection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Zelfservice Alternatief
@@ -352,7 +352,7 @@ const SelfServiceSection = () => {
           </SectionHeader>
 
           <div className="grid grid-cols-1 md:grid-cols-2 border-t border-border">
-            <div className="p-8 border-r border-border space-y-6">
+            <div className="p-8 md:border-r border-border border-b md:border-b-0 space-y-6">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
@@ -395,7 +395,7 @@ const FinalCTASection = () => {
   return (
     <section className="flex flex-col items-center justify-center w-full relative">
       <div className="relative w-full px-6">
-        <div className="max-w-6xl mx-auto border-l border-r border-border">
+        <div className="max-w-6xl mx-auto md:border-l md:border-r border-border">
           <SectionHeader>
             <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-1">
               Klaar om jouw operaties te transformeren?

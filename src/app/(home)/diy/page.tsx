@@ -179,9 +179,9 @@ export default function DIYPage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen w-full">
-      <section className="w-full relative overflow-hidden pb-20">
+      <section className="w-full relative overflow-hidden pb-12 sm:pb-16 md:pb-20">
         {/* Background decoration */}
-        <div className="absolute left-0 top-0 h-[600px] w-1/3 -z-10 overflow-hidden">
+        <div className="absolute left-0 top-0 h-[400px] sm:h-[500px] md:h-[600px] w-full md:w-1/3 -z-10 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background z-10" />
           <FlickeringGrid
             className="h-full w-full"
@@ -193,7 +193,7 @@ export default function DIYPage() {
           />
         </div>
 
-        <div className="max-w-6xl w-full mx-auto px-6 pt-20">
+        <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -204,7 +204,7 @@ export default function DIYPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4">
               DIY Website Scan
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Scan je website en ontdek hoe TynkTech je kan helpen met verbeteringen op het gebied van SEO, performance en beveiliging.
             </p>
           </motion.div>
@@ -439,7 +439,7 @@ export default function DIYPage() {
               <Card className="bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 border-primary/20">
                 <CardContent className="pt-6">
                   <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-semibold">Klaar om je website te verbeteren?</h3>
+                    <h3 className="text-xl sm:text-2xl font-semibold">Klaar om je website te verbeteren?</h3>
                     <p className="text-muted-foreground">
                       Neem contact met ons op voor een vrijblijvend gesprek over hoe we je kunnen helpen
                     </p>
@@ -466,7 +466,7 @@ export default function DIYPage() {
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
                 Bereken de Kosten voor Jouw Project
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Gebruik onze calculator om een schatting te krijgen van de kosten voor jouw custom website of webapplicatie
               </p>
             </div>

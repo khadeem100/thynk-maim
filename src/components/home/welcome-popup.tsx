@@ -53,22 +53,22 @@ export function WelcomePopup() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full max-w-4xl bg-background rounded-2xl shadow-2xl border border-border overflow-hidden">
+            <div className="relative w-full max-w-4xl max-h-[95vh] sm:max-h-[90vh] bg-background rounded-xl sm:rounded-2xl shadow-2xl border border-border overflow-hidden flex flex-col">
               {/* Close Button */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-accent transition-colors flex items-center justify-center group"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-accent transition-colors flex items-center justify-center group"
                 aria-label="Sluiten"
               >
-                <X className="w-4 h-4 text-muted-foreground group-hover:text-foreground" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-foreground" />
               </button>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0 flex-1 overflow-hidden">
                 {/* Image Side - Left */}
-                <div className="relative h-[500px] md:h-[650px] bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 overflow-hidden">
+                <div className="relative h-[200px] sm:h-[250px] md:h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 overflow-hidden order-2 md:order-1">
                   <Image
                     src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop"
                     alt="TynkTech - Professioneel Team"
@@ -81,57 +81,57 @@ export function WelcomePopup() {
                 </div>
 
                 {/* Content Side - Right */}
-                <div className="p-8 md:p-10 flex flex-col justify-between h-[500px] md:h-[650px] overflow-y-auto">
-                  <div className="space-y-5">
+                <div className="p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between overflow-y-auto order-1 md:order-2 min-h-0">
+                  <div className="space-y-4 sm:space-y-5">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3 sm:mb-4">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary animate-pulse" />
                         <span className="text-xs font-medium text-primary">Welkom bij TynkTech</span>
                       </div>
-                      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-2 sm:mb-3">
                         Laten we samen jouw digitale toekomst bouwen
                       </h2>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         Wij zijn gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat. 
                         Plan een vrijblijvend gesprek en ontdek hoe we jouw bedrijf kunnen helpen groeien.
                       </p>
                     </div>
 
-                    <div className="space-y-2.5">
-                      <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-secondary" />
+                    <div className="space-y-2 sm:space-y-2.5">
+                      <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary" />
                         </div>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           Moderne technologieën en best practices
                         </p>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-secondary" />
+                      <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary" />
                         </div>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           Oplossingen op maat voor jouw bedrijf
                         </p>
                       </div>
-                      <div className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-secondary" />
+                      <div className="flex items-start gap-2 sm:gap-3">
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary" />
                         </div>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-xs sm:text-sm text-muted-foreground">
                           Transparante communicatie en snelle levering
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-4 pt-6 border-t border-border">
+                  <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6 border-t border-border mt-4 sm:mt-0">
                     <ContactModal>
                       <Button 
                         size="lg" 
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 text-base font-medium shadow-lg"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-11 sm:h-12 text-sm sm:text-base font-medium shadow-lg"
                       >
-                        <Calendar className="w-5 h-5 mr-2" />
+                        <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                         Maak een Afspraak
                       </Button>
                     </ContactModal>
@@ -141,10 +141,11 @@ export function WelcomePopup() {
                         id="dont-show-again"
                         checked={dontShowAgain}
                         onCheckedChange={(checked) => setDontShowAgain(checked === true)}
+                        className="h-4 w-4"
                       />
                       <Label
                         htmlFor="dont-show-again"
-                        className="text-sm text-muted-foreground cursor-pointer font-normal"
+                        className="text-xs sm:text-sm text-muted-foreground cursor-pointer font-normal"
                       >
                         Deze popup niet meer tonen
                       </Label>
