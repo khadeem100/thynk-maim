@@ -15,8 +15,11 @@ import {
 
 function Command({
   className,
+  children,
   ...props
-}: React.ComponentProps<typeof CommandPrimitive>) {
+}: Omit<React.ComponentProps<typeof CommandPrimitive>, 'children'> & {
+  children?: React.ReactNode;
+}) {
   return (
     <CommandPrimitive
       data-slot="command"
@@ -24,8 +27,10 @@ function Command({
         'bg-popover text-popover-foreground flex h-full w-full flex-col overflow-hidden rounded-md',
         className,
       )}
-      {...props}
-    />
+      {...(props as React.ComponentProps<typeof CommandPrimitive>)}
+    >
+      {children as any}
+    </CommandPrimitive>
   );
 }
 
@@ -34,9 +39,10 @@ function CommandDialog({
   description = 'Search for a command to run...',
   children,
   ...props
-}: React.ComponentProps<typeof Dialog> & {
+}: Omit<React.ComponentProps<typeof Dialog>, 'children'> & {
   title?: string;
   description?: string;
+  children?: React.ReactNode;
 }) {
   return (
     <Dialog {...props}>
