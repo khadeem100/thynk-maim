@@ -121,8 +121,9 @@ export default function WebsiteOntwikkelingPage() {
         </section>
 
         {/* Hero Section */}
-        <section className="w-full py-16 px-6 bg-gradient-to-b from-background to-muted/20">
-          <div className="max-w-6xl mx-auto">
+        <section className="w-full py-16 px-6 bg-gradient-to-b from-background to-muted/20 relative">
+          <RedDotsPattern dotSize={3} gap={32} opacity={0.15} />
+          <div className="max-w-6xl mx-auto relative z-10">
             <SectionHeader>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-center text-balance pb-2">
                 Website Ontwikkeling
@@ -253,7 +254,7 @@ export default function WebsiteOntwikkelingPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
-                  <Card className="h-full text-center hover:border-primary transition-colors">
+                  <Card className="h-full text-center hover:border-destructive transition-colors">
                     <CardHeader>
                       <CardTitle className="text-lg">{tech.name}</CardTitle>
                     </CardHeader>

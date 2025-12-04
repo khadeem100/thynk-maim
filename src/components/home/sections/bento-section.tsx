@@ -4,6 +4,7 @@ import { SectionHeader } from '@/components/home/section-header';
 import { FirstBentoAnimation } from '@/components/home/first-bento-animation';
 import { SecondBentoAnimation } from '@/components/home/second-bento-animation';
 import { ThirdBentoAnimation } from '@/components/home/third-bento-animation';
+import { RedDotsPattern } from '@/components/home/ui/red-dots-pattern';
 export function BentoSection() {
   const bentoItems = [
     {
@@ -34,6 +35,7 @@ export function BentoSection() {
       id="process"
       className="flex flex-col items-center justify-center w-full relative"
     >
+      <RedDotsPattern dotSize={2} gap={40} opacity={0.1} className="opacity-50" />
       <div className="relative w-full px-6">
         <div className="max-w-6xl mx-auto border-l border-r border-border">
           <SectionHeader>

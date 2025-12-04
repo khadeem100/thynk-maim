@@ -3,6 +3,7 @@ import { HeroVideoSection } from '@/components/home/sections/hero-video-section'
 import { siteConfig } from '@/lib/home';
 import { ArrowRight, Github, X, AlertCircle, Square } from 'lucide-react';
 import { FlickeringGrid } from '@/components/home/ui/flickering-grid';
+import { RedDotsPattern } from '@/components/home/ui/red-dots-pattern';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { useState, useEffect, useRef, FormEvent } from 'react';
 import { useScroll } from 'motion/react';
@@ -336,7 +337,9 @@ export function HeroSection() {
         </div>
 
         {/* Center content background with rounded bottom */}
-        <div className="absolute inset-x-0 sm:inset-x-1/6 md:inset-x-1/4 top-0 h-[500px] sm:h-[600px] md:h-[800px] -z-20 bg-background rounded-b-xl"></div>
+        <div className="absolute inset-x-0 sm:inset-x-1/6 md:inset-x-1/4 top-0 h-[500px] sm:h-[600px] md:h-[800px] -z-20 bg-background rounded-b-xl">
+          <RedDotsPattern dotSize={3} gap={32} opacity={0.15} />
+        </div>
 
         <div className="relative z-10 pt-16 sm:pt-24 md:pt-32 mx-auto h-full w-full max-w-6xl flex flex-col items-center justify-center">
           {/* <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">

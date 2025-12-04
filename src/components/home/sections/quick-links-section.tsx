@@ -90,10 +90,10 @@ export function QuickLinksSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={link.href}>
-                  <Card className="h-full hover:border-primary/50 transition-all duration-300 hover:shadow-lg group cursor-pointer">
+                  <Card className="h-full hover:border-destructive/50 transition-all duration-300 hover:shadow-lg group cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className={`p-3 rounded-lg bg-background border border-border group-hover:border-primary/50 transition-colors ${link.color}`}>
+                        <div className={`p-3 rounded-lg bg-background border border-border group-hover:border-destructive/50 transition-colors ${link.color}`}>
                           <Icon className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">

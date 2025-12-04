@@ -3,6 +3,7 @@ import { siteConfig } from '@/lib/home';
 import Link from 'next/link';
 import { ContactModal } from '@/components/home/contact-modal';
 import { HeroVideoSection } from './hero-video-section';
+import { RedDotsPattern } from '@/components/home/ui/red-dots-pattern';
 
 export function CTASection() {
   const { ctaSection } = siteConfig;
@@ -10,9 +11,10 @@ export function CTASection() {
   return (
     <section
       id="cta"
-      className="flex flex-col items-center justify-center w-full pt-12 pb-12 px-6"
+      className="flex flex-col items-center justify-center w-full pt-12 pb-12 px-6 relative"
     >
-      <div className="w-full mx-auto">
+      <RedDotsPattern dotSize={3} gap={36} opacity={0.12} className="opacity-60" />
+      <div className="w-full mx-auto relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="h-[400px] md:h-[400px] overflow-hidden shadow-xl w-full border border-border rounded-xl bg-secondary relative z-20">
           <div className="absolute inset-0 -top-32 md:-top-40 flex flex-col items-center justify-center">
