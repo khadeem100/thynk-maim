@@ -205,7 +205,7 @@ export default function OnderhoudSupportPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-full py-16 px-6">
+        <section className="w-full py-16 px-6 bg-muted/30">
           <div className="max-w-6xl mx-auto">
             <SectionHeader>
               <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance pb-2">
@@ -349,7 +349,7 @@ export default function OnderhoudSupportPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-16 px-6 bg-muted/30">
+        <section className="w-full py-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <Card className="bg-primary/5 border-primary/20">
               <CardHeader>
