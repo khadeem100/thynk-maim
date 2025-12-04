@@ -5,6 +5,8 @@ import { Play, Pause, Volume2, VolumeX, Music } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/lib/utils';
+import { useMusic } from '@/contexts/music-context';
+import { useTheme } from 'next-themes';
 
 // SoundCloud Widget API types
 declare global {
@@ -22,7 +24,8 @@ let globalWidget: any = null;
 let globalWidgetRef: HTMLIFrameElement | null = null;
 
 export function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const { isPlaying, setIsPlaying } = useMusic();
+  const { setTheme } = useTheme();
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const [showControls, setShowControls] = useState(false);
@@ -90,12 +93,19 @@ export function MusicPlayer() {
             globalWidget.isPaused((paused: boolean) => {
               if (paused) {
                 globalWidget.play();
+                setTheme('dark'); // Switch to dark mode when resuming
+              } else {
+                // Already playing, ensure dark mode
+                setTheme('dark');
               }
             });
           } catch (e) {
             console.error('Error restoring play state:', e);
           }
         }, 200);
+      } else {
+        // Not playing, ensure light mode
+        setTheme('light');
       }
       return;
     }
@@ -197,6 +207,7 @@ export function MusicPlayer() {
 
       scWidget.bind(window.SC.Widget.Events.PLAY, () => {
         setIsPlaying(true);
+        setTheme('dark'); // Switch to dark mode when playing
         
         // Seek to start time (1:10) on first play
         if (!hasStartedRef.current) {
@@ -209,6 +220,7 @@ export function MusicPlayer() {
 
       scWidget.bind(window.SC.Widget.Events.PAUSE, () => {
         setIsPlaying(false);
+        setTheme('light'); // Switch back to light mode when paused
       });
 
       scWidget.bind(window.SC.Widget.Events.FINISH, () => {
@@ -238,8 +250,10 @@ export function MusicPlayer() {
     try {
       if (isPlaying) {
         widget.pause();
+        setTheme('light'); // Switch back to light mode
       } else {
         widget.play();
+        setTheme('dark'); // Switch to dark mode
         // Ensure we start from 1:10 on first play
         if (!hasStartedRef.current) {
           setTimeout(() => {

@@ -12,6 +12,8 @@ import Script from 'next/script';
 import { PostHogIdentify } from '@/components/posthog-identify';
 import { PWARegister } from '@/components/home/pwa-register';
 import { MusicPlayer } from '@/components/home/music-player';
+import { MusicProvider } from '@/contexts/music-context';
+import { MusicBeatEffects } from '@/components/home/music-beat-effects';
 import '@/lib/polyfills'; // Load polyfills early
 
 const geistSans = Geist({
@@ -248,16 +250,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Providers>
-            {children}
-            <Toaster />
-          </Providers>
-          <Analytics />
-          <GoogleAnalytics gaId="G-Z9GQMYL46B" />
-          <SpeedInsights />
-          <PostHogIdentify />
-          <PWARegister />
-          <MusicPlayer />
+          <MusicProvider>
+            <Providers>
+              {children}
+              <Toaster />
+            </Providers>
+            <Analytics />
+            <GoogleAnalytics gaId="G-Z9GQMYL46B" />
+            <SpeedInsights />
+            <PostHogIdentify />
+            <PWARegister />
+            <MusicBeatEffects />
+            <MusicPlayer />
+          </MusicProvider>
         </ThemeProvider>
       </body>
     </html>
