@@ -1184,7 +1184,7 @@ export const siteConfig = {
         id: 4,
         question: 'Werken jullie internationaal?',
         answer:
-          'Ja, TynkTech werkt internationaal. Hoewel ons hoofdkantoor in Rotterdam, Nederland is gevestigd, werken we voor klanten wereldwijd. We bieden remote samenwerking en kunnen waar nodig on-site komen. Ons team is ervaren in het werken met internationale klanten en verschillende tijdzones.',
+          'Ja, TynkTech werkt internationaal. Hoewel ons hoofdkantoor in Amsterdam, Nederland is gevestigd, werken we voor klanten wereldwijd. We bieden remote samenwerking en kunnen waar nodig on-site komen. Ons team is ervaren in het werken met internationale klanten en verschillende tijdzones.',
       },
       {
         id: 5,
@@ -1228,13 +1228,13 @@ export const siteConfig = {
         {
           id: 5,
           title: 'Website Ontwikkeling',
-          url: '/#pricing',
+          url: '/diensten/website-ontwikkeling',
         },
-        { id: 6, title: 'Webapplicaties', url: '/#pricing' },
-        { id: 7, title: 'Cloudbeheer', url: '/#pricing' },
-        { id: 8, title: 'Cybersecurity', url: '/#pricing' },
-        { id: 14, title: 'Webdesign', url: '/#pricing' },
-        { id: 15, title: 'Onderhoud & Support', url: '/#pricing' },
+        { id: 6, title: 'Webapplicaties', url: '/diensten/webapplicatie-ontwikkeling' },
+        { id: 7, title: 'Cloudbeheer', url: '/diensten/cloudbeheer' },
+        { id: 8, title: 'Cybersecurity', url: '/diensten/cybersecurity' },
+        { id: 14, title: 'Webdesign', url: '/diensten/webdesign' },
+        { id: 15, title: 'Onderhoud & Support', url: '/diensten/onderhoud-support' },
       ],
     },
     {

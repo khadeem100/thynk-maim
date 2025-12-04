@@ -45,7 +45,7 @@ export const changeLogData: ChangelogData[] = [
       date: "1 september 2024",
       title: "TynkTech Officieel Gelanceerd",
       description:
-        "TynkTech wordt opgericht als innovatief technologiebedrijf gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Rotterdam en heel Nederland.",
+        "TynkTech wordt opgericht als innovatief technologiebedrijf gespecialiseerd in moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Amsterdam en heel Nederland.",
       items: [
         "Website ontwikkeling diensten gelanceerd",
         "Webapplicatie ontwikkeling met moderne frameworks",

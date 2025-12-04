@@ -24,6 +24,7 @@ const PUBLIC_ROUTES = [
   '/faq', // FAQ page should be public
   '/docs', // Documentation pages should be public
   '/changelog', // Changelog page should be public
+  '/diensten', // Service pages should be public
   '/master-login', // Master password admin login
 ];
 

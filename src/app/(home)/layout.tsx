@@ -4,8 +4,8 @@ import Script from 'next/script';
 import { siteConfig } from '@/lib/home';
 
 export const metadata: Metadata = {
-  title: 'TynkTech | Moderne Websites & Webapplicaties Rotterdam | Cloud & Cybersecurity',
-  description: 'TynkTech - Specialist in moderne websites, webapplicaties, cloudbeheer en cybersecurity in Rotterdam. ✓ Toekomstbestendige oplossingen ✓ Transparante prijzen ✓ Expert developers. Website laten maken vanaf €75/uur.',
+  title: 'TynkTech | Moderne Websites & Webapplicaties Amsterdam | Cloud & Cybersecurity',
+  description: 'TynkTech - Specialist in moderne websites, webapplicaties, cloudbeheer en cybersecurity in Amsterdam. ✓ Toekomstbestendige oplossingen ✓ Transparante prijzen ✓ Expert developers. Website laten maken vanaf €75/uur.',
   keywords: [
     'website ontwikkeling',
     'webapplicatie ontwikkeling',
@@ -73,11 +73,11 @@ export default function HomeLayout({
     alternateName: 'Tynk Technologies V.O.F',
     url: baseUrl,
     logo: `${baseUrl}/kortix-logo.svg`, // TODO: Vervang met TynkTech logo wanneer beschikbaar
-    description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Rotterdam en heel Nederland.',
+    description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Amsterdam en heel Nederland.',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Rotterdam',
-      addressRegion: 'Zuid-Holland',
+      addressLocality: 'Amsterdam',
+      addressRegion: 'Noord-Holland',
       addressCountry: 'NL',
     },
     contactPoint: {
@@ -107,14 +107,14 @@ export default function HomeLayout({
     image: `${baseUrl}/banner.png`,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Rotterdam',
-      addressRegion: 'Zuid-Holland',
+      addressLocality: 'Amsterdam',
+      addressRegion: 'Noord-Holland',
       addressCountry: 'NL',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 51.9244,
-      longitude: 4.4777,
+      latitude: 52.3676,
+      longitude: 4.9041,
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -124,7 +124,7 @@ export default function HomeLayout({
     },
     areaServed: {
       '@type': 'City',
-      name: 'Rotterdam',
+      name: 'Amsterdam',
     },
     serviceArea: {
       '@type': 'Country',
@@ -162,10 +162,10 @@ export default function HomeLayout({
       },
       {
         '@type': 'Question',
-        name: 'Werken jullie alleen in Rotterdam of ook landelijk?',
+        name: 'Werken jullie internationaal?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Hoewel ons kantoor in Rotterdam is gevestigd, werken we voor klanten door heel Nederland. We kunnen remote werken of on-site komen, afhankelijk van jouw voorkeur en de aard van het project.',
+          text: 'Ja, TynkTech werkt internationaal. Hoewel ons hoofdkantoor in Amsterdam, Nederland is gevestigd, werken we voor klanten wereldwijd. We bieden remote samenwerking en kunnen waar nodig on-site komen. Ons team is ervaren in het werken met internationale klanten en verschillende tijdzones.',
         },
       },
       {

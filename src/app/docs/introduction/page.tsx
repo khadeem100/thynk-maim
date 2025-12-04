@@ -78,7 +78,7 @@ export default function IntroductionPage() {
         
         <h3 id="internationaal-werken" className="mb-4">Internationaal Werken</h3>
         <p className="mb-6">
-          TynkTech werkt wereldwijd met klanten. Hoewel ons hoofdkantoor in Rotterdam, Nederland is gevestigd, hebben we ervaring met internationale projecten en kunnen we naadloos samenwerken met teams in verschillende tijdzones. We bieden zowel remote als on-site ondersteuning, afhankelijk van jouw behoeften.
+          TynkTech werkt wereldwijd met klanten. Hoewel ons hoofdkantoor in Amsterdam, Nederland is gevestigd, hebben we ervaring met internationale projecten en kunnen we naadloos samenwerken met teams in verschillende tijdzones. We bieden zowel remote als on-site ondersteuning, afhankelijk van jouw behoeften.
         </p>
       </DocsBody>
       <Separator className="my-6 w-full" />
