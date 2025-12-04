@@ -8,6 +8,8 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Metadata } from 'next';
+import { BlogPostSkeleton } from '@/components/home/skeleton-loaders';
+import { useState, useEffect } from 'react';
 
 // Blog posts data
 const blogPosts = [
@@ -68,6 +70,14 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading
+    const timer = setTimeout(() => setIsLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen w-full">
       <div className="w-full">
@@ -83,7 +93,14 @@ export default function BlogPage() {
             </SectionHeader>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {blogPosts.map((post, index) => (
+              {isLoading ? (
+                <>
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <BlogPostSkeleton key={i} />
+                  ))}
+                </>
+              ) : (
+                blogPosts.map((post, index) => (
                 <motion.div
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -125,7 +142,8 @@ export default function BlogPage() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
+                ))
+              )}
             </div>
 
             <div className="mt-12 text-center">

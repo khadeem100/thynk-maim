@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ContactModal } from '@/components/home/contact-modal';
+import { PricingCalculator } from '@/components/home/pricing-calculator';
 import { FlickeringGrid } from '@/components/home/ui/flickering-grid';
 import { useMediaQuery } from '@/hooks/use-media-query';
 
@@ -453,6 +454,24 @@ export default function DIYPage() {
               </Card>
             </motion.div>
           )}
+
+          {/* Pricing Calculator Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
+                Bereken de Kosten voor Jouw Project
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Gebruik onze calculator om een schatting te krijgen van de kosten voor jouw custom website of webapplicatie
+              </p>
+            </div>
+            <PricingCalculator />
+          </motion.div>
         </div>
       </section>
     </main>

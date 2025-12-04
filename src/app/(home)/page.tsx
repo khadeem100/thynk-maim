@@ -22,6 +22,7 @@ import { DeliverablesSection } from '@/components/home/sections/deliverables-sec
 import { CapabilitiesSection } from '@/components/home/sections/capabilities-section';
 import { WelcomePopup } from '@/components/home/welcome-popup';
 import { QuickLinksSection } from '@/components/home/sections/quick-links-section';
+import { PWAInstallPrompt } from '@/components/home/pwa-install-prompt';
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
             <FooterSection />
           </div>
         </main>
+        <PWAInstallPrompt />
       </BackgroundAALChecker>
     </>
   );

@@ -10,6 +10,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import { PostHogIdentify } from '@/components/posthog-identify';
+import { PWARegister } from '@/components/home/pwa-register';
 import '@/lib/polyfills'; // Load polyfills early
 
 const geistSans = Geist({
@@ -204,6 +205,13 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-PCHSN4M2');`}
         </Script>
         <Script async src="https://cdn.tolt.io/tolt.js" data-tolt={process.env.NEXT_PUBLIC_TOLT_REFERRAL_ID}></Script>
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="TynkTech" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
 
       <body
@@ -233,6 +241,7 @@ export default function RootLayout({
           <GoogleAnalytics gaId="G-6ETJFB3PT3" />
           <SpeedInsights />
           <PostHogIdentify />
+          <PWARegister />
         </ThemeProvider>
       </body>
     </html>

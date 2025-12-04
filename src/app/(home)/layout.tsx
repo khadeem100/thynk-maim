@@ -188,14 +188,23 @@ export default function HomeLayout({
     publisher: {
       '@type': 'Organization',
       name: 'TynkTech',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/tynktech-logo.svg`,
+      },
     },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+        urlTemplate: `${baseUrl}/zoeken?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
+    },
+    inLanguage: 'nl-NL',
+    copyrightHolder: {
+      '@type': 'Organization',
+      name: 'TynkTech',
     },
     // Important pages for sitelinks (Google uses this as a hint)
     mainEntity: {
@@ -234,11 +243,31 @@ export default function HomeLayout({
         {
           '@type': 'ListItem',
           position: 6,
-          name: 'Klantenservice',
-          url: `${baseUrl}/contact`,
+          name: 'Blog',
+          url: `${baseUrl}/blog`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 7,
+          name: 'FAQ',
+          url: `${baseUrl}/faq`,
         },
       ],
     },
+  };
+
+  // BreadcrumbList schema for better navigation
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+    ],
   };
 
   const serviceSchema = {
@@ -391,6 +420,11 @@ export default function HomeLayout({
         id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Script
         id="local-business-schema"

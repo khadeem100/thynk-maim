@@ -27,9 +27,19 @@ Allow: /legal
 Allow: /changelog
 Allow: /templates/
 Allow: /share/
+Allow: /blog/
+Allow: /diy
+Allow: /faq
+Allow: /diensten/
+Allow: /portfolio
+Allow: /contact
 
 # Sitemap location
 Sitemap: https://tynktech.nl/sitemap.xml
+
+# Additional sitemaps (if you have separate sitemaps)
+# Sitemap: https://tynktech.nl/sitemap-blog.xml
+# Sitemap: https://tynktech.nl/sitemap-images.xml
 
 # Crawl-delay for respectful crawling (optional, can be removed for faster indexing)
 # Crawl-delay: 1
