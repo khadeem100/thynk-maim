@@ -1158,45 +1158,45 @@ export const siteConfig = {
     },
   ],
   faqSection: {
-    title: 'Frequently Asked Questions',
+    title: 'Veelgestelde Vragen',
     description:
-      "Answers to common questions about Tynk Tech and its capabilities. If you have any other questions, please don't hesitate to contact us.",
+      'Antwoorden op veelgestelde vragen over TynkTech en onze diensten. Heb je andere vragen? Neem gerust contact met ons op.',
     faQitems: [
       {
         id: 1,
-        question: 'What is an AI Worker?',
+        question: 'Wat kost een website laten maken bij TynkTech?',
         answer:
-          'An AI Worker is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals. It combines artificial intelligence and machine learning to provide personalized assistance and automation.',
+          'De kosten voor website ontwikkeling beginnen vanaf 20 uur. De exacte prijs is afhankelijk van de complexiteit, gewenste functionaliteiten en design. Een standaard website kost gemiddeld tussen de €2.400 en €4.800. Neem contact op voor een vrijblijvende offerte op maat.',
       },
       {
         id: 2,
-        question: 'How does Tynk Tech work?',
+        question: 'Hoe lang duurt het om een website te ontwikkelen?',
         answer:
-          'Tynk Tech works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.',
+          'Een standaard website wordt binnen 4-6 weken opgeleverd. Complexere webapplicaties of custom oplossingen kunnen 8-12 weken in beslag nemen. De exacte timeline bespreken we tijdens het intakegesprek en hangt af van de scope en jouw beschikbaarheid voor feedback.',
       },
       {
         id: 3,
-        question: 'Is Tynk Tech really free?',
+        question: 'Bieden jullie ook onderhoud en support na oplevering?',
         answer:
-          'Yes, Tynk Tech is completely free and open source. We believe in democratizing AI technology and making it accessible to everyone. You can use it, modify it, and contribute to its development without any cost.',
+          'Ja, wij bieden uitgebreide onderhoud en support pakketten vanaf €60 per maand. Dit omvat regelmatige updates, bug fixes, security patches, backup beheer en technische ondersteuning. Zo blijft jouw website veilig en up-to-date.',
       },
       {
         id: 4,
-        question: 'Can I integrate Suna with my existing tools?',
+        question: 'Werken jullie alleen in Rotterdam of ook landelijk?',
         answer:
-          'Yes, Tynk Tech is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.',
+          'Hoewel ons kantoor in Rotterdam is gevestigd, werken we voor klanten door heel Nederland. We kunnen remote werken of on-site komen, afhankelijk van jouw voorkeur en de aard van het project.',
       },
       {
         id: 5,
-        question: 'How can I contribute to Tynk Tech?',
+        question: 'Welke technologieën gebruiken jullie voor website ontwikkeling?',
         answer:
-          'You can contribute to Tynk Tech by submitting pull requests on GitHub, reporting bugs, suggesting new features, or helping with documentation. Join our Discord community to connect with other contributors and Hire Suna.',
+          'We werken met moderne frameworks en technologieën zoals React, Next.js, Vue.js, Node.js, en headless CMS systemen zoals Strapi en Sanity. Voor cloud werken we met AWS, Azure en Google Cloud. We kiezen altijd de beste technologie die past bij jouw specifieke behoeften en toekomstplannen.',
       },
       {
         id: 6,
-        question: 'How does Tynk Tech save me time?',
+        question: 'Wat is het verschil tussen een website en een webapplicatie?',
         answer:
-          'Tynk Tech automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.',
+          'Een website is primair informatief en statisch, terwijl een webapplicatie interactief is en functionaliteiten biedt zoals gebruikersaccounts, dataverwerking en complexe workflows. TynkTech helpt je bepalen welke oplossing het beste past bij jouw behoeften.',
       },
     ],
   },

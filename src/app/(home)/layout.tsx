@@ -72,7 +72,7 @@ export default function HomeLayout({
     name: 'TynkTech',
     alternateName: 'Tynk Technologies V.O.F',
     url: baseUrl,
-    logo: `${baseUrl}/kortix-logo.svg`,
+    logo: `${baseUrl}/kortix-logo.svg`, // TODO: Vervang met TynkTech logo wanneer beschikbaar
     description: 'TynkTech is een innovatief technologiebedrijf gespecialiseerd in het ontwikkelen van moderne websites, webapplicaties en digitale oplossingen op maat voor bedrijven in Rotterdam en heel Nederland.',
     address: {
       '@type': 'PostalAddress',

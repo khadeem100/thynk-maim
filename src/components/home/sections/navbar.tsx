@@ -212,9 +212,6 @@ export function Navbar() {
                       height={22}
                       priority
                     />
-                    <span className="font-medium text-primary text-sm">
-                      / Suna
-                    </span>
                   </Link>
                   <button
                     onClick={toggleDrawer}
