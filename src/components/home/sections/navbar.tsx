@@ -30,7 +30,7 @@ const drawerVariants = {
     y: 0,
     rotate: 0,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       damping: 15,
       stiffness: 200,
       staggerChildren: 0.03,
@@ -206,7 +206,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                   <Link href="/" className="flex items-center gap-3">
                     <Image
-                      src="/kortix-logo.svg"
+                      src="/tynktech-logo.svg"
                       alt="Tynk Tech Logo"
                       width={120}
                       height={22}
