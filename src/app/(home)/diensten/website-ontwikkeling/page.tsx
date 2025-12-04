@@ -5,6 +5,7 @@ import { SectionHeader } from '@/components/home/section-header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SEOBreadcrumb } from '@/components/home/seo-breadcrumb';
+import { RedDotsPattern } from '@/components/home/ui/red-dots-pattern';
 import { 
   Globe, 
   Code, 

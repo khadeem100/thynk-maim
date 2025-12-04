@@ -25,14 +25,19 @@ export function RedDotsPattern({
   }, []);
 
   useEffect(() => {
-    if (!mounted || !canvasRef.current) return;
-
+    if (!mounted || typeof window === 'undefined') return;
     const canvas = canvasRef.current;
+    if (!canvas) return;
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
+      if (!canvas) return;
+      
       const rect = canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      
       const dpr = window.devicePixelRatio || 1;
       
       canvas.width = rect.width * dpr;
@@ -64,13 +69,22 @@ export function RedDotsPattern({
       }
     };
 
-    resizeCanvas();
+    // Use requestAnimationFrame to ensure canvas is rendered
+    const timeoutId = setTimeout(() => {
+      resizeCanvas();
+    }, 0);
+
     window.addEventListener('resize', resizeCanvas);
     
     return () => {
+      clearTimeout(timeoutId);
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [mounted, dotSize, gap, opacity, color]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <canvas
