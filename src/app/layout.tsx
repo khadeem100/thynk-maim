@@ -204,6 +204,20 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-PCHSN4M2');`}
         </Script>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z9GQMYL46B"
+          strategy="afterInteractive"
+          async
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z9GQMYL46B');
+          `}
+        </Script>
         <Script async src="https://cdn.tolt.io/tolt.js" data-tolt={process.env.NEXT_PUBLIC_TOLT_REFERRAL_ID}></Script>
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
@@ -238,7 +252,7 @@ export default function RootLayout({
             <Toaster />
           </Providers>
           <Analytics />
-          <GoogleAnalytics gaId="G-6ETJFB3PT3" />
+          <GoogleAnalytics gaId="G-Z9GQMYL46B" />
           <SpeedInsights />
           <PostHogIdentify />
           <PWARegister />
