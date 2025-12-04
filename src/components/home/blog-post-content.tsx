@@ -57,6 +57,15 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         <p className="text-xl text-muted-foreground mb-6">
           {post.description}
         </p>
+        {post.image && (
+          <div className="mb-6 rounded-lg overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
