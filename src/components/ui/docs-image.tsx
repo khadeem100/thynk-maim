@@ -87,7 +87,17 @@ export const DocsImage = React.forwardRef<HTMLDivElement, DocsImageProps>(
         onZoom();
       } else {
         // Default zoom behavior - open in new tab
-        window.open(src, '_blank');
+        // Convert src to string - handle both string and Blob types
+        let srcString = '';
+        if (typeof src === 'string') {
+          srcString = src;
+        } else if (src instanceof Blob) {
+          // Convert Blob to blob URL string
+          srcString = URL.createObjectURL(src);
+        }
+        if (srcString) {
+          window.open(srcString, '_blank');
+        }
       }
     };
 
@@ -96,12 +106,22 @@ export const DocsImage = React.forwardRef<HTMLDivElement, DocsImageProps>(
         onDownload();
       } else {
         // Default download behavior
-        const link = document.createElement('a');
-        link.href = src || '';
-        link.download = alt || 'image';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Convert src to string - handle both string and Blob types
+        let srcString = '';
+        if (typeof src === 'string') {
+          srcString = src;
+        } else if (src instanceof Blob) {
+          // Convert Blob to blob URL string
+          srcString = URL.createObjectURL(src);
+        }
+        if (srcString) {
+          const link = document.createElement('a');
+          link.href = srcString;
+          link.download = alt || 'image';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
       }
     };
 
@@ -183,21 +203,34 @@ export const DocsImage = React.forwardRef<HTMLDivElement, DocsImageProps>(
           )}
 
           {/* Image */}
-          {src && !imageError && (
-            <img
-              src={src}
-              alt={alt || caption || 'Documentation image'}
-              loading={loading}
-              onLoad={handleImageLoad}
-              onError={handleImageError}
-              className={cn(
-                "w-full h-full object-cover transition-transform",
-                zoom && "group-hover:scale-105 cursor-zoom-in",
-                imageLoading && "opacity-0"
-              )}
-              {...props}
-            />
-          )}
+          {src && !imageError && (() => {
+            // Convert src to string for img tag - handle both string and Blob types
+            let imgSrc: string = '';
+            if (typeof src === 'string') {
+              imgSrc = src;
+            } else if (src instanceof Blob) {
+              // Convert Blob to blob URL string
+              imgSrc = URL.createObjectURL(src);
+            }
+            
+            if (!imgSrc) return null;
+            
+            return (
+              <img
+                src={imgSrc}
+                alt={alt || caption || 'Documentation image'}
+                loading={loading}
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+                className={cn(
+                  "w-full h-full object-cover transition-transform",
+                  zoom && "group-hover:scale-105 cursor-zoom-in",
+                  imageLoading && "opacity-0"
+                )}
+                {...props}
+              />
+            );
+          })()}
         </div>
 
         {/* Caption */}
