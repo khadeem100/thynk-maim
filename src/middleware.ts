@@ -20,6 +20,10 @@ const PUBLIC_ROUTES = [
   '/careers', // Careers page should be public
   '/portfolio', // Portfolio pages should be public
   '/diy', // DIY website scan page should be public
+  '/blog', // Blog pages should be public
+  '/faq', // FAQ page should be public
+  '/docs', // Documentation pages should be public
+  '/changelog', // Changelog page should be public
   '/master-login', // Master password admin login
 ];
 

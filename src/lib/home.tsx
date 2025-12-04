@@ -1248,7 +1248,7 @@ export const siteConfig = {
         {
           id: 17,
           title: 'Veelgestelde Vragen',
-          url: '/#faq',
+          url: '/faq',
         },
         {
           id: 18,
