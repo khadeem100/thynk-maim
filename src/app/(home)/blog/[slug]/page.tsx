@@ -91,7 +91,11 @@ Wil je meer weten over onze cloudbeheer diensten? [Bekijk onze cloudbeheer pagin
   },
 };
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+interface BlogPostPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = blogPosts[slug];
 
