@@ -23,13 +23,20 @@ import { CapabilitiesSection } from '@/components/home/sections/capabilities-sec
 import { WelcomePopup } from '@/components/home/welcome-popup';
 import { QuickLinksSection } from '@/components/home/sections/quick-links-section';
 import { PWAInstallPrompt } from '@/components/home/pwa-install-prompt';
+import { AngriLaunchModal } from '@/components/AngriLaunchModal';
 
 export default function Home() {
+  const [showAngriModal, setShowAngriModal] = useState(true);
+
   return (
     <>
       <ModalProviders />
       <BackgroundAALChecker>
         <WelcomePopup />
+        <AngriLaunchModal
+          open={showAngriModal}
+          onClose={() => setShowAngriModal(false)}
+        />
         <main className="flex flex-col items-center justify-center min-h-screen w-full">
           <div className="w-full divide-y divide-border">
             <HeroSection />
