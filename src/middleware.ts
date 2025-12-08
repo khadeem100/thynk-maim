@@ -60,7 +60,15 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Everything else requires authentication
+  // If the route is not explicitly protected or billing-related, skip auth entirely
+  const isBillingRoute = BILLING_ROUTES.some(route => pathname.startsWith(route));
+  const isProtectedRoute = PROTECTED_ROUTES.some(route => pathname.startsWith(route));
+
+  if (!isBillingRoute && !isProtectedRoute) {
+    return NextResponse.next();
+  }
+
+  // Only billing and protected routes require authentication
   let supabaseResponse = NextResponse.next({
     request,
   });
@@ -103,13 +111,13 @@ export async function middleware(request: NextRequest) {
       return supabaseResponse;
     }
 
-    // Skip billing checks for billing-related routes
-    if (BILLING_ROUTES.some(route => pathname.startsWith(route))) {
+    // Skip billing checks for billing-related routes (they only need basic auth)
+    if (isBillingRoute) {
       return supabaseResponse;
     }
 
     // Only check billing for protected routes that require active subscription
-    if (PROTECTED_ROUTES.some(route => pathname.startsWith(route))) {
+    if (isProtectedRoute) {
       const { data: accounts } = await supabase
         .schema('basejump')
         .from('accounts')
